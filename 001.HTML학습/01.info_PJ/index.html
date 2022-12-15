@@ -10,7 +10,25 @@
         <meta charset="utf-8" />
         <!-- title 탭에 표시 타이틀-->
         <title>네이버 요약 뉴스</title>
-        <link rel="stylesheet" href="style.css">
+        <!-- Internal Stylesheet -->
+        <style>
+            /* 
+                [스타일 시트 문법 영역 기본문법]
+                선택자 { 속성:값;}
+
+                [CSS 박스모델]
+                모든 요소는 박스형태로 그 디자인으로 설정한다. (5가지 요소)
+
+                1. width: 가로크기
+                2. height: 세로크기
+                3. padding: 안쪽여백
+                4. border: 경계선
+                5. margin: 바깥여백
+
+                -> 박스모델의 적용은 block 요소를 기본으로 한다.
+
+            */
+        </style>
     </head>
     <body>
         <!--  header -->
@@ -19,7 +37,7 @@
             <h1>네이버 요약 뉴스</h1>
             <!-- global navigation bar(GNB) -->
             <nav id="gnb">
-                <a href="">
+                <a href="#">
                     <!-- img 요소: 이미지 연결 요소 
                         [웹 표준] : 모든 웹 브라우저에서 하나의 소스로 동일한 디스플레이 및 기능이 되도록 정한 웹 코딩의 표준안
 
@@ -35,10 +53,10 @@
                     -->
                     <img src="./images/naver_logo.png" alt="naver_logo" style="width:20px;">
                 </a>
-                <a href="#">정치</a> 
-                <a href="#">경제</a>
-                <a href="#">사회</a>
-                <a href="#">IT/과학</a>
+                <a href="#">정치</a> |
+                <a href="#">경제</a> |
+                <a href="#">사회</a> |
+                <a href="#">IT/과학</a> |
                 <a href="#">TV/연예</a>
             </nav>
         </header>
