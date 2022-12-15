@@ -40,18 +40,27 @@
 
             /* 기본 마진 패팅 없애기 */
             html,body { margin:0; padding:0; /* 초기화 */}
-            /* header */
-            .top { width:750px; height:150px; border:5px solid #6bf96b; padding:20px; margin:30px;}
+
+            /* 박스 공통 클래스 */
+            .bx { width:750px; /* height:150px; */ border:5px double #6bf96b; padding:20px; margin:20px auto; border-radius:10px; box-sizing:border-box;}
             /* padding 1개(사방) 2개(위아래 좌우) 3개(위 양쪽 아래) 4개(각방향 위 오른 아래 왼) */
             /* margin도 동일*/
             /*
                margin: 0 auto; // 블록요소가 가로 크기를 가질 때 중앙정렬하려면 양쪽 margin을 auto로 설정
             */
+            /*
+             default width:auto; height:auto;
+             width: 부모요소 끝까지
+             height: 내용만큼 늘어난다.
+            */
+            .top { background:#c8f5c8;}
+            .cont > img {  width:100%; height:100%;}
         </style>
     </head>
     <body>
+    
         <!--  header -->
-        <header class="top">
+        <header class="top bx">
             <!-- title -->
             <h1>네이버 요약 뉴스</h1>
             <!-- global navigation bar(GNB) -->
@@ -80,11 +89,11 @@
             </nav>
         </header>
         <!-- main -->
-        <main class="cont">
+        <main class="cont bx">
             <img src="./images/news.jpg" alt="news_img">
         </main>
         <!-- footer -->
-        <footer class="info">
+        <footer class="info bx">
             <address>
                 서울시 강남구 역삼동 119 대호B 8F<br>
                 대표: Tom Brace Parker<br>
