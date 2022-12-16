@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+/* 
+    [스타일 시트 문법 영역 기본문법]
+    선택자 { 속성:값;}
+
+    [CSS 박스모델]
+    모든 요소는 박스형태로 그 디자인으로 설정한다. (5가지 요소)
+
+    1. width: 가로크기
+    2. height: 세로크기
+    3. padding: 안쪽여백
+    4. border: 경계선
+    5. margin: 바깥여백
+
+    -> 박스모델의 적용은 block 요소를 기본으로 한다.
+
+    [CSS 선택자(Selector)]
+    1. 요소 선택자 : 요소명
+    2. 아이디 선택자 : #아이디명
+    3. 클래스 선택자 : .클래스명
+    4. 종속 선택자: 요소명#id / 요소명.class / 요소명#id.class 
+     목적: 특정 요소에 특정 이름을 밝혀야 할 경우
+           클래스 적용 시 같은 이름으로 다른 디자인 줄 때
+    5. 그룹 선택자 :,(comma)
+    6. 자손 선택자 : 띄어쓰기
+    7. 자식 선택자 : >
+    8. 형제 선택자 : + ex) div + div {} 앞에 형제 div가 있는 div 선택 (첫번째를 제외한 나머지 형제 요소들 선택 시 많이 사용)
+
+*/
+
+/* 기본 마진 패팅 없애기 */
+html,body,h1 { 
+    margin:0; padding:0; /* 초기화 */
+}
+
+body {
+    padding-bottom: 50px;
+}
+
+/* 박스 공통 클래스 */
+.bx { 
+    width:750px;
+    /* height:150px; */ 
+    border:5px double #6bf96b;
+    padding:20px;
+    margin:20px auto;
+    border-radius:10px;
+    box-sizing:border-box;
+}
+/* padding 1개(사방) 2개(위아래 좌우) 3개(위 양쪽 아래) 4개(각방향 위 오른 아래 왼) */
+/* margin도 동일*/
+/*
+   margin: 0 auto; // 블록요소가 가로 크기를 가질 때 중앙정렬하려면 양쪽 margin을 auto로 설정
+*/
+/*
+ default width:auto; height:auto;
+ width: 부모요소 끝까지
+ height: 내용만큼 늘어난다.
+*/
+/* header */
+.top { 
+    background-color:#c8f5c8;
+    text-align:center;}
+.top > h1 { 
+    font-style: normal; 
+    font-size: 50px; 
+    font-weight:bold; 
+    line-height:1.7; 
+    font-family: 'Gugi', cursive;}
+#gnb a { font-family: 'Gugi', cursive;
+         color:black;
+         text-decoration:none;
+         font-size:20px;
+         margin:0 5px;
+        }
+/* hover */
+#gnb a+a:hover { 
+    /* 글자색 */
+    color:lightcoral;
+    /* 글자 데코레이션 : underline,overline,line-through,none */
+    text-decoration:overline;
+}  
+#gnb a:nth-child(2):after,
+#gnb a:nth-child(3):after,
+#gnb a:nth-child(4):after,
+#gnb a:nth-child(5):after {
+    content:"";
+    background:black;
+    border:1px solid black;
+    width:1px;
+    height:2px;
+}
+/* img */
+#gnb img { /* 인라인 요소간 세로 정렬: vertical-align */vertical-align: -2px;}
+/* main */
+.cont > img { width:100%; height:100%;}
+/* footer */
+.info { background-color: #e6ffcf; text-align:center;
+}
+.info address { 
+font-style:normal; 
+font-family: 'Gugi',cursive;
+color:#555; font-size:15px;
+}
