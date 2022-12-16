@@ -11,10 +11,10 @@
         <!-- title 탭에 표시 타이틀-->
         <title>네이버 요약 뉴스 - 정치</title>
         <!-- external stylesheet -->
-        <link rel="stylesheet" href="./css/common.css">
+        <link rel="stylesheet" href="./css/common.css" />
+        <link rel="stylesheet" href="./css/sub.css" />
     </head>
     <body>
-    
         <!--  header -->
         <header class="top bx">
             <!-- title -->
@@ -35,7 +35,11 @@
                         2. 절대경로 http://이미지경로..
                         3. 절대상대경로 / 서버의 루트로부터의 경로
                     -->
-                    <img src="./images/naver_logo.png" alt="naver_logo" style="width:20px;">
+                    <img
+                        src="./images/naver_logo.png"
+                        alt="naver_logo"
+                        style="width: 20px"
+                    />
                 </a>
                 <a href="sub1.html">정치</a>
                 <a href="sub2.html">경제</a>
@@ -46,13 +50,50 @@
         </header>
         <!-- main -->
         <main class="cont bx">
+            <!-- 언론사 로고 -->
+            <div class="prlogo">
+                <a href="" target="_blank">
+                    <img src="" alt="" />
+                </a>
+            </div>
+            <!-- 기사 제목 -->
+            <h2 class="atit">제목 어쩌구 저쩌구</h2>
+            <!-- 기사 사진(사진 설명)-->
+            <figure class="afig">
+                <!-- 이미지나 표를 넣을 때-->
+                <img src="" alt="" />
+                <figcaption></figcaption>
+            </figure>
+            <!-- 기사 내용 -->
+            <section class="arti">
+                <p>
+                    [서울=뉴시스]윤현성 기자 = 우리나라의 첫 달 궤도선
+                    '다누리'가 지난 8월 발사된 이후 4개월 만에 최종 목적지인
+                    달에 도착한다. 이제 다누리는 달 영향권에 최종 진입하기 위해
+                    가장 어려운 임무 중 하나를 수행하게 된다. 총알보다 빠른
+                    다누리를 총알과 같은 속도의 달에 정확하게 맞춰야 한다
+                </p>
 
+                <p>
+                    16일 과학계에 따르면 다누리는 달에서 약 108㎞까지 가까워지는
+                    다음날 새벽 2시45분 달 임무궤도 진입을 위한 1차 달 임무궤도
+                    진입기동(LOI)을 진행하게 된다. LOI는 다누리의 임무궤도인 달
+                    상공 100㎞ 원궤도에 안착시키기 위해 다누리에 탑재된 추력기를
+                    통해 속도를 줄이는 기동이다
+                </p>
+            </section>
+            <!-- 기자 정보 -->
+            <div class="rpt">윤현상기자(어쩌고저쩌고)</div>
+            <!-- 기사 원문 -->
+            <h5>
+                <a href="" target="_blank"> 기사원문 </a>
+            </h5>
         </main>
         <!-- footer -->
         <footer class="info bx">
             <address>
-                서울시 강남구 역삼동 119 대호B 8F<br>
-                대표: Tom Brace Parker<br>
+                서울시 강남구 역삼동 119 대호B 8F<br />
+                대표: Tom Brace Parker<br />
                 전화: 010-2222-3333
             </address>
         </footer>
