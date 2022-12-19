@@ -6,3 +6,10 @@
     letter-spacing:-2px;
     word-spacing:-1px;
 }
+.afig {
+    text-align:center;
+}
+.afig small {
+    font-family:gulim;
+    color:#555;
+}

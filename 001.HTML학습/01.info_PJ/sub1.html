@@ -91,7 +91,9 @@
             <!-- 인용블록 영역 -->
             <article class="qb">
                 <h5>한국 우주 연구원 소개 인용</h5>
-                <blockquote cite="https://ko.wikipedia.org/wiki/%ED%95%9C%EA%B5%AD%ED%95%AD%EA%B3%B5%EC%9A%B0%EC%A3%BC%EC%97%B0%EA%B5%AC%EC%9B%90">
+                <blockquote
+                    cite="https://ko.wikipedia.org/wiki/%ED%95%9C%EA%B5%AD%ED%95%AD%EA%B3%B5%EC%9A%B0%EC%A3%BC%EC%97%B0%EA%B5%AC%EC%9B%90"
+                >
                     한국항공우주연구원(韓國航空宇宙硏究院, 영어: Korea Aerospace Research Institute, KARI), 약자로
                     항우연은 대전광역시 유성구 어은동에 위치하는 과학기술정보통신부 산하 항공우주 과학기술 관련
                     기타공공기관 재단법인이다.<br /><br />
@@ -107,6 +109,18 @@
             <h5>
                 <a href="" target="_blank"> 기사원문 </a>
             </h5>
+
+            <hr />
+
+            <!-- 오늘의 작품 & 느낌 -->
+            <article class="work">
+                <h3>오늘의 작품 &amp; 느낌</h3>
+                <!-- 특수문자 처리 : &amp;(&), &lt;(<), &gt;(>)-->
+                <figure>
+                    <img src="./images/scream.jpg" alt="scream">
+                    <figcaption>뭉크의 <cite>&lt;절규&gt;</cite></figcaption>
+                </figure>
+            </article>
         </main>
         <!-- footer -->
         <footer class="info bx">
@@ -144,15 +158,29 @@
 
             [인용관련요소]
 
-            1. <blockquote> : block 요소로 별도의 인용구를 구분하는 박스 
-                            : cite 속성 - 출처 표시(필수속성x,url주소)
-                            : 주의 - 내부에 p요소와 같은 다른  block 사용 x
-            2. <q> : 작은 인용구(쌍따옴표가 자동 생성)
-                   : inline 요소임
-            3. <abbr> :
-            <address>   Defines contact information for the author/owner of a document
-            <bdo>   Defines the text direction
-            <cite>   Defines the title of a work
+            1. 블록인용요소
+            <blockquote> : block 요소로 별도의 인용구를 구분하는 박스 
+                         : cite 속성 - 출처 표시(필수속성x,url주소)
+                         : 주의 - 내부에 p요소와 같은 다른  block 사용 x
+
+            2.인라인인용요소
+            <q> : 작은 인용구(쌍따옴표가 자동 생성)
+                : inline 요소임
+
+            3.줄임말인용
+            <abbr> : 줄임말의 원래 뜻을 표시하는 요소
+                   : 필수 속성 ->> title 속성으로 tooltip을 띄운다(원래뜻)
+                   : title 속성은 tooltip을 띄우고자 하는 어떤 요소에도 사용
+
+            4. 주소 인용
+            <address> : 사이트 정보 표시
+            
+            5. 작품명 인용
+            <cite> : 인용하고 있는 작품명을 표시하기 위한 요소
+
+            6. 반대방향글 인용
+            <bdo> : 글 방향이 반대일때 사용
+                  : dir 속성 : rtl (right to left)
          -->
     </body>
 </html>
