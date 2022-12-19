@@ -1,1 +1,8 @@
 @charset "utf-8";
+.atit {
+    font-size:30px;
+    font-weight:normal;
+    font-family:'굴림',sans-serif;
+    letter-spacing:-2px;
+    word-spacing:-1px;
+}
