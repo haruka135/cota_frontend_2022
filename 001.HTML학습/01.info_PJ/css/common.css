@@ -88,9 +88,9 @@ body {
 #gnb a:nth-child(5):after {
     content:"";
     background:black;
-    border:2px solid black;
+    border:1px solid black;
     width:1px;
-    height:1px;
+    height:0.5px;
 }
 /* img */
 #gnb img { /* 인라인 요소간 세로 정렬: vertical-align */vertical-align: -2px;}
