@@ -12,7 +12,7 @@
         <title>네이버 요약 뉴스</title>
         <!-- Internal Stylesheet -->
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+            @import url("https://fonts.googleapis.com/css2?family=Gugi&display=swap");
             /* 
                 [스타일 시트 문법 영역 기본문법]
                 선택자 { 속성:값;}
@@ -43,8 +43,11 @@
             */
 
             /* 기본 마진 패팅 없애기 */
-            html,body,h1 { 
-                margin:0; padding:0; /* 초기화 */
+            html,
+            body,
+            h1 {
+                margin: 0;
+                padding: 0; /* 초기화 */
             }
 
             body {
@@ -52,14 +55,14 @@
             }
 
             /* 박스 공통 클래스 */
-            .bx { 
-                width:750px;
-                /* height:150px; */ 
-                border:5px double #6bf96b;
-                padding:20px;
-                margin:20px auto;
-                border-radius:10px;
-                box-sizing:border-box;
+            .bx {
+                width: 750px;
+                /* height:150px; */
+                border: 5px double #6bf96b;
+                padding: 20px;
+                margin: 20px auto;
+                border-radius: 10px;
+                box-sizing: border-box;
             }
             /* padding 1개(사방) 2개(위아래 좌우) 3개(위 양쪽 아래) 4개(각방향 위 오른 아래 왼) */
             /* margin도 동일*/
@@ -72,54 +75,65 @@
              height: 내용만큼 늘어난다.
             */
             /* header */
-            .top { 
-                background-color:#c8f5c8;
-                text-align:center;}
-            .top > h1 { 
-                font-style: normal; 
-                font-size: 50px; 
-                font-weight:bold; 
-                line-height:1.7; 
-                font-family: 'Gugi', cursive;}
-            #gnb a { font-family: 'Gugi', cursive;
-                     color:black;
-                     text-decoration:none;
-                     font-size:20px;
-                     margin:0 5px;
-                    }
+            .top {
+                background-color: #c8f5c8;
+                text-align: center;
+            }
+            .top > h1 {
+                font-style: normal;
+                font-size: 50px;
+                font-weight: bold;
+                line-height: 1.7;
+                font-family: "Gugi", cursive;
+            }
+            #gnb a {
+                font-family: "Gugi", cursive;
+                color: black;
+                text-decoration: none;
+                font-size: 20px;
+                margin: 0 5px;
+            }
             /* hover */
-            #gnb a+a:hover { 
+            #gnb a + a:hover {
                 /* 글자색 */
-                color:lightcoral;
+                color: lightcoral;
                 /* 글자 데코레이션 : underline,overline,line-through,none */
-                text-decoration:overline;
-            }  
+                text-decoration: overline;
+            }
             #gnb a:nth-child(2):after,
             #gnb a:nth-child(3):after,
             #gnb a:nth-child(4):after,
             #gnb a:nth-child(5):after {
-                content:"";
-                background:black;
-                border:1px solid black;
-                width:1px;
-                height:2px;
+                content: "";
+                background: black;
+                border: 1px solid black;
+                width: 1px;
+                height: 2px;
             }
             /* img */
-            #gnb img { /* 인라인 요소간 세로 정렬: vertical-align */vertical-align: -2px;}
-            /* main */
-            .cont > img { width:100%; height:100%;}
-            /* footer */
-            .info { background-color: #e6ffcf; text-align:center;
+            #gnb img {
+                /* 인라인 요소간 세로 정렬: vertical-align */
+                vertical-align: -2px;
             }
-            .info address { 
-            font-style:normal; 
-            font-family: 'Gugi',cursive;
-            color:#555; font-size:15px;
+            /* main */
+            .cont > img {
+                width: 100%;
+                height: 100%;
+            }
+            /* footer */
+            .info {
+                background-color: #e6ffcf;
+                text-align: center;
+            }
+            .info address {
+                font-style: normal;
+                font-family: "Gugi", cursive;
+                color: #555;
+                font-size: 15px;
             }
         </style>
     </head>
     <body>
-    
         <!--  header -->
         <header class="top bx">
             <!-- title -->
@@ -140,7 +154,11 @@
                         2. 절대경로 http://이미지경로..
                         3. 절대상대경로 / 서버의 루트로부터의 경로
                     -->
-                    <img src="./images/naver_logo.png" alt="naver_logo" style="width:20px;">
+                    <img
+                        src="./images/naver_logo.png"
+                        alt="naver_logo"
+                        style="width: 20px"
+                    />
                 </a>
                 <a href="sub1.html">정치</a>
                 <a href="sub2.html">경제</a>
@@ -151,13 +169,13 @@
         </header>
         <!-- main -->
         <main class="cont bx">
-            <img src="./images/news.jpg" alt="news_img">
+            <img src="./images/news.jpg" alt="news_img" />
         </main>
         <!-- footer -->
         <footer class="info bx">
             <address>
-                서울시 강남구 역삼동 119 대호B 8F<br>
-                대표: Tom Brace Parker<br>
+                서울시 강남구 역삼동 119 대호B 8F<br />
+                대표: Tom Brace Parker<br />
                 전화: 010-2222-3333
             </address>
         </footer>
