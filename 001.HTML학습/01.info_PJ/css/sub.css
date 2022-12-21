@@ -31,11 +31,27 @@
     /* 글자간격(자간): letter-spacing 기본값: 0,normal */
     word-spacing:-1px;
     /* 단어간격 : word-spacing */
+    /* white-space:nowrap; */
+    /* 줄바꿈 방지: 공백 white-space :normal(default)
+       -> normal 박스 끝에서 줄바꿈
+       -> nowrap 박스 끝에서 줄바꿈 되지 않고 계속 감
+       -> 사용: 줄바꿈이 되면 안될 때
+       ex) 한줄에 오는 버튼 글자, 한줄에 말 줄임표
+    */
 }
+
+/* 기사 사진 */
 .afig {
+    margin: 15px 0;
     text-align:center;
 }
+
+.afig img {
+    width:100%;
+}
+
+/* 기사 이미지 설명 */
 .afig small {
     font-family:gulim;
-    color:#555;
+    color:#555555;
 }
