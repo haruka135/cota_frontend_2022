@@ -55,3 +55,66 @@
     font-family:gulim;
     color:#555555;
 }
+
+/* 기사 내용 */
+.arti p {
+    font-size:17px;
+    line-height:1.5;
+    padding:0 10px;
+    letter-spacing:-1px;
+    font-family:gulim;
+    /* text-indent:20px; */
+}
+
+.arti p mark {
+    display:block;
+    font-size: 20px;
+    line-height:2;
+    padding:20px 50px;
+    text-align:center;
+    background-color:#e9e9e9;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+    margin:10px 0; 
+    font-family:'맑은 고딕';
+    font-weight:normal;
+
+}
+
+.arti p em {
+    /* text-shdaow: x축 y축 그림자경계흐림 색 */
+    text-shadow: 2px 2px 2px rgba(139,0,139,.3);
+    font-style:normal;
+    color:darkmagenta;
+    font-weight: bold;
+}
+
+/* 기자 정보 */
+.rpt {
+    font-size:14px;
+    background-color:rgb(218, 215, 215);
+    display:inline-block;
+    padding: 5px;
+    margin: 15px 0;
+}
+.cont > h5 {
+    text-align: right;
+}
+.cont > h5 a {
+    display:inline-block;
+    margin: 20px 0;
+    padding: 0;
+    width:70px;
+    height:70px;
+    border: 2px solid #dbdbdb;
+    text-align:center;
+    line-height:70px;
+    border-radius:50%;
+    background-color: lightsteelblue;
+}
+
+/* 가상 클래스로 오버 시 박스 그림자 넣기 */
+
+.cont > h5 a:hover {
+    box-shadow: 0 0 5px darkblue; 
+}
