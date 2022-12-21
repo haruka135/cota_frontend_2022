@@ -1,10 +1,36 @@
 @charset "utf-8";
+
+/* import로 파일 합치기
+   -> 외부 css 파일에서 다른 외부 파일 불러올 때 장점
+   -> html 파일에서 link 요소로 호출할 경우
+      HttpRequest이 많아져 페이지 랜더링 속도에 영향
+   -> import 방식을 쓰면 더 적은 웹 요청에 따라 처리 속도에 도움
+   -> 주의: import는 css파일 상단에서 처리한다.
+*/
+
+@import url('./common.css');
+
+/* main-box */
+
+.cont {
+    padding: 15px;
+}
+
+/* 언론사 로고 */
+.prlogo img {
+    height:32px;
+    /* 이미지는 가로,세로 중 한쪽만 주면 자동 비율 유지 */
+}
+
+/* 기사 제목 */
 .atit {
     font-size:30px;
     font-weight:normal;
     font-family:'굴림',sans-serif;
-    letter-spacing:-2px;
+    letter-spacing:-2px; 
+    /* 글자간격(자간): letter-spacing 기본값: 0,normal */
     word-spacing:-1px;
+    /* 단어간격 : word-spacing */
 }
 .afig {
     text-align:center;
