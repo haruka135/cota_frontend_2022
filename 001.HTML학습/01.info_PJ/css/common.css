@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Brush+Script&display=swap');
 /* 
     [스타일 시트 문법 영역 기본문법]
     선택자 { 속성:값;}
@@ -31,30 +31,31 @@
 */
 
 /* 기본 마진 패팅 없애기 */
-html,body,h1 { 
-    margin:0; padding:0; /* 초기화 */
+html,
+body,
+h1 {
+    margin: 0;
+    padding: 0; /* 초기화 */
 }
 
 body {
     padding-bottom: 50px;
 }
 
-/* 전체 a 요소 공통 셋팅 */
-
 a {
-    color:#222;
+    color:black;
     text-decoration:none;
 }
 
 /* 박스 공통 클래스 */
-.bx { 
-    width:750px;
-    /* height:150px; */ 
-    border:5px double #6bf96b;
-    padding:20px;
-    margin:20px auto;
-    border-radius:10px;
-    box-sizing:border-box;
+.bx {
+    width: 750px;
+    /* height:150px; */
+    border: 5px double #6bf96b;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-sizing: border-box;
 }
 /* padding 1개(사방) 2개(위아래 좌우) 3개(위 양쪽 아래) 4개(각방향 위 오른 아래 왼) */
 /* margin도 동일*/
@@ -67,48 +68,50 @@ a {
  height: 내용만큼 늘어난다.
 */
 /* header */
-.top { 
-    background-color:#c8f5c8;
-    text-align:center;}
-.top > h1 { 
-    font-style: normal; 
-    font-size: 50px; 
-    font-weight:bold; 
-    line-height:1.7; 
-    font-family: 'Gugi', cursive;}
-#gnb a { font-family: 'Gugi', cursive;
-         color:black;
-         text-decoration:none;
-         font-size:20px;
-         margin:0 5px;
-        }
+.top {
+    background-color: #c8f5c8;
+    text-align: center;
+}
+.top > h1 {
+    font-style: normal;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 1.5;
+    font-family: 'Nanum Brush Script',cursive;
+    color: darkslateblue;
+}
+#gnb a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0 5px;
+    font-family: 'Do Hyeon',sans-serif;
+}
 /* hover */
-#gnb a+a:hover { 
+#gnb a + a:hover {
     /* 글자색 */
-    color:lightcoral;
+    color: lightcoral;
     /* 글자 데코레이션 : underline,overline,line-through,none */
-    text-decoration:overline;
-}  
-#gnb a:nth-child(2):after,
-#gnb a:nth-child(3):after,
-#gnb a:nth-child(4):after,
-#gnb a:nth-child(5):after {
-    content:"";
-    background:black;
-    border:1px solid black;
-    width:1px;
-    height:1px;
-
+    text-decoration: overline;
 }
 /* img */
-#gnb img { /* 인라인 요소간 세로 정렬: vertical-align */vertical-align: -2px;}
-/* main */
-.cont > img { width:100%; height:100%;}
-/* footer */
-.info { background-color: #e6ffcf; text-align:center;
+#gnb img {
+    /* 인라인 요소간 세로 정렬: vertical-align */
+    vertical-align: -2px;
 }
-.info address { 
-font-style:normal; 
-font-family: 'Gugi',cursive;
-color:#555; font-size:15px;
+/* main */
+.cont > img {
+    width: 100%;
+    height: 100%;
+}
+/* footer */
+.info {
+    background-color: #e6ffcf;
+    text-align: center;
+}
+.info address {
+    font-style: normal;
+    font-family: 'Do Hyeon',sans-serif;
+    color: #555;
+    font-size: 15px;
 }
