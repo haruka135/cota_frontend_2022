@@ -291,6 +291,15 @@
     margin-left: 100px;
 }
 
+/* 사진 뉴스 타이틀 가상요소 아이콘 :: */
+.pnews h3 {
+    text-align: center;
+}
+
+.pnews h3::before {
+   content:'📷'; /* 태그를 쓴 것과 똑같음 */
+}
+
 /* table */
 
 .pnews table {
