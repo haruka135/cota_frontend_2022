@@ -118,3 +118,37 @@
 .cont > h5 a:hover {
     box-shadow: 0 0 5px darkblue; 
 }
+
+/* 메인 공통 article 박스 디자인 */
+.cont article {
+    border-top: 2px dashed #ccc; /* 구분선 */
+    margin-top: 40px; /* 구분선 위 여백 */
+    padding: 15px;
+}
+
+/* 각 파트별 공통 타이틀 */
+
+.cont article h5 {
+
+    display:inline-block;
+    padding:10px 20px;
+    background-color: whitesmoke;
+    margin:0;
+    border-radius: 20px;
+
+    /* 내부 그림자 */
+    /* inset은 내부 그림자 설정 */
+    box-shadow: inset 0 0 5px rgb(0, 0, 0,.462);
+
+    font-weight: normal;
+    font-size: 20px;
+    color: #333;
+}
+
+.cont h3 {
+    font-family:'Do Hyeon',sans-serif;
+    font-weight: normal;
+    font-size: 26px;
+    text-indent: 20px;
+    color: #333;
+}

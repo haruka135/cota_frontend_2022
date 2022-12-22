@@ -41,6 +41,11 @@
                 padding-bottom: 50px;
             }
 
+            a {
+                text-decoration:none;
+                color: black;
+            }
+
             /* 박스 공통 클래스 */
             .bx {
                 width: 750px;
