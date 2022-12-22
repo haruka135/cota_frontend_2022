@@ -1,19 +1,8 @@
 @charset "utf-8";
-
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-@import url("https://fonts.googleapis.com/css2?family=Gugi&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Brush+Script&display=swap');
             /* 
                 [스타일 시트 문법 영역 기본문법]
                 선택자 { 속성:값;}
-=======
->>>>>>> Stashed changes
-@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Brush+Script&display=swap');
-/* 
-    [스타일 시트 문법 영역 기본문법]
-    선택자 { 속성:값;}
->>>>>>> 8047ea63394b9576a458af16ea8bad91c2c5bdbb
 
                 [CSS 박스모델]
                 모든 요소는 박스형태로 그 디자인으로 설정한다. (5가지 요소)
@@ -40,7 +29,6 @@
 
             */
 
-<<<<<<< HEAD
             /* 기본 마진 패팅 없애기 */
             html,
             body,
@@ -48,30 +36,11 @@
                 margin: 0;
                 padding: 0; /* 초기화 */
             }
-=======
-/* 기본 마진 패팅 없애기 */
-html,
-body,
-h1 {
-    margin: 0;
-    padding: 0; /* 초기화 */
-<<<<<<< Updated upstream
-}
 
-body {
-    padding-bottom: 50px;
-=======
->>>>>>> Stashed changes
-}
->>>>>>> 8047ea63394b9576a458af16ea8bad91c2c5bdbb
-
-<<<<<<< Updated upstream
-=======
             body {
                 padding-bottom: 50px;
             }
 
-<<<<<<< HEAD
             /* 박스 공통 클래스 */
             .bx {
                 width: 750px;
@@ -101,15 +70,16 @@ body {
                 font-style: normal;
                 font-size: 50px;
                 font-weight: bold;
-                line-height: 1.7;
-                font-family: "Gugi", cursive;
+                line-height: 1.5;
+                font-family: 'Nanum Brush Script',cursive;
+                color: darkslateblue;
             }
             #gnb a {
-                font-family: "Gugi", cursive;
                 color: black;
                 text-decoration: none;
                 font-size: 20px;
                 margin: 0 5px;
+                font-family: 'Do Hyeon',sans-serif;
             }
             /* hover */
             #gnb a + a:hover {
@@ -135,83 +105,6 @@ body {
             }
             .info address {
                 font-style: normal;
-                font-family: "Gugi", cursive;
+                font-family: 'Do Hyeon',sans-serif;
                 color: #555;
-                font-size: 15px;
             }
-=======
->>>>>>> Stashed changes
-a {
-    color:black;
-    text-decoration:none;
-}
-
-/* 박스 공통 클래스 */
-.bx {
-    width: 750px;
-    /* height:150px; */
-    border: 5px double #6bf96b;
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 10px;
-    box-sizing: border-box;
-}
-/* padding 1개(사방) 2개(위아래 좌우) 3개(위 양쪽 아래) 4개(각방향 위 오른 아래 왼) */
-/* margin도 동일*/
-/*
-   margin: 0 auto; // 블록요소가 가로 크기를 가질 때 중앙정렬하려면 양쪽 margin을 auto로 설정
-*/
-/*
- default width:auto; height:auto;
- width: 부모요소 끝까지
- height: 내용만큼 늘어난다.
-*/
-/* header */
-.top {
-    background-color: #c8f5c8;
-    text-align: center;
-}
-.top > h1 {
-    font-style: normal;
-    font-size: 50px;
-    font-weight: bold;
-    line-height: 1.5;
-    font-family: 'Nanum Brush Script',cursive;
-    color: darkslateblue;
-}
-#gnb a {
-    color: black;
-    text-decoration: none;
-    font-size: 20px;
-    margin: 0 5px;
-    font-family: 'Do Hyeon',sans-serif;
-}
-/* hover */
-#gnb a + a:hover {
-    /* 글자색 */
-    color: lightcoral;
-    /* 글자 데코레이션 : underline,overline,line-through,none */
-    text-decoration: overline;
-}
-/* img */
-#gnb img {
-    /* 인라인 요소간 세로 정렬: vertical-align */
-    vertical-align: -2px;
-}
-/* main */
-.cont > img {
-    width: 100%;
-    height: 100%;
-}
-/* footer */
-.info {
-    background-color: #e6ffcf;
-    text-align: center;
-}
-.info address {
-    font-style: normal;
-    font-family: 'Do Hyeon',sans-serif;
-    color: #555;
-    font-size: 15px;
-}
->>>>>>> 8047ea63394b9576a458af16ea8bad91c2c5bdbb
