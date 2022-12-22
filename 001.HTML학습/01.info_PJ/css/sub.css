@@ -290,3 +290,46 @@
 .secnews dd {
     margin-left: 100px;
 }
+
+/* table */
+
+.pnews table {
+    margin: 0 auto; /* 가로 중앙 이동 : 마영오 -> 블록 요소 혹은 테이블에 적용 */ 
+    border: 1px solid #000;
+
+    /* 테이블 기본 사이 간격 없애기
+       seperate (기본값) */
+    border-collapse: collapse;
+
+}
+
+/* tr이나 td에 child 선택자 사용 가능
+   why? 같은 종류의 요소가 올 수 있으므로! */
+/* 첫번째 td - 숫자 부분 */
+.pnews td:first-child {
+    width: 50px;
+    height: 70px;
+    /* 인라인 가로 중앙 */ text-align: center;
+    background-color: #ccc;
+}
+
+/* 두번째 td - 기사 제목 */
+.pnews td:nth-child(2) {
+    background-color: rgb(225, 225, 225);
+    padding: 0 20px; /* 위아래 양쪽 */
+ }
+ /* 세번째 td */
+
+ .pnews td:last-child {
+    background-color: #e4e4e4;
+    /* 세로 정렬 td에서만 세로 정렬이 적용
+       일반적으로는 vertical-align는 인라인 요소간
+       세로 방향 정렬 */
+    vertical-align: middle;
+    padding-right: 7px;
+ }
+
+ /* 사진 뉴스 이미지 */
+ .pnews img {
+    height: 70px;
+ }
