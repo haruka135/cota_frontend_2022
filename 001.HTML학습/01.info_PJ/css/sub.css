@@ -250,3 +250,43 @@
 .cont article ol li {
     padding-left: 10px;
 }
+
+/* 분야별 뉴스 */
+/* 각 분야명 dt 공통 디자인 */
+.secnews dt {
+    font-family:'Do Hyeon',sans-serif;
+    font-size: 20px;
+    display:inline-block; /* 글자 크기만큼 디자인 적용 */
+    border: 5px dashed darkseagreen;
+    padding: 10px;
+    border-radius: 50%;
+    margin-left:20px;
+    box-shadow: 0 0 5px 5px rgb(139, 0, 139,.5);
+}
+
+/* 앞에 dd가 있는 dt만 margin top 밀기 */
+.secnews dd + dt {
+    margin-top: 15px;
+}
+/*
+ [여러 종류가 섞여 있을 경우 형제 선택하기]
+ 요소:first-of-type -> 같은 요소 중 첫번째
+ 요소:nth-of-type(n) -> 같은 요소 중 n번째
+ 요소:last-of-type -> 같은 요소 중 마지막
+*/
+/* dt별 글자 색 다르게 하기 */
+.secnews dt:first-of-type {
+    color: blue;
+}
+.secnews dt:nth-of-type(2) {
+    color: green;
+}
+.secnews dt:last-of-type {
+    color: red;
+}
+
+
+/* dd 공통 */
+.secnews dd {
+    margin-left: 100px;
+}
