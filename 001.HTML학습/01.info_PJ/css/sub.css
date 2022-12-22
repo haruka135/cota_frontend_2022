@@ -303,6 +303,11 @@
 
 }
 
+.cont .pnews table a {
+    font-size: 14px;
+    line-height: 1.2;
+}
+
 /* tr이나 td에 child 선택자 사용 가능
    why? 같은 종류의 요소가 올 수 있으므로! */
 /* 첫번째 td - 숫자 부분 */
