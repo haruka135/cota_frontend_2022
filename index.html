@@ -3,13 +3,45 @@
     <head>
         <meta charset="UTF-8" />
         <title>아카이브 페이지</title>
+        <style>
+            html,body {
+                height:100%;
+                margin:0;
+                padding:0;
+            }
+            body {
+                background-image:url(./imgs/worksbg.jpg);
+                /* 배경 반복 x */
+                background-repeat: no-repeat;
+                /* 배경 크기: 채우기 */
+                background-size: cover;
+                padding-top: 50px;
+            }
+            .mybox {
+                width:1200px;
+                height:800px;
+                background-color:rgba(255, 255, 255, 0.5);
+                border-radius:20px;
+                margin: 0 auto;
+            }
+            .tit {
+                text-align:center;
+                margin: 0;
+                padding: 20px;
+            }
+        </style>
     </head>
-    <body style="text-align: center">
-        <h1>나의 아카이브 페이지</h1>
-        <h2>
-            <a href="./001.HTML학습/01.info_PJ/index.html" target="_blank"
-                >1.Info PJ
-            </a>
-        </h2>
+    <body>
+        <div class="mybox">
+            <h1 class="tit">
+                <img src="./imgs/mylogo_14.png" alt="logo">
+                <br>
+                나의 아카이브 페이지</h1>
+            <h2>
+                <a href="./001.HTML학습/01.info_PJ/index.html" target="_blank"
+                    >1.Info PJ
+                </a>
+            </h2>
+        </div>
     </body>
 </html>
