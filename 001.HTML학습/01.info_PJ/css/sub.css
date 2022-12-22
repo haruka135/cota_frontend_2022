@@ -186,3 +186,67 @@
         2. padding-box : padding까지
         3. content-box : content 영역까지(bd,pd빠짐) */
 }
+
+/* 작품명 */
+.work figcaption {
+    font-family: 'Nanum Brush Script';
+    font-size: 25px;
+}
+
+.work figcaption cite {
+    font-style:normal;
+}
+
+/* 작품 이미지 */
+
+.work img {
+    border: 10px ridge goldenrod;            
+}
+
+/* 파트별 a 링크 요소 공통 디자인 */
+
+.cont article a {
+    font-size: 17px;
+    line-height:2.5;
+    letter-spacing: -1px;
+}
+
+/* hover */
+.cont article a:hover {
+    color: greenyellow;
+    text-shadow: 1px 1px 1px #333;
+}
+
+/* 공통 ul */
+.cont article ul {
+    list-style-type:square;
+}
+
+/* 공통 ol */
+
+.cont article ol {
+    list-style-type:upper-roman;
+}
+
+/* 주요 뉴스 li별 글자색 변경 */
+.cont article ul li:first-child a {
+    color:aqua;
+}
+.cont article ul li:nth-child(2) a {
+    color:blue;
+}
+.cont article ul li:last-child a {
+    color:green;
+}
+
+/* CSS 우선순위 */
+/*  type < class < id < inline style < !important
+    더 쎈 선택자이어도 부모요소를 업고 있는 것이 더 쎄다
+*/
+
+/* 불릿과 글자 사이 간격 주기 */
+
+.cont article ul li,
+.cont article ol li {
+    padding-left: 10px;
+}
