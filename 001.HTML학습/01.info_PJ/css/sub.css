@@ -352,3 +352,12 @@
  .pnews tr + tr td {
     border-top:2px solid #ccc;
  }
+
+ /* 말 줄임 표시 */
+ ul a, ol a, dl a {
+    display:block; /* display 변경 */
+    width:315px;
+    white-space :nowrap; /* 줄 바꿈 방지 */
+    overflow:hidden; /* 넘치는 자식 요소 숨기기 */
+    text-overflow: ellipsis; /* 넘치는 텍스트 말줄임 설정 */
+ }

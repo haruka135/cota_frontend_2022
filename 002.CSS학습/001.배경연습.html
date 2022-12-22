@@ -5,7 +5,58 @@
     <meta charset="UTF-8">
     <title>001.배경연습</title>
     <style>
-        
+        html,body {
+            margin: 0;
+            padding: 0;
+            height: 100%; /* 기본 높이값을 안 주면 height : auto이므로 내용 만큼 늘어남
+            보이는 화면을 기준하여 높이값 세팅
+            최상위 html 요소가 보이는 화면(window)을 기준하여 높이를 채우고
+            그것을 기준하여 body가 100%로 높이를 채움 */
+        }
+        h1 {
+            margin: 0;
+            /* 
+            블록 요소 안에 첫번째 블록 자식요소의 margin top,bottom은 부모 요소 바깥으로 나가서 표현
+            자식의 자식인데도 margin top이 바깥으로 나가서 body가 위로부터 밀려나 있어서 스크롤바가 생김
+            따라서 내부 여백은 일반적으로
+            부모요소의 패딩으로 준다 */
+            padding: 50px;
+            text-align:center;
+        }
+
+        /* body 요소 안에 배경 넣기 */
+        body {
+            /* html에 배경을 넣지 말자 */ 
+            background-color: pink;
+            /* 배경 이미지는 기본적으로 반복 */
+            background-image: url(./imgs/bg_logo_a_01.png);
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+            /* 배경고정 : 보이는 화면에 고정*/
+            background-position: center; 
+            /* 세로는 기본값이 center */
+            background-size: 200px auto;
+            /* 특이한 크기 셋팅 : cover */
+            /* background-size: cover; */
+            /* cover 적용을 위한 한번에 셋팅 */
+            /* background: 색 이미지 반복 고정여부 위치/크기 */
+            /* background: pink url(./imgs/bg_mainvisual.jpg) no-repeat fixed center/cover;
+ */
+        }
+
+        .wrap {
+            height: 100%;
+            /* 다중 이미지 셋팅 
+               중간에 ,로 구분하여 여러 이미지로 셋팅함 */
+            background: 
+            url(./imgs/dc1.png) no-repeat center/400px,
+            url(./imgs/dc2.png) no-repeat right top/auto 150px,
+            url(./imgs/dc3.png) no-repeat left top/300px auto,
+            url(./imgs/dc4.png) no-repeat right center/250px,
+            url(./imgs/bg_mainvisual.jpg) no-repeat 0/50%;
+            /* 배경 위치는 먼저 쓴게 위에 온다
+               배경 위치 값 0을 쓰면 left center가 된다. */
+        }
     </style>
 </head>
 
