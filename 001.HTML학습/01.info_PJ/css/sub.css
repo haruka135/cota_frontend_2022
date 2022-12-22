@@ -295,7 +295,7 @@
 
 .pnews table {
     margin: 0 auto; /* 가로 중앙 이동 : 마영오 -> 블록 요소 혹은 테이블에 적용 */ 
-    border: 1px solid #000;
+    border: 1px solid #ccc;
 
     /* 테이블 기본 사이 간격 없애기
        seperate (기본값) */
@@ -326,10 +326,15 @@
        일반적으로는 vertical-align는 인라인 요소간
        세로 방향 정렬 */
     vertical-align: middle;
-    padding-right: 7px;
+    padding-right: 7px; /* 오른쪽 패딩 */
  }
 
  /* 사진 뉴스 이미지 */
  .pnews img {
     height: 70px;
+ }
+
+ /* 앞에 tr이 있는 tr만 하위 td에 디자인 */
+ .pnews tr + tr td {
+    border-top:2px solid #ccc;
  }
