@@ -117,6 +117,8 @@
             width: 800px;
             margin: 0 auto;
             text-align: right;
+            padding:20px;
+            box-sizing: border-box;                                 
         }
 
         /* ul,ol reset */
@@ -130,9 +132,9 @@
         /* 종속 선택자를 쓰는 경우 */
         /* 1. 개발자가 요소를 밝히고 싶을 때 */
         /* 2. 같은 클래스를 다르게 셋팅할때 */
-        ul.part1 {
+        ul.part1,div.part2 {
             width: 800px;
-            margin: 0 auto;
+            margin: 30px auto;
             border: 2px solid #ccc;
             border-radius: 20px;
             padding: 20px;
@@ -144,7 +146,8 @@
             font: 40px "궁서";
             color: red;
             /* <font 한번에 셋팅> 
-              font : 스타일 두께 크기/줄간격 글자체*/
+              font : 스타일 두께 크기/줄간격 글자체
+              font 한번에 쓰기 할 때 글씨체는 필수 */
         }
         .part1 li:first-child:hover {
             font-size: 50px;
@@ -194,6 +197,23 @@
         /* :last-child가 적용되지 않은 이유
            -> 위에서 적용한 틸드(~) 선택자가 한단계 더 선택했으므로 우선순위가 높다
            -> 우선순위 변경을 위해서는 상위 요소를 하나 더 써주면 된다. */
+
+        .part2 div:nth-of-type(2) {
+            font: 30px '궁서';
+            color: blueviolet;
+        }
+
+        .part2 i:first-of-type {
+            /* font 한번에 쓰기 할 때 글씨체는 필수 */
+            font-size: 30px;
+            font-weight: bold;
+            color: palevioletred;
+        }
+
+        .part2 div:nth-of-type(3) ~ div {
+            font-family: '궁서';
+            color: red;
+        }
 
         /* 
         [ CSS 선택자 우선순위 ]
