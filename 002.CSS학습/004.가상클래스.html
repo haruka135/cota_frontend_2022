@@ -205,7 +205,7 @@
 
         .part2 i:first-of-type {
             /* font 한번에 쓰기 할 때 글씨체는 필수 */
-            font-size: 30px;
+            font-size: 20px;
             font-weight: bold;
             color: palevioletred;
         }
@@ -213,6 +213,16 @@
         .part2 div:nth-of-type(3) ~ div {
             font-family: '궁서';
             color: red;
+        }
+
+        .part2 div:nth-of-type(3) ~ i {
+            font-family: '맑은 고딕';
+            color: red;
+        }
+
+        .part2 div:nth-of-type(3) ~ * {
+            font-family: '맑은 고딕';
+            color: violet;
         }
 
         /* 
