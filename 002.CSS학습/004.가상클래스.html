@@ -71,7 +71,129 @@
 
     */
 
+        /* 타이틀 중앙 정렬 */
+        h1,h2 {
+            text-align:center;
+        }
+        /* a:link 링크 최초 상태  */
+       /*  h2 a:link {
+            color:red;
+            text-decoration: none;
+        } */
+        /* a:visited 링크 방문 후 상태 */
+       /*  h2 a:visited {
+            color: lime;
+            text-decoration:none;
+        } */
+        /* a:active 클릭 왼쪽 버튼을 누른 상태 */
+       /*  h2 a:active {
+            color: pink;
+            text-shadow: 2px 2px 2px #000;
+        } */
 
+        /* 마우스 over 시 */
+        h2 a:hover {
+            color:darkgreen;
+            text-decoration:overline;
+            /* 글자데코스타일 */ text-decoration-style: wavy;
+        }
+
+        /* 요즘은 a 요소에 바로 셋팅하고 hover 정도만 변경함 */
+        h2 a {
+            color:darkorange;
+            text-decoration: none;
+        }
+
+        /* focus 요소를 클릭 탭하여 초점이 올 때 */
+        h2 a:focus {
+            /* 외곽선: 두께 종류 색상
+              -> border와 차이점은 주변에 영향을 주지 않는다
+              -> box 기본 구성 속성이 아니다. 
+              -> ex) 입력창 포커스 갈때 아웃라인*/ 
+              outline: 10px dotted orangered;
+        }
+
+        h3 {
+            width: 800px;
+            margin: 0 auto;
+            text-align: right;
+        }
+
+        /* ul,ol reset */
+        ul,ol {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+
+        /* 종속 선택자를 쓰는 경우 */
+        /* 1. 개발자가 요소를 밝히고 싶을 때 */
+        /* 2. 같은 클래스를 다르게 셋팅할때 */
+        ul.part1 {
+            width: 800px;
+            margin: 0 auto;
+            border: 2px solid #ccc;
+            border-radius: 20px;
+            padding: 20px;
+            box-sizing:border-box;
+            text-align: center;
+        }
+
+        .part1 li:first-child {
+            font: 40px "궁서";
+            color: red;
+            /* <font 한번에 셋팅> 
+              font : 스타일 두께 크기/줄간격 글자체*/
+        }
+        .part1 li:first-child:hover {
+            font-size: 50px;
+            color: blueviolet;
+        }
+        .part1 li:nth-child(2) {
+            font: bold 30px 'Gulim';
+            color: lightcoral;
+        }
+        .part1 li:nth-child(2):hover {
+            color:skyblue;
+        }
+        /* 한글 처음에 안 보이게 */
+        .part1 li:nth-child(4) b {
+            display:none;
+        }
+        .part1 li:nth-child(4):hover b {
+            display:inline;
+        }
+        .part1 li:nth-child(4):hover span {
+            display:none;
+        }
+        .part1 li:nth-child(4):hover {
+            background-color:yellow;
+        }
+
+        /* 4번 li 이후 모든 li를 전부 셋팅하기 */
+        /* 
+         틸드(~)는 다중 형제 선택 요소
+         선택요소~요소명 */
+
+        .part1 li:nth-child(4)~li {
+            font:25px '궁서';
+            color: orangered;
+        }
+        .part1 li:nth-child(4)~li:hover {
+            font-size:28px;
+            color:blue;
+        }
+
+        /* 마지막 li 변경하기 */
+        body .part1 li:last-child {
+            font: 40px '맑은 고딕';
+            color: coral;
+        }
+
+        /* :last-child가 적용되지 않은 이유
+           -> 위에서 적용한 틸드(~) 선택자가 한단계 더 선택했으므로 우선순위가 높다
+           -> 우선순위 변경을 위해서는 상위 요소를 하나 더 써주면 된다. */
 
         /* 
         [ CSS 선택자 우선순위 ]

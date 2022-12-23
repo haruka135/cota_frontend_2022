@@ -27,15 +27,15 @@
 
         }
         /* 종류가 섞여있는 div 순서대로 선택하기 nth-of-type(n) */
-        /* 1. 가로 채움 : auto는 생략 가능 -> 비율 유지 */
+        /* 1. 가로 채움 : auto는 생략 가능 -> 비율 유지(세로 부분이 잘릴 수 있음) */
         .wrap > div:nth-of-type(1) {
             background-size: 100% auto;
         }
-        /* 2. 세로 채움 -> 비율 유지 */
+        /* 2. 세로 채움 -> 비율 유지(가로 부분이 잘릴 수 있음) */
         .wrap > div:nth-of-type(2) {
             background-size: auto 100%;
         }
-        /* 3. 가로 세로 모두 채움 : 이미지가 변형됨 */
+        /* 3. 가로 세로 모두 채움 : 이미지가 모두 보이지만이미지가 변형됨 */
         .wrap > div:nth-of-type(3) {
             background-size: 100% 100%;
         }
