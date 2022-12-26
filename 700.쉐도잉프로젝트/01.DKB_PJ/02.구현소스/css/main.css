@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+/* 공통 외부 css merge */
+@import url(reset.css);
+@import url(core.css);
+@import url(common.css);
+
+/* 공사중 표시 */
+
+body * {
+    outline: 1px dotted red;
+}
+
+/* 컨텐츠파트 최상위 부모 */
+
+body {
+    /* 한번에 배경 주기 + 여러개 주기 */
+    /* background : 색 이 반 고 윙/크 */
+    /* 콤마로 구분하여 여러 배경이미지를 넣을 수 있고, 먼저 쓴 이미지가 위에 온다 */
+    background: url(../images/bg_logo_a_01.png) no-repeat fixed 20% 10%/10% auto,
+                url(../images/bg_mainvisual.jpg) no-repeat fixed center/cover;
+    /* 외부 css에서 이미지 경로를 잡을 때 주의사항
+       -> css 파일 위치에서 이미지를 찾아가야 한다. */
+    /* fixed인 배경이미지는 body의 높이값과 상관없이 보이는 화면을 기준하여 그 크기를 잡는다 */
+}
+
+/* MAIN */
+
+.cont {
+    overflow:hidden;
+}
+
+.cbx {
+    width: 90%;
+    margin: 0 auto;
+    /* 상단 margin * -> 부모박스에 overflow:hidden; 설정/ margin-top: 470px; */
+
+}
+
+/* 자식요소의 float 해제 */
+
+.cbx::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.cat {
+    width: 25%;
+    float:left;
+}
+
+.cat img {
+    width:100%;
+}
