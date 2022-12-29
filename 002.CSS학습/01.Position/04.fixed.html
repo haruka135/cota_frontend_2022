@@ -49,6 +49,8 @@
         }
 
 
+
+
         .bx{
             width: 100px;
             height: 100px;
@@ -206,6 +208,38 @@
         .absimg:hover img:last-child {
             opacity: 1;
         }
+
+        /* 최하위 요소일지라도 fixed가 되면 보이는 화면으로 기준하여 변경 됨 */
+
+        .f3 {
+            position: fixed;
+            top: 25%;
+            right: -140px;
+            z-index: 99999;
+            transition: .3s;
+        }
+
+        .f3:hover {
+            right: 0;
+        }
+
+        .f3 span {
+            position: absolute;
+            background-color: lightblue;
+            width: 50px;
+            height: 100%;
+            /* 글자세로모드 */ writing-mode: vertical-lr;
+            padding-left: 20px;
+            /* border-radius: 왼위 오른위 오른아래 왼아래 */
+            border-radius: 20px 0 0 20px;
+            right: 100%;
+            top: 0;
+        }
+
+        .f3 img {
+            height: 200px;
+            vertical-align: middle; /* 하단 간극 없애기 */
+        }
     </style>
 </head>
 <body>
@@ -244,6 +278,11 @@
                     <span class="spabs">
                         나는 span앱솔루트다!
                     </span>
+                    <!-- 최하위 요소일지라도 fixed가 되면 보이는 화면으로 기준하여 변경 됨 -->
+                    <div class="f3">
+                        <img src="./images/ab0.jpg" alt="포스터">
+                        <span>포스터보기</span>
+                    </div>
                 </div>
             </div>
         </div>
