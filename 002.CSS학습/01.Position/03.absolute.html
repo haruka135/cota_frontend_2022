@@ -83,6 +83,9 @@
                  8. 앱솔루트의 부모자격 박스가 overflow: hidden으로 셋팅 되어 넘치는 자식요소를 숨길 때
                  부모 자격이 아닌 박스가 overflow: hidden이어도 숨겨지지 않고 부모자격박스만 숨길 수 있다.
 
+                 ex)
+
+
             *******************************************/
 
             background: url(./images/ab1.jpg) no-repeat center/cover;
@@ -146,6 +149,8 @@
         .s8 {
             position: relative;
             background-color: lightsalmon;
+            overflow:hidden;
+            /* absolute에 관해 부모자격이 있는 경우에만 overflow: hidden이 적용 */
         }
 
         /* 부모 찾는 앱솔루트 */
@@ -159,7 +164,7 @@
         }
 
         .a4 {
-            top:0;
+            top:-18px; /* 부모자격 있는 overflow: hidden 체크 */
             left:0;
             /* 나의 부모는 누구인가 */
             width: 20%;
