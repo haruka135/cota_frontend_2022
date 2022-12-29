@@ -1,6 +1,5 @@
 @charset "utf-8";
-
-/* web font common class setting css - core */
+/* 웹폰트, 공통클래스 셋팅 CSS - core.css */
 
 /* 웹폰트 CDN */
 @import url('https://fonts.googleapis.com/css2?family=Gugi&family=Nanum+Gothic&family=Single+Day&family=ZCOOL+KuaiLe&display=swap');
@@ -15,13 +14,16 @@
     font-family: 'Nanum Gothic', sans-serif;
 */
 
-/* 웹 폰트 적용하기 */
-
-body {
+/* 전체 웹폰트 적용하기 */
+body{
     font-family: 'Nanum Gothic', sans-serif;
 }
 
-.ibx {
-    max-width:1200px; /* 1200px보다 작아지면 auto로 가로크기가 전환되어 가로 스크롤이 안 생기게 됨 */
-    margin:0 auto;
+/* 중앙 속박스 클래스 */
+.ibx{
+    max-width: 1200px;
+    /* 1200px을 유지하다가 이것 보다 작아지면
+    auto로 가로크기가 전환되어 가로스크롤이
+    안생기게 됨! */
+    margin: 0 auto;
 }
