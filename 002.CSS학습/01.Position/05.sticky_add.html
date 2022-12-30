@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>05. sticky 포지션 응용</title>
+        <style>
+            html,body {
+                margin:0;
+                padding:0;
+            }
+            
+            body {
+                height: 3000px;
+            }
+
+            .box {
+                position: sticky;
+                top:0;
+                text-align: center;
+                margin-top: 300px;
+            }
+            .box:nth-child(2) {
+                top: 104px;
+            }
+            .box:nth-child(3) {
+                top: calc(104*2px);
+            }
+            .box:nth-child(4) {
+                top: calc(104*3px);
+            }
+            .box:nth-child(5) {
+                top: calc(104*4px);
+            }
+            .box:nth-child(6) {
+                top: calc(104*5px);
+            }
+            .box:nth-child(7) {
+                top: calc(104*6px);
+            }
+
+            /* [ CSS 계산 내장 함수 : calc() ]
+
+            1. 사칙 연산을 수행함
+            2. 덧셈과 뺄셈은 기호 앞 뒤를 반드시 띄어쓴다
+            3. 숫자의 단위가 꼭 붙어야 한다.
+            4. 곱셈과 나눗셈은 기호를 붙여써도 된다.
+            5. 곱하거나 나누는 수는 단위가 없다.
+            
+            */
+
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <img src="./sticky_imgs/picaso_01.jpg" alt="picaso" />
+        </div>
+        <div class="box">
+            <img src="./sticky_imgs/picaso_02.jpg" alt="picaso" />
+        </div>
+        <div class="box">
+            <img src="./sticky_imgs/picaso_03.jpg" alt="picaso" />
+        </div>
+        <div class="box">
+            <img src="./sticky_imgs/picaso_04.jpg" alt="picaso" />
+        </div>
+        <div class="box">
+            <img src="./sticky_imgs/picaso_05.jpg" alt="picaso" />
+        </div>
+        <div class="box">
+            <img src="./sticky_imgs/picaso_06.jpg" alt="picaso" />
+        </div>
+        <div class="box">
+            <img src="./sticky_imgs/picaso_07.jpg" alt="picaso" />
+        </div>
+    </body>
+</html>
