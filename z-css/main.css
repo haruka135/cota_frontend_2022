@@ -1,4 +1,4 @@
-@charset "utf-8"
+@charset "utf-8";
 
 /* 아카이브 css */
 
@@ -21,7 +21,7 @@ body{
     height: 100%;
 
     /* 배경이미지넣기 bgi */
-    background-image: url(./imgs/worksbg.jpg);
+    background-image: url(../imgs/worksbg.jpg);
     /* 배경반복여부 bgr 반복안함(no-repeat) */
     background-repeat: no-repeat;
     /* 배경고정: bga - 고정의 기준은 보이는 화면! */
@@ -44,7 +44,7 @@ body{
 }
 /* 두번째 페이지 박스 */
 .mbx2 {
-    background-image: url('./imgs/bg_mainvisual.jpg');
+    background-image: url('../imgs/bg_mainvisual.jpg');
 }
 
 
