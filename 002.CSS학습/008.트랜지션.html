@@ -118,7 +118,7 @@
 
         /* #tr3에 트랜지션 설정 */
         #tr3 span{
-            left: -10%;
+            left: -2%;
             width: 50px;
             height: 50px;
             background-color: palevioletred;
@@ -143,9 +143,25 @@
             속시이지 순으로 셋팅하고 콤마로 구분한다!
         */
         #tr4 span{
-            
+            left: 10%;
+            width: 10px;
+            height: 10px;
+            background-color: royalblue;
+            transition: 
+            left 5s ease-in-out .5s,
+            width 3s ease-out 1s,
+            height 1s ease-in 2s,
+            background-color 3s linear 3s;
+            /* 트랜지션 원본 (양방향 / 돌아올 때) */
         }
         
+        /* 체크박스가 체크되면 그 다음 형제 요소 변경하여 클릭 시 변경된 것처럼 작동 */
+        #chkbx:checked + span {
+            left:70%;
+            width: 500px;
+            height: 300px;
+            background-color: olivedrab;
+        }
         
     </style>
 </head>
@@ -169,9 +185,37 @@
     </div>
 
     <h2>4.원본에 트랜지션을 각 속성별로 다르게 준다</h2>
-    <div id="tr4">        
+    <div id="tr4">   
+        <label for="chkbx">체크하면 작동</label>   
+        <input type="checkbox" name="chkbx" id="chkbx">  
         <span></span>
+        <!-- 체크 박스 다음에 변경할 요소가 와야함 : 그래야 형제 선택자로 변경을 할 수 있음 -->
     </div>
+
+    <!-- 
+        [ 체크 박스를 응용한 클릭이벤트 작동 CSS ]
+
+        label 요소: input 입력요소의 name 태그이며 서로 for 속성으로 맵핑 ( for = input의 id값)
+        input 요소 : 여러 종류의 입력 양식
+                     checkbox -> 체크박스형식
+                     text -> 글자 입력 형식
+                     password -> 비밀번호 입력 형식
+                     radio -> 라디오버튼형식
+
+                -> name 속성은 무엇? 백엔드에서 값을 읽어갈때 기본적으로 name 속성 사용 (필수속성)
+                -> id 속성은 label의 for와 맵핑되므로 필수 셋팅!
+
+        [클릭이벤트 처럼 효과 내기]
+        :checked 가상 클래스 사용
+        + 형제요소 선택자 사용!
+
+        ->> 체크박스:checked + 변경할 요소 { 변경내용 }
+
+        -> 라벨은 서로 붙여서 코딩하지 않아도 되므로 다른 곳에 원하는 디자인 요소를 구현 후 이것을 클릭하면 체크박스가 체크되므로 기능이 작동한다.
+
+        -> 체크박스는 display: none; 처리하여 숨겨놓아도 동일한 작동을 함
+
+     -->
 </body>
 
 </html>
