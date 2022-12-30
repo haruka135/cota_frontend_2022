@@ -21,6 +21,12 @@
 
             -> 만약 top 값을 설정하지 않으면 relative와 유사하게 그대로 위치
             
+            3. 주의사항:
+            -> 1) 전체 스크롤 시에는 적용 요소가 body 바로 아래 있어야 한다.
+               2) 부모요소중 overflow:auto/hidden/scroll이 적용된 경우 안됨
+                  (이유: 스크롤이 이용한 방법이기 때문에..visible인 경우만 됨)
+                3) 특정 박스 하위요소인 경우 sticky는 박스 내부에서만 보이는 화면 기준으로 작동하기 때문에
+                   반드시 height 값이 셋팅 되어야 함
             */
             width: 600px !important;
             background-color: lightpink;
@@ -245,11 +251,24 @@
             vertical-align: middle; /* 하단 간극 없애기 */
         }
 
+        /* sticky를 싸고 있는 .s7 박스에 높이값 주기
+          -> 그래야 내부 박스의 sticky가 적용 */
+
+        .s7 {
+           /*  overflow:visible; -> 기본값 (가능)
+            overflow:visible; -> 불가능
+            overflow:visible; -> 불가능
+            overflow:visible; -> 불가능 
+            -> 조상 중에 있어도 적용이 안된다 */
+            height: 600px;
+        }
+
         .stkbtn {
             position: sticky;
             font-size: 50px;
             top: 60%; /* 보이는 화면 기준 위치 */
-            z-index: 999999999999;
+            /* 가장 위! */
+            z-index: 9999;
         }
     </style>
 </head>
@@ -301,6 +320,9 @@
                     </div>
 
                 </div>
+
+                 <!-- 스티키 버튼 -->
+                 <button class="stkbtn">나는 스티키!!</button>
             </div>
         </div>
     </div>
