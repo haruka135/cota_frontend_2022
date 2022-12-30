@@ -8,9 +8,9 @@
 @import url(common.css);
 
 /* 공사중 표시 */
-body * {
+/* body * {
     outline: 1px dotted red;
-}
+} */
 
 /* 컨텐츠파트 최상위부모 */
 body{
@@ -113,7 +113,9 @@ body{
 .cd {
     /* 배경넣기 */ background: url(../images/eachBG.jpg) no-repeat bottom/cover;
     /* 높이 설정 */ height: 0;
+    /* 둥근 모서리 */ border-radius: 20px 5px 5px 20px;
     /* 넘치는 자식 요소 y쪽 스크롤 */ overflow-y:scroll;
+    /* 위쪽 여백 */margin-top: 20px;
     /* 트랜지션 - 두 가지 변화 상태를 애니메이션 해주는 속성 
        transition: 속성 시간 easing 지연*/ 
     transition: height .4s ease;
@@ -135,6 +137,23 @@ body{
     letter-spacing : -1px;
 }
 
+/* 캐릭터 타이틀 앞 아이콘 가상요소 */
+
+.cd h3::before {
+    content:'';
+    display: inline-block;
+    width: 20px;
+    height: 30px;
+    background-color: red;
+    margin-right: 5px;
+    vertical-align:-3px;
+    background: url(../images/bg_logo_a_01.png) no-repeat -144px -181px;
+   /* 배경 이미지 위치값은 본 이미지를 그림판으로 열어서 
+   마우스 커서 위치에 따라 표시되는 x,y축 좌표값을 
+   -를 붙여서 가로,세로 순으로 입력해주면 정확한 위치가 된다 */
+}
+
+
 .cd p {
     font-family: 'Single Day','ZCOOL KuaiLe', cursive;
     font-size: 18px;
@@ -143,4 +162,29 @@ body{
     text-align: justify; /* 양쪽 정렬 */
 }
 
+/* 캐릭터 첫번째 문단 첫글자 가상요소로 디자인 변경하기 */
 
+.cd p:first-child::first-letter {
+    font-size: 50px;
+    color: orange;
+    /* 그림자로 글자 테두리 주기 (blur 없는 그림자 4개 사용) */
+    text-shadow: 1px 0 #000,
+                 -1px 0 #000,
+                 0 1px #000,
+                 0 -1px #000;
+    line-height: 0.8;
+}
+
+/* 각 캐릭터 박스별 첫글자 색 변경 */
+
+.cat:nth-child(2) .cd p:first-child::first-letter {
+    color: green;
+}
+
+.cat:nth-child(3) .cd p:first-child::first-letter {
+    color: red;
+}
+
+.cat:nth-child(4) .cd p:first-child::first-letter {
+    color: white;
+}
