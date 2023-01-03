@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            background: #000 url(./starbucks_img/reserve_bg.jpg) no-repeat top/100%;
+        }
+
+        #trans10 {
+                width: 200px;
+                height: 200px;
+                /* outline: 2px dashed lime; */
+                text-align: left; /* 가운데 정렬 풀기 */
+                margin: 0 auto;
+                margin-top: 100px;
+            }
+
+            #trans10 img {
+                position: absolute;
+                /* 젠틀 앱솔루트 */
+                /* 주의: 크기를 %로 주지 말것 -> 부모를 찾기 때문 */
+            }
+
+            #trans10 img:last-child {
+                transform: rotateY(0deg);
+                transition:.4s ease-in-out .4s;
+            }
+
+            #trans10:hover img:last-child {
+                /* 90도 회전하기 */
+                transform: rotateY(90deg);
+                /* 트랜지션 */
+                transition: all ease-in-out .4s;
+            }
+
+            #trans10 img:first-child {
+                /* 90도 회전하기 */
+                transform: rotateY(90deg);
+                transition: ease-in-out .4s;
+            }
+
+            #trans10:hover img:first-child {
+                transform: rotateY(0deg);
+                /* 트랜지션 */
+                transition: all .4s ease-in-out .4s;
+            }
+    </style>
+</head>
+<body>
+    <div id="trans10">
+        <img src="starbucks_img/reserve_medal01.png" alt="캐릭터" />
+        <img src="starbucks_img/reserve_medal02.png" alt="캐릭터" />
+    </div>
+</body>
+</html>
