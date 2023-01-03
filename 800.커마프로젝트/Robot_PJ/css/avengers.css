@@ -2,8 +2,7 @@
 /* 어벤저스 CSS - avengers.css */
 
 /* 웹폰트 */
-@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Single+Day&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Roboto+Condensed:wght@300&display=swap');
 /* 
     font-family: 'Monoton', cursive;
     font-family: 'Single Day', cursive;
@@ -26,7 +25,7 @@ a{
 }
 body{
     /* 배경이미지 채우기 */
-    background: url(../ab_img/space.jpg) no-repeat fixed center/cover;
+    background: rgba(0, 0, 0, 0.253) url(../ab_img/space.jpg) no-repeat fixed center/cover;
     /* 전체 body 스크롤바 숨기기 */
     /* overflow: hidden; */
 }
@@ -54,14 +53,16 @@ html,body{
     position: fixed;
     width: 100%;
     z-index: 9999; /* 가장 위! */
-    font-family: 'Monoton', cursive;
+    font-family: 'Roboto Condensed',sans-serif;
     color: #fff;
     font-size: 70px;
     /* 글자두께 보통 */
-    font-weight: normal;
+    font-weight: bold;
     text-align: center;
     /* 위아래 패딩 */
     padding: 50px 0;
+    text-shadow: 1px 1px #000;
+    
 }
 
 /* 1. 페이지 박스 공통 */
