@@ -85,6 +85,29 @@
             #wrap > ul > li {
                 /* 등분할 */
                 flex: 1;
+
+                /* 
+                
+                [ flex 속성 : 플렉스 자식요소에 주는 속성 ]
+                        -> flex : 한번에 아래 3가지 속성을 줌
+
+                        flex: 1 숫자하나만 쓰면 
+                        flex: 1 1 0 과 동일
+                        해석) 
+                        커질래? 응(1), 작아질래? 응(1), 가로크기 0 (설정없음)
+
+                        따로 설정시 아래와 같다!
+                        flex-grow: 1;
+                        flex-shrink: 1;
+                        flex-basis: 0;
+
+                        1) flex-grow: 1 | 0 -> 커질래? 1 응 | 0 아니
+                        2) flex-shrink: 1 | 0 -> 작아질래? 1 응 | 0 아니
+                        3) flex-basis: 설정값(px,%,em,rem,vw등)
+                        -> width 가로크기를 설정하는 속성
+                        -> 만약 0을 쓰면 속성값 없음!
+
+                */
             }
 
             /* 타이틀 공통 */
@@ -193,9 +216,11 @@
 
             .t4 {
                 top: 200px;
-                left: 150px;
+                left: 50px;
                 width: 150px;
                 height: 500px;
+                /* 트랜스폼 해제 */
+                transform: none;
                 /* 플렉스 박스 */
                 display: flex;
                 /* 플렉스진행방향 */
@@ -207,17 +232,50 @@
                     2) row-reverse : 우->좌
                     3) column : 위->아래
                     4) column-reverse : 아래->위
-                    
+
                 */
 
-
+                align-items: center; /* 수직 방향 정렬 중앙 */
             }
 
-            /* 네번째 li부터 끝으로 보내기 */
+            /* 수직 방향일 때 마지막 요소만 끝으로 보내기 (선택된 요소부터 끝으로 보내짐) */
 
-            .t4 li:nth-child(4) {
-                margin-left: auto; /* 선택요소의 떨어뜨리려는 방향으로 margin을 auto로 설정하면 flex에서 끝으로 이동시켜준다. */
+            .t4 li:last-child {
+                /* 수직 방향 마진 top,bottom */
+                margin-top : auto;
             }
+
+            /* 타이틀 박스 5 */
+
+            .t5 {
+                top: 50px;
+                left: 50px;
+                width: 150px;
+                transform: none;
+
+                display: flex;
+            }
+
+            .t5 li {
+                /* 부모 박스가 줄어들때 같이 자동으로 줄어들래?
+                기본값 : 1(응) 줄어듦
+                -> 강제로 크기 유지할 경우 0으로 변경 */
+                flex-shrink: 0;
+
+                /* 
+                
+                    [ flex 자식요소 속성을 셋팅하지 않으면? ]
+
+                    1. 기본값은 아래와 같다
+                    flex: initial
+                    flex : 0 1 auto
+                    -> 두번째 값이 flex-shrink : 1로 셋팅
+                    그래서 부모박스 크기가 작아지면 자식요소도 가로크기가 같이 작아진다.
+                    flex-shrink:0 이면 자기 세팅된 원래 크기를 유지하며 부모박스 바깥으로 나가게 됨!
+                
+                */
+            }
+
         </style>
     </head>
     <body>
@@ -261,6 +319,15 @@
 
             <!-- 타이틀박스4 -->
             <ol class="tit t4">
+                <li>L</li>
+                <li>O</li>
+                <li>T</li>
+                <li>T</li>
+                <li>E</li>
+            </ol>
+
+             <!-- 타이틀박스5 -->
+             <ol class="tit t5">
                 <li>L</li>
                 <li>O</li>
                 <li>T</li>
