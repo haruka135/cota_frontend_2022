@@ -174,7 +174,7 @@
                 line-height: 30px;
             }
 
-            /* 타이틀 박스 */
+            /* 타이틀 박스 3 */
             .t3 {
                 top: 350px;
                 /* 플렉스 박스 */
@@ -186,6 +186,36 @@
             /* 네번째 li부터 끝으로 보내기 */
 
             .t3 li:nth-child(4) {
+                margin-left: auto; /* 선택요소의 떨어뜨리려는 방향으로 margin을 auto로 설정하면 flex에서 끝으로 이동시켜준다. */
+            }
+
+            /* 타이틀 박스 4 */
+
+            .t4 {
+                top: 200px;
+                left: 150px;
+                width: 150px;
+                height: 500px;
+                /* 플렉스 박스 */
+                display: flex;
+                /* 플렉스진행방향 */
+                flex-direction: column;
+                /* 
+                flex-direction 속성 : 진행방향과 순서를 정함
+
+                    1) row : 좌->우(기본값)
+                    2) row-reverse : 우->좌
+                    3) column : 위->아래
+                    4) column-reverse : 아래->위
+                    
+                */
+
+
+            }
+
+            /* 네번째 li부터 끝으로 보내기 */
+
+            .t4 li:nth-child(4) {
                 margin-left: auto; /* 선택요소의 떨어뜨리려는 방향으로 margin을 auto로 설정하면 flex에서 끝으로 이동시켜준다. */
             }
         </style>
@@ -222,6 +252,15 @@
 
              <!-- 타이틀박스3 -->
              <ol class="tit t3">
+                <li>L</li>
+                <li>O</li>
+                <li>T</li>
+                <li>T</li>
+                <li>E</li>
+            </ol>
+
+            <!-- 타이틀박스4 -->
+            <ol class="tit t4">
                 <li>L</li>
                 <li>O</li>
                 <li>T</li>
