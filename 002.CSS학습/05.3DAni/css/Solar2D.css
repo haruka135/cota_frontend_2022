@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+html,body {
+    margin:0;
+    padding:0;
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    background: url(../images/space.jpg) no-repeat center/cover;
+    overflow: hidden;
+}
+
+.ir {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+/* 공사중 표시 */
+
+body * {
+    outline: 1px dashed lightblue;
+}
+
+/* 태양계 박스 */
+
+#solar {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* 박스 정중앙 이동 */
+
+    width: 250px;
+    height: 250px;
+}
+
+/* 태양박스 */
+
+#sun {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 250px;
+    height: 250px;
+}
+
+/* 태양 이미지 */
+
+#sun img {
+    width: 100%;
+    height: 100%;
+}
+
+:root {
+    --esz : 80px; /* 지구크기 */
+}
+
+/* 지구 */
+
+#earth {
+    position: absolute;
+    top: calc(50% - 40px);
+    left: calc(50% - 40px);
+    width: var(--esz);
+    height: var(--esz);
+    background: url(../images/earth.png) no-repeat 0/100% 100%;
+
+    animation: earth 5s linear infinite 
+}
+
+/* 지구회전 키프레임 */
+
+@keyframes earth {
+    from {
+        transform: rotate(0deg) translateX(-250px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(-250px) rotate(-360deg);
+    }
+}
