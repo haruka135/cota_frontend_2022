@@ -19,7 +19,7 @@ body{
     /* 콤마로 구분하여 여러 배경이미지를 넣을 수 있고
     먼저쓴 이미지가 위에 온다! */
     background: 
-    url(../images/bg_logo_a_01.png) no-repeat fixed 10% 20%/10%,
+    url(../images/bg_logo_a_01.png) no-repeat fixed 10% 28%/10%,
     url(../images/bg_mainvisual.jpg) no-repeat fixed center/cover;
     /* 외부CSS에서 이미지 경로를 잡을때 주의사항!
     -> CSS파일 위치에서 이미지를 찾아가야함! */
@@ -30,6 +30,8 @@ body{
 /**************** 메인영역 ****************/
 /* 메인영역 속박스 */
 .cont{
+    position: relative;
+    /* 부모자격 - .mvtxt */
     overflow: hidden;
     /* 자식요소 위,아래 마진 포함 */
 }
@@ -55,17 +57,19 @@ body{
 .cat{
     /* 블록박스 옆으로 흐르게 */
     float: left;
-    /* 4등분할 가로크기 -> 25% */
+    /* 4등분할 가로크기 
+    -> 25% - 1%(마진) = 24% */
     width: 24%;
-    margin: 0 .5%
+    /* 마진: 위아래 0 , 양쪽 0.5% */
+    margin: 0 .5%;
 }
 
-/* 캐릭터 이미지 박스 */
-
+/* 캐릭터 이미지박스 */
 .cat .ci {
+    /* 트랜지션 : 속시이지 trs */
     transition: margin-top .4s;
 }
-
+/* .cat에 오버시 .ci박스 마진탑 변경하기 */
 .cat:hover .ci {
     margin-top: -55%;
 }
@@ -108,92 +112,111 @@ body{
     display: none;
 }
 
-/* 캐릭터 설명 박스 */
+/* 캐릭터 설명박스 */
+.cd{
+    /* 전체 높이설정 */
+    height: 0px;
+    /* 넘치는 자식요소 y축 스크롤셋팅
+        overflow-y:scroll 또는
+        overflow:auto -> 자동으로 y스크롤
+    */    
+    overflow: auto;
 
-.cd {
-    /* 배경넣기 */ background: url(../images/eachBG.jpg) no-repeat bottom/cover;
-    /* 높이 설정 */ height: 0;
-    /* 둥근 모서리 */ border-radius: 20px 5px 5px 20px;
-    /* 넘치는 자식 요소 y쪽 스크롤 */ overflow-y:scroll;
-    /* 위쪽 여백 */margin-top: 20px;
-    /* 트랜지션 - 두 가지 변화 상태를 애니메이션 해주는 속성 
-       transition: 속성 시간 easing 지연*/ 
-    transition: height .4s ease;
+    /* 배경넣기 */
+    background: url(../images/eachBG.jpg) no-repeat bottom/cover;
+
+    /* 둥근모서리 : 왼쪽위 부터 시계방향 */
+    border-radius: 20px 5px 5px 20px;
+
+    /* 윗쪽여백 */
+    margin-top: 20px;
+
+    /* 트랜지션 
+    - 두가지변화상태를 애니메이션해주는 속성 
+    transition: 속성 시간 이징 지연 */
+    transition: height .4s;
 }
-
-/* .cat에 마우스 오버 시 .cd 높이 값 늘리기 */
-
-.cat:hover .cd {
+/* .cat에 마우스 오버시 .cd 높이값 늘리기 */
+.cat:hover .cd{
     height: 250px;
 }
 
-/* 캐릭터 설명 타이틀 */
-
-.cd h3 {
-    font-family: 'Gugi', cursive;
-    font-size: 24px;
-    font-weight: normal;
-    padding: 15px 10px 5px;
-    letter-spacing : -1px;
+/* 중간 미디어 쿼리에서 겹쳐질 때 위로 올라오도록 설정 추가 */
+.cat:hover {
+    z-index:1;
 }
 
-/* 캐릭터 타이틀 앞 아이콘 가상요소 */
-
-.cd h3::before {
-    content:'';
+/* 캐릭터 설명 타이틀 */
+.cd h3{
+    font-family: 'Gugi', cursive;
+    /* 글자크기 최대24px, 화면가로크기의 1.7% */
+    font-size: min(24px,1.7vw);
+    font-weight: normal;
+    /* 줄바꿈 방지 */
+    white-space: nowrap;
+    padding: 15px 10px 5px;
+    letter-spacing: -1px;
+}
+/* 캐릭터 타이틀 앞 아이콘 가상요소로 넣기 */
+.cd h3::before{
+    content: '';
     display: inline-block;
     width: 20px;
-    height: 30px;
-    background-color: red;
+    height: 35px;
+    /* 인라인요소간 세로정렬 */
+    vertical-align: -6px;
     margin-right: 5px;
-    vertical-align:-3px;
     background: url(../images/bg_logo_a_01.png) no-repeat -144px -181px;
-   /* 배경 이미지 위치값은 본 이미지를 그림판으로 열어서 
-   마우스 커서 위치에 따라 표시되는 x,y축 좌표값을 
-   -를 붙여서 가로,세로 순으로 입력해주면 정확한 위치가 된다 */
+    /* 배경이미지위치값은 본 이미지를 그림판으로 열어서
+    마우스 커서 위치에 따라 표시되는 x,y축 좌표값을
+    마이너스 기호를 붙여서 가로,세로순으로 써주면 정확한 위치가된다! */
 }
 
-
-.cd p {
+/* 캐릭터 설명문단 */
+.cd p{
     font-family: 'Single Day','ZCOOL KuaiLe', cursive;
-    font-size: 18px;
+    /* 글자크기 최대18px, 화면가로크기의 1.3% */
+    font-size: min(1.3vw,18px);
     line-height: 1.6;
-    padding: 10px;
-    text-align: justify; /* 양쪽 정렬 */
+    /* 패딩크기 최대15px, 화면가로크기의 1% */
+    padding: min(1vw,15px);
+    /* 양쪽정렬 justify - taj */
+    text-align: justify;
 }
 
-/* 캐릭터 첫번째 문단 첫글자 가상요소로 디자인 변경하기 */
+/* 캐릭터 첫번째 문단 첫글자 가상요소로 디자인 변경하기! */
+.cd p:first-child::first-letter{
+    /* 글자크기 최대50px, 화면가로크기의 3% */
+    font-size: min(3vw,50px);
+    color: cyan;
+    /* 그림자로 글자 테두리주기
+    블러없는 그림자 4개사용 */
+    text-shadow: 
+        1px 0 #000,
+        -1px 0 #000,
+        0 1px #000,
+        0 -1px #000;
+    /* 글자크기로 인해 줄간격조정 */
+    line-height: 1;
+}
+/* 각 캐릭터 박스별 첫글자 색 변경 - 3개변경 */
 
-.cd p:first-child::first-letter {
-    font-size: 50px;
-    color: orange;
-    /* 그림자로 글자 테두리 주기 (blur 없는 그림자 4개 사용) */
-    text-shadow: 1px 0 #000,
-                 -1px 0 #000,
-                 0 1px #000,
-                 0 -1px #000;
-    line-height: 0.8;
+.cat:nth-child(2) .cd p:first-child::first-letter{
+    color: lightgreen;
+}
+.cat:nth-child(3) .cd p:first-child::first-letter{
+    color: lightseagreen;
+}
+.cat:nth-child(4) .cd p:first-child::first-letter{
+    color: lightpink;
 }
 
-/* 각 캐릭터 박스별 첫글자 색 변경 */
-
-.cat:nth-child(2) .cd p:first-child::first-letter {
-    color: green;
-}
-
-.cat:nth-child(3) .cd p:first-child::first-letter {
-    color: red;
-}
-
-.cat:nth-child(4) .cd p:first-child::first-letter {
-    color: white;
-}
 
 /* 등장글자 이미지 */
-
-#mvtxt {
+#mvtxt{
     position: absolute;
-    top: 25vh;
+    top: 15vh;
     right: 5vw;
-    width: min(20vw,320px);
+    width: min(20vw,327px);
 }
+
