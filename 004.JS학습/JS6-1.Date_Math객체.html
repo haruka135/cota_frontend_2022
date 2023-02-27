@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS6-1.Date객체와 Math객체</title>
+    <style>
+        .time {
+            width: 500px;
+            padding: 10px;
+            text-align: center;
+            font-size: 42px;
+            color: aqua;
+            background-color: #000;
+            margin: 0 auto;
+        }
+
+        /* 이미지박스 */
+        .imbx {
+            width: 500px;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+
+        .imbx img {
+            width: 100%;
+        }
+    </style>
+    <script>
+        window.addEventListener("DOMContentLoaded",()=>{
+
+            console.log("로딩확인");
+
+            // 1. 변경대상 :.tt (각 시간 출력 요소)
+            const tt = document.querySelectorAll(".tt");
+            console.log(tt);
+
+            /*************************************************
+                함수명 : showTime
+                기능 : 오늘 날짜, 현재 시간 찍기
+            *************************************************/
+
+            function showTime() {
+
+                // 1. 호출확인
+                console.log("왕빛나!");
+
+                // 날짜 객체로 시간 찍기
+                // Date 객체 : 날짜, 시간을 표현하는 객체
+                // 객체 새성: new 키워드로 객체 생성
+                // 실제 객체가 메모리에 생성된다 -> 인스턴스화
+
+                let today = new Date();
+                // Date 객체 today 변수 주소에 생성
+
+                // 2. 출력하기
+                // (1) 년도 출력
+                tt[0].innerText = today.getFullYear();
+
+                // (2) 월 출력
+                tt[1].innerText = today.getMonth() + 1;
+                // getMonth : 0부터 시작한다. (각 나라별로 부르는 월의 이름이 다 다르기 때문)
+                // 이 이름을 배열에 놓고 출력
+
+                // (3) 일 출력
+                tt[2].innerText = today.getDate();
+
+                // (4) 요일 출력
+                let week = ["일","월","화","수","목","금","토"];
+                tt[3].innerText = week[today.getDay()];
+                // getDay는 요일의 순번
+
+                /****************************************************************************** 
+            시,분,초 두자릿수 출력함수 => 넘어온 숫자가 10보다 작으면 앞에 "0"을 붙이고 아니면 그대로!
+                ******************************************************************************/
+
+                const addZero = num => num < 10? "0" + num : num;
+
+                // (5) 오전 / 오후
+                let noon = "오전";
+                // 시간에서 오후일 경우 덮어쓰고 아래에서 출력
+
+                // (6) 시간 출력
+                let hour = today.getHours();
+                // 시간은 24시간제
+
+                // 시간 테스트 조작
+                // hour = 17;
+
+                // 12보다 크면 12를 빼고 "오후"로 noon 값 변경
+                if (hour > 12) {
+                    hour -=12;
+                    noon = "오후";
+                }
+
+
+                // 오전 오후 출력
+                tt[4].innerText = noon;
+
+                // 시간 출력
+                tt[5].innerText = addZero(hour);
+
+
+                // (7) 분 출력
+                let minutes = today.getMinutes();
+
+                // 분 테스트 조작
+                minutes = 3;
+
+                tt[6].innerText = addZero(minutes);
+
+                // (8) 초 출력
+                let seconds = today.getSeconds();
+
+                // 초 테스트 조작
+                // seconds = 8;
+
+                tt[7].innerText = addZero(seconds);
+
+            }//////////// 지역 선언적 함수 /////////////// showTime 함수 /////////////
+
+            // 임시함수호출
+            // window.onclick = () => showTime();
+
+            // 최초 호출
+            showTime();
+
+            // 타이밍 함수 인터벌 호출
+            setInterval(showTime,1000);
+
+
+            /********************************* 
+                [ Math 객체 ]
+                - 수학 객체로써 다른 객체와 달리 new 키워드 없이 바로 사용할 수 있게 설계됨
+                - 이런 객체를 정적 객체(static object)라고 한다
+                -> 정적객체들 : Array , Object , Math
+
+                ------------------------------------------
+
+                [ 주요 Math 객체의 메서드들 ]
+                Math.min(값들)
+
+            *********************************/
+           
+
+
+        }); /////////////////////////// 로딩구역 //////////////////
+    </script>
+    
+</head>
+
+<body>
+    <!-- 시간표시박스 -->
+    <div class="time">
+        <!-- 년도 -->
+        <span class="year tt"></span>.
+        <!-- 월 -->
+        <span class="month tt"></span>.
+        <!-- 일 -->
+        <span class="date tt"></span>.
+        <!-- 요일 -->
+        (<span class="day tt"></span>) <br>
+        <!-- 오전/오후 -->
+        <span class="noon tt"></span>
+        <!-- 시간 -->
+        <span class="hour tt"></span> :
+        <!-- 분 -->
+        <span class="minute tt"></span> :
+        <!-- 초 -->
+        <span class="second tt"></span>
+    </div>
+
+    <!-- 이미지박스 -->
+    <div class="imbx"></div>
+
+</body>
+
+</html>
