@@ -34,6 +34,7 @@ body{
 }
 
 .saturn-info {
+  display: flex;
   width: 100vw;
   height: 90px;
   background-color: #151515;
@@ -72,7 +73,25 @@ body{
   margin-left: 10px;
 }
 
+.left-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 54px;
+  padding-left: 39px;
 
+}
+
+.left-menu a {
+  color : #151515;
+  font-family: Metropolis;
+  font-size: 17px;
+  font-weight: normal;
+}
+
+.left-menu a:hover {
+  color: blueviolet;
+}
 
 
 

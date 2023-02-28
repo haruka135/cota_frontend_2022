@@ -59,7 +59,12 @@ window.addEventListener("DOMContentLoaded",()=>{
                 window.open().location.href= url;
             }
             else {
-                location.href = url + ".html";
+
+                // 메인 페이지 이동일 경우
+                // html?code=m을 보내주자!
+
+                location.href = 
+                url + ".html" + (atxt === "tvN로고")?"?code=m":"";
             }
         };
     }
