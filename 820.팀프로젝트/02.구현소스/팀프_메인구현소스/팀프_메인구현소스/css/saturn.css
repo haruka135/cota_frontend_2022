@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+/* SOLAR SYSTEM PJ 메인 페이지 CSS - main.css */
+
+/* 외부 공통 CSS 합치기 */
+@import url(reset.css);
+@import url(core.css);
+@import url(common.css);
+
+/* 스크롤바 안보이게 하기 */
+body{
+  -ms-overflow-style: none;
+  height: 500vh;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* 토성 컨텐츠 영역 */
+
+.img {
+  position: relative;
+  width: 100vw;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.img > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.saturn-info {
+  width: 100vw;
+  height: 90px;
+  background-color: #151515;
+}
+
+.saturn-info span {
+  color: #fff;
+  line-height: 90px;
+  font-size: 35px;
+  font-family: Metropolis;
+  font-weight: bold;
+  padding-left: 71px;
+}
+
+.saturn-more {
+  width: 100vw;
+  height: 38px;
+  background-color: #f2bd6e;
+}
+
+.saturn-more span {
+  display: block;
+  text-align: center;
+  line-height: 38px;
+  font-size: 20px;
+  letter-spacing: -1px;
+  font-weight: normal;
+}
+
+.saturn-more span::after {
+  content:'';
+  display: inline-block;
+  width: 21px;
+  height: 19px;
+  background: url(../img/ui_sprite@2x.png) no-repeat -114px -265px;
+  margin-left: 10px;
+}
+
+
+
+
+
+
+
