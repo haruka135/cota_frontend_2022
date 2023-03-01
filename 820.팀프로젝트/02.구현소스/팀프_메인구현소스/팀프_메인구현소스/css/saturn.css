@@ -104,7 +104,11 @@ body{
 }
 
 .saturn-more span::after {
+  content:'';
+  display: inline-block;
   width: 24px;
   height: 16px;
   background: url(../img/ui_sprite@2x.png) no-repeat -113px -268px;
+  vertical-align: -1px;
+  margin-left: 10px;
 }
