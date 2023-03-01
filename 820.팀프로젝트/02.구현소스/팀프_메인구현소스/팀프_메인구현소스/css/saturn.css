@@ -18,6 +18,7 @@ body{
 
 /* 토성 컨텐츠 영역 */
 
+
 .img {
   position: relative;
   width: 100vw;
@@ -25,7 +26,7 @@ body{
   overflow: hidden;
 }
 
-.img > img {
+.img img {
   position: absolute;
   top: 0;
   left: 0;
@@ -35,18 +36,56 @@ body{
 
 .saturn-info {
   display: flex;
-  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
   height: 90px;
   background-color: #151515;
+
 }
 
 .saturn-info span {
   color: #fff;
-  line-height: 90px;
   font-size: 35px;
   font-family: Metropolis;
   font-weight: bold;
-  padding-left: 71px;
+  padding-right: 37px;
+}
+
+.buttons {
+  position: relative;
+  overflow: hidden;
+  width: 513px;
+  height: 40px;
+}
+
+.slider {
+  display: flex;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slider > li {
+  font-family: Metropolis;
+  font-weight: bold;
+  line-height: 20px;
+  text-align: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+  flex-basis: 100%;
+}
+
+.slider > li > div:first-child {
+  font-size: 16px;
+  color: #b77f3f;
+}
+
+.slider > li > div:last-child {
+  font-size: 20px;
+  color: #fff;
 }
 
 .saturn-more {
@@ -65,35 +104,7 @@ body{
 }
 
 .saturn-more span::after {
-  content:'';
-  display: inline-block;
-  width: 21px;
-  height: 19px;
-  background: url(../img/ui_sprite@2x.png) no-repeat -114px -265px;
-  margin-left: 10px;
+  width: 24px;
+  height: 16px;
+  background: url(../img/ui_sprite@2x.png) no-repeat -113px -268px;
 }
-
-.left-menu {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding-top: 54px;
-  padding-left: 39px;
-
-}
-
-.left-menu a {
-  color : #151515;
-  font-family: Metropolis;
-  font-size: 17px;
-  font-weight: normal;
-}
-
-.left-menu a:hover {
-  color: blueviolet;
-}
-
-
-
-
-
