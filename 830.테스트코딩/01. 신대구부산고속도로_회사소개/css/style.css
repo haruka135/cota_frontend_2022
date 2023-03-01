@@ -1,0 +1,60 @@
+#container {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+#container #snb {
+    float: left;
+    width: 259px;
+    padding: 30px 29px 0 0;
+    box-sizing: border-box;
+}
+
+#container #snb h2 {
+    height: 140px;
+    background-color: #333f52;
+    font-size: 21px;
+    color: #fff;
+    font-weight: normal;
+    text-align: center;
+    padding-top: 49px;
+    box-sizing: border-box;
+
+}
+
+#container #snb h2 span {
+    display: block;
+    color: #8f939b;
+    font-size: 12px;
+    padding-top: 13px;
+}
+
+#container #snb li a {
+    display: block;
+    border-bottom: 1px solid gray;
+    height: 53px;
+    line-height: 53px;
+    text-indent: 25px;
+    position: relative;
+}
+
+#container #snb li a:hover {
+    color: blue;
+    text-indent: 61px;
+}
+
+#container #snb li a:hover::after {
+    content:'';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 45px;
+    height: 54px;
+    background: url(../images/common/bg_snb.png) no-repeat center blue;
+
+}
+
+#container #contents {
+    float: left;
+}
