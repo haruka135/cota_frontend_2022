@@ -367,6 +367,31 @@ function loadFn(){
     // 행성넘어가는 JS 끝부분 ////////////////////////////////////
     */
 
+    /************************************************************* 
+                    함수기능 : 인포메이션 배열넣기
+    *************************************************************/
+    // 0. 배열
+    const pa = ["Four robotic spacecraft have visited Saturn.",
+                "NASA's Pioneer 11 provided the first close look in September 1979.",
+                "NASA's twin Voyager 1 and Voyager 2 spacecraft followed up with flybys nine months apart in 1980 and 1981.",
+                "The Saturn System Through the Eyes of Cassini (e-Book)",
+                "Each flyby revealed intriguing details about the ringed giant world,",
+                "but it wasn't until the international Cassini mission arrived in orbit in 2004 that our understanding of Saturn really started to take shape.",
+                "Cassini studied Saturn from orbit for 13 years before its human engineers",
+                "on Earth transformed it into an atmospheric probe for its spectacular final plunge into the planet in September 2017.",
+                "Cassini also carried ESA's Huygens Probe, which landed on Saturn's moon Titan in 2005.",
+                "From Earth, astronomers have studied Saturn with telescopes for centuries.",
+                "And the Hubble Space Telescope continues to uncover new details from its perch in Earth orbit."]
+    console.log(pa);
+        // 1. 대상선정
+        const p = document.querySelector(".history p");
+        
+        for(let x of pa) {
+            console.log(x);
+            p.innerHTML += `<br>${x}`;
+        }   
+        p.style.whiteSpace = 'nowrap';       
+
 
     
 } ////////////////// loadFn 함수 //////////////

@@ -17,20 +17,56 @@ body{
 
 /* 토성 컨텐츠 영역 */
 
-
-.img {
-  position: relative;
-  width: 100vw;
-  height: 50vh;
-  overflow: hidden;
+.banner {
+  background-color : #131313;
 }
 
-.img img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+
+.cont .banner .img-banner .sl1 {
+  display: block;
+  height: 500px;
+  background: url(../img/particle_banner.png) no-repeat; 
+  background-size: cover;
+
+}
+
+.cont .banner .img-banner > li {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: "Raleway",sans-serif;
+  gap: 20px;
+
+}
+
+
+.cont .banner .img-banner > li div:first-child {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.cont .banner .img-banner > li div:last-child a {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.cont .banner .img-banner > li div:last-child a {
+  display: inline-block;
+  background-color: #fff;
+  color: #131313;
+  padding: 20px;
+  border-radius: 5px;
+  margin-right: 38px;
+  transition: all .5s ease-in-out;
+}
+
+.cont .banner .img-banner > li div:last-child a:hover {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
 }
 
 .saturn-info {
