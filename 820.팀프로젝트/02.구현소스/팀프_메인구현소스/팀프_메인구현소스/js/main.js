@@ -388,7 +388,7 @@ function loadFn(){
         
         for(let x of pa) {
             console.log(x);
-            p.innerHTML += `<br>${x}`;
+            p.innerHTML += `${x}<br>`;
         }   
         p.style.whiteSpace = 'nowrap';       
 

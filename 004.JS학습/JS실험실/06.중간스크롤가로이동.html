@@ -11,6 +11,55 @@
         }
         body{
             overflow-x: hidden;
+            background-image: linear-gradient(to bottom,orange,lightpink,lightgreen);
+        }
+
+        /* 메뉴박스 */
+        .gnb {
+            position: fixed;
+            top: 5vh;
+            left: 50%;
+            transform: translateX(-50%);
+            /* 가로 중앙 이동 */
+            background-color: #fff;
+            border-radius: 35px;
+        }
+
+        /* 가상 요소로 움직이는 배경 박스 만들기 */
+        .mbg {
+            position: absolute;
+            /* 변경내용: left,width -> li의 수치를 기준 */
+            left: 0;
+            width: 206px;
+            height: 78px;
+            background-color: #ffc75f;
+            border-radius: 35px;
+            transition: .4s ease-in-out;
+            opacity: 0; /* 처음에 안보임 */
+        }
+
+        .gnb ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            position: relative; /* 가상요소보다 위 */
+        }
+
+        .gnb a {
+            text-decoration: none;
+            font-size: 24px;
+            display: block;
+            padding: 23px 35px;
+            color: #000;
+            transition: color .4s;
+            white-space: nowrap;
+        }
+
+        /* 마우스 오버 시 글자색 변경 */
+        .gnb a:hover {
+            color: #fff;
+            transition-delay: .4s; /* 오버시에만 딜레이 주기 */
         }
         
         .pg{
@@ -29,7 +78,6 @@
             top: 0;
             left: 0;
             height: 100vh;
-            
             background-color: orange;
         }
         /* 가로 이동할 ul 박스 */
@@ -71,30 +119,147 @@
             const tpg = document.querySelector(".tpg");
             // console.log(tpg);
 
-            // (2) 가로 이동 페이지(박스) : .slidePg
+            // (2) sticky 박스 : .slidePg
             const spg = document.querySelector(".slidePg");
             // console.log(spg);
 
-            // html 코드 변수
-            let hcode = "<ul>";
+            // 리스트 넣기 함수 호출
+            makeList();
 
-            // 2. 가로이동박스에 디자인 요소 넣기
-            for (let x = 1; x < 8; x++) {
-                hcode += `
-                    <li><img src="images/${x}.jpg" alt="댄스"></li>
-                `;
+            // (3) 가로이동박스 : .slidePg ul
+            const mvbx = spg.querySelector("ul");
+            
+            // console.log(tpg,spg,mvbx);
 
-            } /////////////// for ///////////////
 
-            hcode += "</ul>";
+            /******************************************** 
+                스크롤 시 sticky 구간에서 가로 방향 이동 구현
+            ********************************************/
 
-            // 가로이동박스에 코드 넣기
-            spg.innerHTML = hcode;
+            // 대상: mvbx
+
+            // 이벤트 : scroll
+
+            // 스크롤 이벤트 설정
+            window.addEventListener("scroll",movePage);
+
+            /******************************************** 
+                함수명: retVal
+                기능: getBoundingClientRect() 값 리턴
+            ********************************************/
+            const retVal = x => x.getBoundingClientRect().top;
+
+            /******************************************* 
+                함수명: movePage
+                기능: 가로방향 이동하기
+            *******************************************/
+
+            function movePage(e) {
+
+                // 스크롤 위치값 확인
+                // console.log(window.scrollY);
+
+                // 1. 타겟박스의 바운딩 위치값 찍기
+                // 스티키박스의 부모 박스 (멈추는 구간)
+                let tgpos = retVal(tpg);
+                console.log("바운딩값: ",tgpos);
+
+                // 2. 가로이동박스(mvbx)의 left 값 변경하기
+                // 타겟박스의 바운딩값을 left 값으로 넣어주기
+                // 이유 : 바운딩 수치가 === left값 이동수치
+                // 적용 구간 설정 : 0 이하 -3000px 이상
+                if(tgpos <= 0 && tgpos >= -3000)
+                mvbx.style.left = tgpos + "px";
+                else if(tgpos > 0)
+                mvbx.style.left = "0";
+                
+            }
+
+            /*************************** 
+                함수명: makeList
+                기능: 리스트 넣기
+            ***************************/
+
+            function makeList() {
+                // html 코드 변수
+                let hcode = "<ul>";
+    
+                // 2. 가로이동박스에 디자인 요소 넣기
+                for (let x = 1; x < 8; x++) {
+                    hcode += `
+                        <li><img src="images/${x}.jpg" alt="댄스"></li>
+                    `;
+    
+                } /////////////// for ///////////////
+    
+                hcode += "</ul>";
+    
+                // 가로이동박스에 코드 넣기
+                spg.innerHTML = hcode;
+            }/////// makeList 함수 ///////
+
+
+
+            /************************************ 
+               GNB 메뉴 오버 시 움직이는 배경 구현
+            ************************************/
+
+            // 0. 대상선정: .gnb li (이벤트 대상)
+            const gnb = document.querySelectorAll(".gnb li");
+
+            // 1. 변경대상: .mbg
+            const mbg = document.querySelector(".mbg");
+
+            // 2. 이벤트 설정하기 : mouseenter event
+            gnb.forEach(ele => {
+                ele.onmouseenter = e => {
+                    // 1. 요소 정보 알아내기
+                    // (1) left 위치값
+                    let eLeft = ele.offsetLeft;
+
+                    // (2) width 값
+                    let eWidth = ele.offsetWidth;
+                    // 대상 요소의 위차값은 nav.gnb 요소가 relative 가진 요소를 기준한 offset 정보임
+
+                    console.log("left:",eLeft,"width:",eWidth);
+
+                    // 2. 움직이는 배경 박스 위치값 변경하기
+                    mbg.style.left = eLeft + "px";
+                    mbg.style.width = eWidth + "px";
+                    mbg.style.opacity = "1";
+
+                }; ////// 마우스오버 ///////
+
+                // 마우스가 나갈때 투명도 0으로 사라짐
+                ele.onmouseleave = e => {
+                    mbg.style.opacity = "0";
+                }
+            }); /////// forEach /////////
 
         }); ////////// load /////////////////
     </script>
 </head>
 <body>
+    <!-- 네비게이션 -->
+    <nav class="gnb">
+    <!-- 메뉴 배경 박스 -->
+    <div class="mbg"></div>
+    <!-- 메뉴 리스트 -->
+        <ul>
+            <li>
+                <a href="#">Let's explore</a>
+            </li>
+            <li>
+                <a href="#">Let's meet</a>
+            </li>
+            <li>
+                <a href="#">Let's attend</a>
+            </li>
+            <li>
+                <a href="#">Let's dance</a>
+            </li>
+        </ul>
+    </nav>
     <div class="pg"></div>
     <div class="pg"></div>
     <!-- 타겟 페이지 (스크롤 시 가로 이동) -->
