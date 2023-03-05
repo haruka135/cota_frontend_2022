@@ -83,6 +83,14 @@ window.addEventListener("DOMContentLoaded",() => {
         };
     });
 
+
+    const color = {"color1":"red","color2":"navy","color3":"sky","color4":"green"};
+    const colorspan = document.querySelectorAll(".color span");
+
+    for(let x in color) {
+        console.log(color[x]);
+    }
+
     
 
 });

@@ -1,0 +1,233 @@
+@charset "utf-8";
+
+@import url('reset.css');
+@import url('common.css');
+
+body {
+    background-color: #f6f6f6;
+}
+
+main {
+    width: 1500px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%,50%);
+    margin: 0 auto;
+}
+
+.esports-teams,
+.business,
+.shopping {
+    border: 1px solid red;
+    padding-top: 284px;
+}
+
+.esports-teams h2,
+.business h2,
+.shopping h2 {
+    text-align: left;
+    font-family: 'Noto Sans KR',sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+    letter-spacing: -5px;
+    margin-bottom: 48px;
+}
+
+.esports-teams .information,
+.business .information,
+.shopping .information {
+    display: flex;
+    align-items: center;
+    margin-bottom: 63px;
+}
+
+.esports-teams .information span,
+.business .information span,
+.shopping .information span {
+    display: inline-block;
+    width: 212px;
+    height: 4px;
+    background-color: #10305c;
+    vertical-align: middle;
+}
+
+.esports-teams .information p,
+.business .information p,
+.shopping .information p {
+    margin-left: 50px;
+    font-family: 'Noto Sans KR',sans-serif;
+    font-weight: lighter;
+    font-size: 23px;
+}
+
+.divide-wrapper .divide {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 821px;
+}
+
+.divide-wrapper .divide li {
+    flex-basis: 100%;
+    flex: 1;
+    background: url(../img/team_01.jpg) no-repeat center/cover;
+    position: relative;
+    transition: all .4s ease-in-out;
+}
+
+.divide-wrapper .divide li:hover {
+    flex: 2;
+}
+
+.divide-wrapper .divide li::before {
+    content:'';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    opacity: .4;
+    transition: all .4s ease-in-out;
+}
+
+.divide-wrapper .divide li:hover::before {
+    opacity: 0;
+}
+
+.divide-wrapper .divide li a {
+    position: absolute;
+    color: #fff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 70px;
+    font-family: 'Noto Sans KR';
+    font-weight: bold;
+    letter-spacing: -6px;
+}
+
+.esports-btn {
+    position: absolute;
+    background: url(../img/esports_btn_01.png) no-repeat;
+    display: block;
+    width: 49px;
+    height: 51px;
+    margin-top: 198px;
+}
+
+.business .business-wrapper {
+    width: 831px;
+    height: 802px;
+    background-color: rgb(0,0,0,.4);
+    border-radius: 30px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+.business .business-wrapper .business-slide {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.business .business-wrapper .business-slide li {
+    background: url(../img/info_slide_01.png) no-repeat center/cover;
+    flex-shrink: 0;
+    flex-basis: 100%;
+    border-radius: 30px;
+    position: relative;
+}
+.business .business-wrapper .business-slide li > span {
+    font-size: 90px;
+    color: #fff;
+    font-family: 'Noto Sans KR';
+    font-weight: bold;
+    letter-spacing: -6px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 298px;
+}
+
+
+.business .business-wrapper .business-slide li a {
+    color: #402c83;
+    font-weight: bold;
+    font-family: 'Noto Sans KR';
+}
+
+.business .business-wrapper .business-slide li a > span {
+    font-size: 25px;
+}
+
+.business .business-wrapper .business-slide li .view-buttons {
+    width: 177px;
+    height: 57px;
+    background-color: #fff;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 416px;
+}
+
+.business .business-wrapper .business-slide li .view-wrap {
+    height: 25px;
+ 
+}
+
+.business .business-wrapper .business-slide li .view-wrap span {
+    font-size: 25px;
+    letter-spacing: -1px;
+
+}
+
+.business .business-wrapper .business-slide li .view-buttons .plus {
+    width: 18px;
+    height: 18px;
+    position: relative;
+    margin-right: 12px;
+}
+
+.business .business-wrapper .business-slide li .view-buttons .plus span:first-child {
+    display: inline-block;
+    width: 18px;
+    height: 4px;
+    background-color:#402c83;
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.business .business-wrapper .business-slide li .view-buttons .plus span:last-child {
+    position: absolute;
+    width: 4px;
+    height: 18px;
+    background-color:#402c83;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.business .business-wrapper .business-slide li .view-buttons > span {
+    display: block;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.shopping {
+    padding-bottom: 188px;
+}
+

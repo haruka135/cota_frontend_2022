@@ -6,7 +6,7 @@ html,body {
     padding: 0;
 }
 
-h1,h2,h3,h4,h5,h6,ul {
+h1,h2,h3,h4,h5,h6,ul,p {
     font-size: 100%;
     line-height: 1;
     margin: 0;
@@ -14,12 +14,16 @@ h1,h2,h3,h4,h5,h6,ul {
     font-weight: normal;
 }
 
+p {
+    margin-bottom: 0 !important;
+}
+
 li {
     list-style: none;
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 img {
@@ -30,6 +34,12 @@ img {
     display: none;
 }
 
+/* common - layout */
+
+main, main section {
+    padding: 60px 0;
+}
+
 /* common - header */
 
 body {
@@ -38,7 +48,9 @@ body {
     color: #495662;
     line-height: 1;
     overflow-x: hidden;
+    background-color: #f4f6f8;
 }
+
 
 header {
     
@@ -52,12 +64,12 @@ header .top-nav {
     background-color: #fff;
 }
 
-.container {
+.containers {
     margin: 0 auto;
     width: 1170px;
 }
 
-.container .row {
+.containers .rows {
     display: flex;
     justify-content: space-between;
 }
@@ -357,4 +369,140 @@ header form input[type="submit"] {
     background-position: -62px -303px;
 }
 
+.new-arrivals .content-title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: #34404b;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+
+}
+
+.new-arrivals .content-title span {
+    color: #ff5912;
+}
+
+.new-arrivals .content-desc {
+    text-align: center;
+    margin-bottom: 81px !important;
+}
+
+.new-arrivals-list {
+    display: flex;
+    justify-content: center;
+}
+
+.new-arrivals-list li .list-contents {
+    background-color: #fff;
+    text-align: center;
+    margin: 0 15px;
+    height: 100%;
+}
+
+.new-arrivals-list li .list-contents .default {
+    padding: 30px 0;
+}
+
+.new-arrivals-list li .list-contents .default h3{
+  font-size: 12px;
+  color: #34404b;
+  font-weight: 600;
+  margin: 28px 0;
+}
+
+.new-arrivals-list li .list-contents .default h4 {
+    font-size: 12px;
+    color: #ff5912;
+    font-weight: normal;
+}
+
+.new-arrivals-list li .list-contents .hover {
+    padding: 30px 0;
+}
+
+.new-arrivals-list li .list-contents .hover p:first-child {
+    font-size: 14px;
+    color: #34404b;
+    text-transform: uppercase;
+}
+
+.new-arrivals-list li .list-contents .hover .color {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.new-arrivals-list li .list-contents .hover .color span {
+    display: block;
+    width: 13px;
+    height: 13px; 
+    border: 1px solid red;
+    border-radius: 50%;
+    text-indent: -9999em;
+}
+
+.new-arrivals-list li .list-contents .hover hr {
+    width: 170px;
+    margin: 0 auto;
+    border:none;
+    border-bottom: 1px solid #f2f4f7;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.new-arrivals-list li .list-contents .hover ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.new-arrivals-list li .list-contents .hover ul li:nth-child(2) {
+    margin-top: -3px;
+}
+
+.new-arrivals-list > li {
+    height: 365px;
+    overflow: hidden;
+}
+
+.new-arrivals-list > li .default img {
+    width: 80%;
+    transition: width .4s ease-in-out;
+}
+
+.new-arrivals-list > li:hover .default img {
+    width: 70px;
+    height: auto;
+}
+
+.new-arrivals-list > li:hover .default h4 {
+    display: none;
+}
+
+.new-arrivals-list > li:hover .default {
+    padding: 30px 0 0;
+}
+
+.new-arrivals-list > li:hover .hover {
+    padding: 0 0 30px;
+}
+
+
+.share {
+    width: 19px;
+    height: 17px;
+    background-position: -150px -1px;
+}
+
+.addcart {
+    width: 22px;
+    height: 21px;
+    background-position: -180px -28px;
+}
+.wish {
+    width: 19px;
+    height: 16px;
+    background-position: -210px 0px;
+}
 
