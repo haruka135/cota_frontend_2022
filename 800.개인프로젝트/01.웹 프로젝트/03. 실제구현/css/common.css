@@ -2,11 +2,11 @@
 
 @import url('reset.css');
 
-/* body * {
+/*  body * {
     outline: 1px dashed red;
-}
- */
-header {
+} */
+
+header.main-header {
     margin: 0 auto;
     width: 100%;
     position: absolute;
@@ -62,6 +62,7 @@ header {
     width: 100%;
 }
 
+
 .menu > li:first-child:hover .smenu {
     display: block;
     position: absolute;
@@ -80,10 +81,23 @@ header {
     z-index: -1;
 }
 
-.menu .smenu > ul {
+.menu > li:first-child:hover .smenu > ul {
     display: flex;
     padding-left: 258px;
-    box-sizing: border-box;
+}
+
+.menu > li:nth-child(2):hover .smenu > ul {
+    display: flex;
+    padding-left: 421px;
+}
+
+.menu > li:nth-child(2):hover .smenu > ul > li > a {
+    white-space: nowrap;
+}
+
+.menu > li:nth-child(3) .smenu > ul {
+    display: flex;
+    padding-left: 569px;
 }
 
 .menu .smenu > ul li {
@@ -125,9 +139,7 @@ header {
     height: 95px;
 }
 
-/* .menu > li > ul {
-    display: none;
-} */
+
 
 .menu > li > a {
     padding: 0 50px;
@@ -169,7 +181,22 @@ header {
     opacity: .4;
 }
 
-.ham {
+.hidden-all {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    background: rgba(0,0,0,.5);
+    z-index: 5;
+}
+
+div.on {
+    display: block;
+}
+
+.ham > a {
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -182,6 +209,57 @@ header {
     background-color: #fff;
 
 }
+
+.hidden-menu {
+    display: none;
+}
+
+.active {
+    display: block;
+    width: 100%;
+    height: 125px;
+    background-color: #fff;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+}
+
+.hidden-wrap {
+    padding: 0 50px;
+}
+
+.sub-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sub-header .sub-logo a {
+    display: block;
+    width: 95px;
+    height: 125px;
+    line-height: 125px;
+}
+
+.sns-wrap .sns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.sns-wrap li a {
+    color: #000;
+    font-family: 'Poppins';
+    font-weight: normal;
+    font-size: 14px;
+    display: block;
+    height: 125px;
+    line-height: 125px;
+    padding: 0 12px;
+}
+
+.sns-wrap .close 
+
 
 .slides {
     position: relative;
