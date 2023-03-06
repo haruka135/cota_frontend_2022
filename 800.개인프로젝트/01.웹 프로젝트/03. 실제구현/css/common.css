@@ -2,9 +2,9 @@
 
 @import url('reset.css');
 
-/*  body * {
+body * {
     outline: 1px dashed red;
-} */
+}
 
 header.main-header {
     margin: 0 auto;
@@ -106,7 +106,7 @@ header.main-header {
 
 .gnb:hover {
     background-color: #fff;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #d7d7d7;
 }
 
 .gnb:hover .left-menu .menu li a {
