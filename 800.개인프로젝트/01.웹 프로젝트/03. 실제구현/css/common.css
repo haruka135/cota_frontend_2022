@@ -2,44 +2,138 @@
 
 @import url('reset.css');
 
+/* body * {
+    outline: 1px dashed red;
+}
+ */
 header {
     margin: 0 auto;
-    width: 1500px;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
 }
 .gnb {
+    height: 105px;
     display: flex;
     justify-content: space-between;
-    padding-top: 42px;
-    padding-bottom: 42px;
+    padding: 0 43px;
+    transition: all .4s ease-in-out;
 }
 
 .left-menu {
     display: flex;
+    align-items: center;
+}
+
+.left-menu .logo a {
+    display: block;
+    width: 95px;
+    height: 105px;
+    position: relative;
+}
+
+.left-menu .logo a img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .left-menu .menu {
-    margin-left: 170px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    height: 100%;
 }
 
 .left-menu .menu a {
     color: #fff;
     font-family:'Noto Sans KR';
 }
+.menu-wrapper {
+    margin-left: 120px;
+}
 
-.logo {
-    background: url(../img/logo.png) no-repeat;
+.smenu {
+    position: absolute;
+    left:0;
+    display: none;
+    width: 100%;
+}
+
+.menu > li:first-child:hover .smenu {
     display: block;
-    width: 95px;
-    height: 29px;
-    text-indent: -9999em;
+    position: absolute;
+    z-index: -1;
+}
+
+.menu > li:nth-child(2):hover .smenu {
+    display: block;
+    position: absolute;
+    z-index: -1;
+}
+
+.menu > li:nth-child(3):hover .smenu {
+    display: block;
+    position: absolute;
+    z-index: -1;
+}
+
+.menu .smenu > ul {
+    display: flex;
+    padding-left: 258px;
+    box-sizing: border-box;
+}
+
+.menu .smenu > ul li {
+    padding: 41px 50px;
+}
+
+.gnb:hover {
+    background-color: #fff;
+    border-bottom: 1px solid #000;
+}
+
+.gnb:hover .left-menu .menu li a {
+    color: #000;
+}
+
+.gnb:hover .right-menu .box {
+    border-color: #000;
+}
+
+.gnb:hover .right-menu .box a {
+    color: #000;
+}
+
+.gnb:hover .right-menu .box span {
+    background-color: #000;
+}
+
+.gnb:hover .right-menu .ham span {
+    background-color: #000;
+}
+
+.gnb:hover .smenu {
+    background-color: #fff;
+}
+
+.gnb:hover::after {
+    background-color: #fff;
+    width: 100%;
+    height: 95px;
+}
+
+/* .menu > li > ul {
+    display: none;
+} */
+
+.menu > li > a {
+    padding: 0 50px;
+    display: block;
+    height: 105px;
+    line-height: 105px;
 }
 
 .right-menu {
@@ -69,6 +163,10 @@ header {
 .right-menu .box a {
     font-size: 11px;
     color: #fff;
+}
+
+.box-wrap > a {
+    opacity: .4;
 }
 
 .ham {
