@@ -2,10 +2,10 @@
 
 @import url('reset.css');
 
- body * {
+/*  body * {
     outline: 1px dashed red;
 }
-
+ */
 header.main-header {
     margin: 0 auto;
     width: 100%;
@@ -208,55 +208,7 @@ div.on {
 
 }
 
-.hidden-menu {
-    display: none;
-}
 
-.active {
-    display: block;
-    width: 100%;
-    height: 125px;
-    background-color: #fff;
-    position: fixed;
-    z-index: 99999;
-    top: 0;
-}
-
-.hidden-wrap {
-    padding: 0 50px;
-}
-
-.sub-header {
-    display: flex;
-    justify-content: space-between;
-}
-
-.sub-header .sub-logo a {
-    display: block;
-    width: 95px;
-    height: 125px;
-    line-height: 125px;
-}
-
-.sns-wrap .sns {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.sns-wrap li a {
-    color: #000;
-    font-family: 'Poppins';
-    font-weight: normal;
-    font-size: 14px;
-    display: block;
-    height: 125px;
-    line-height: 125px;
-    padding: 0 12px;
-}
-
-.sns-wrap .close 
 
 
 .slides {

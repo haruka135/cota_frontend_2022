@@ -314,6 +314,7 @@ main {
     border-radius: 30px;
     overflow: hidden;
     box-shadow: 0 0 16px rgb(0,0,0,.16);
+    width: 330px;
 }
 
 .shop-wrapper .shop .shop-common .overflow {
