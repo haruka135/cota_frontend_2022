@@ -7,7 +7,83 @@ body {
     background-color: #f6f6f6;
 }
 
-main {
+.slides {
+    position: relative;
+}
+
+.slides .slide {
+    background: url(../img/slide_01.png) no-repeat center/cover;
+    width: 100%;
+    height: 910px;
+    z-index: -1;
+    position: relative;
+}
+
+.slide-contents {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+}
+
+.slide-contents h2 {
+    color: #fff;
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 90px;
+    letter-spacing: -4px;
+    white-space: nowrap;
+    margin-bottom: 40px;
+}
+
+.slide-contents p {
+    color: #fff;
+    text-align: center;
+    line-height: 1.3;
+    font-size: 19px;
+    font-family: 'Noto Sans KR';
+    margin-bottom: 50px;
+}
+.view-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 23px;
+}
+
+.view-more {
+    text-align: center;
+    width: 210px;
+    height: 40px;
+    border: 1px solid #fff;
+    line-height: 42px;
+    border-radius: 30px;
+}
+
+
+.view-more a {
+    color: #fff;
+    display: block;
+    width: 212px;
+    height: 42px;
+    cursor: pointer;
+}
+
+.icons {
+    background: url(../img/arrow-down.png) no-repeat;
+    width: 38px;
+    height: 37px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icons a {
+    display: block;
+    text-indent: -9999em;
+}
+
+.main {
     width: 1500px;
     margin: 0 auto;
 }
@@ -19,14 +95,15 @@ main {
     padding-top: 284px;
 }
 
-.media {
+.media, .news, #footer {
     background-color: #0c0c0c;
 }
 
 .esports-teams h2,
 .business h2,
 .shopping h2,
-.media h2 {
+.media h2,
+.news h2 {
     text-align: left;
     font-family: 'Noto Sans KR',sans-serif;
     font-weight: bold;
@@ -35,15 +112,19 @@ main {
     margin-bottom: 48px;
 }
 
-.media h2 {
+.media h2,
+.news h2 {
     color: #fff;
     padding-bottom: 118px;
 }
 
+
+
 .esports-teams .information,
 .business .information,
 .shopping .information,
-.media .information {
+.media .information,
+.news .information {
     display: flex;
     align-items: center;
     margin-bottom: 63px;
@@ -52,7 +133,8 @@ main {
 .esports-teams .information span,
 .business .information span,
 .shopping .information span,
-.media .information span {
+.media .information span,
+.news .information span {
     display: inline-block;
     width: 212px;
     height: 4px;
@@ -63,7 +145,8 @@ main {
 .esports-teams .information p,
 .business .information p,
 .shopping .information p,
-.media .information p {
+.media .information p,
+.news .information p {
     margin-left: 50px;
     font-family: 'Noto Sans KR',sans-serif;
     font-weight: lighter;
@@ -170,16 +253,49 @@ main {
     display: flex;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .business .business-wrapper .business-slide li {
-    background: url(../img/info_slide_01.png) no-repeat center/cover;
     flex-shrink: 0;
     flex-basis: 100%;
     border-radius: 30px;
     position: relative;
 }
+
+.business .business-wrapper .business-slide li.slide1 {
+    background: url(../img/info_slide_01.jpg) no-repeat center/cover;
+}
+
+.business .business-wrapper .business-slide li.slide2 {
+    background: url(../img/info_slide_02.jpg) no-repeat center/cover;
+}
+
+.business .business-wrapper .business-slide li.slide3 {
+    background: url(../img/info_slide_03.jpg) no-repeat center/cover;
+}
+
+.business .business-wrapper .business-slide li.slide4 {
+    background: url(../img/info_slide_04.jpg) no-repeat center/cover;
+}
+
+.business .business-wrapper .business-slide li::before {
+    content:'';
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom:0;
+    opacity: .5;
+    transition: all .4s ease-in-out;
+}
+.business .business-wrapper .business-slide li:hover::before {
+    opacity: 0;
+}
+
 .business .business-wrapper .business-slide li > span {
     font-size: 90px;
     color: #fff;
@@ -190,6 +306,7 @@ main {
     left: 50%;
     transform: translateX(-50%);
     margin-top: 298px;
+    white-space: nowrap;
 }
 
 
@@ -291,6 +408,7 @@ main {
     display: block;
     height: 7px;
     background-color: #250088;
+    transition: all .4s ease-in-out;
 }
 
 .shopping {
@@ -350,4 +468,282 @@ main {
     color: #a0a0a0;
     font-size: 18px;
     font-family: 'Noto Sans KR';
+}
+
+.media-header,
+.news-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 116px;
+}
+
+.media-header .view-wrapper,
+.news-header .view-wrapper {
+    height: 60px;
+    margin-top: 18px;
+}
+
+.media-con {
+    background-color: #0c0c0c;
+    padding-bottom: 318px;
+}
+
+.conbox {
+    padding-bottom: 316px;
+    position: relative;
+    width: 1500px;
+    margin: 0 auto;
+}
+
+.conbox .conslide li.conslide1 {
+    margin-left: 82px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+}
+
+.conbox .conslide li.conslide2 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+
+.conbox .conslide li span {
+    display: none;
+    transition: all .4s ease-in-out;
+}
+
+.conbox .conslide li:hover span {
+    position: absolute;
+    top: 17px;
+    left: 27px;
+    color: #fff;
+    font-family: 'Noto Sans KR';
+    font-size: 20px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+}
+
+.conbox .conslide li:hover::before {
+    content:'';
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: .5;
+    transition: all .4s ease-in-out;
+    
+}
+
+.conbox .conslide li.conslide2 img {
+    display: block;
+    width: 462px;
+    height: 250px;
+}
+
+.conbox .arrow-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.conbox .arrow-btn a {
+    display:block;
+	overflow:hidden;
+	Font-size:1px;
+	line-height:0;
+	text-indent:-9999px;
+}   
+
+.conbox .arrow-btn a.arl {
+    display: block;
+    width: 21px;
+    height: 21px;
+    background: url(../img/new_arrow_left.png) no-repeat;
+    position: absolute;
+    bottom: 334px;
+    right: 323px;
+}
+
+.conbox .arrow-btn a.arr {
+    display: block;
+    width: 21px;
+    height: 21px;
+    background: url(../img/new_arrow_right.png) no-repeat;
+    position: absolute;
+    bottom: 334px;
+    right: 248px;
+}
+
+.news-con .newcon li span {
+    font-size: 43px;
+    font-family: 'Noto Sans KR';
+    color: #fff;
+}
+
+.news-con {
+    padding-bottom: 337px;
+}
+
+.news-con .newcon li p {
+    font-size: 35px;
+    font-family: 'Noto Sans KR';
+    color: #3b3b3b;
+    font-weight: bold;
+    margin-top: 28px;
+    margin-bottom: 37px;
+}
+
+.news-con .newcon li {
+    display: inline-block;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 128px;
+}
+
+.footer-main {
+    width: 1700px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.big-logo .logobig img {
+    display: block;
+    width: auto;
+    height: 277px;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-main .address-contact {
+    position: absolute;
+    top: 0;
+    left: 470px;
+}
+
+.footer-menu .ftmenu {
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+    grid-template-columns: 1fr 1fr;
+    row-gap: 27px;
+    column-gap: 56px;
+}
+
+.footer-menu .ftmenu li a {
+    color: #fff;
+    font-family: 'Noto Sans KR';
+    font-weight: bold;
+}
+
+.address {
+    margin-bottom: 20px;
+}
+
+.address h2, .contact h2 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: normal;
+    margin-bottom: 7px;
+}
+
+.address address {
+    font-style: normal;
+    color: #fff;
+    font-size: 13px;
+    font-family: 'Noto Sans KR';
+}
+
+.address address:nth-of-type(1) {
+    padding-bottom: 8px;
+}
+
+.contact span {
+    color: #fff;
+    font-size: 13px;
+    font-family: 'Noto Sans KR';
+}
+
+.contact {
+    margin-bottom: 75px;
+}
+
+.link .sns-link {
+    display: flex;
+    gap: 17px;
+}
+
+.link .sns-link li a {
+    display:block;
+	Font-size:1px;
+	line-height:0;
+	text-indent:-9999px;
+}
+
+.link .sns-link li {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #ffc600;
+    justify-content: center;
+    align-items: center;
+}
+
+.link .sns-link li a.yt {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../img/youtube_mo.png) no-repeat center/cover;
+}
+
+.link .sns-link li a.fb {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../img/facebook_mo.png) no-repeat center/cover;
+}
+
+.link .sns-link li a.tw {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../img/twitter_mo.png) no-repeat center/cover;
+}
+
+.link .sns-link li a.th {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../img/twitch_mo.png) no-repeat center/cover;
+}
+
+.link .sns-link li a.in {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../img/insta_mo.png) no-repeat center/cover;
+}
+
+.link .sns-link li a.ti {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../img/tictok_mo.png) no-repeat center/cover;
+}
+
+.copyright {
+    margin-top: 40px;
+}
+
+.copyright span {
+    color: #fff;
+
 }

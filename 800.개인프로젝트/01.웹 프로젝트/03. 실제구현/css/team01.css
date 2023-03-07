@@ -1,0 +1,212 @@
+@charset "utf-8";
+
+@import url('reset.css');
+@import url('common.css');
+
+body {
+    background-color: #f6f6f6;
+}
+
+.slides {
+    position: relative;
+}
+
+.slides .slide {
+    background: url(../img/team_lck.png) no-repeat center/cover;
+    width: 100%;
+    height: 891px;
+    z-index: -1;
+    position: relative;
+}
+
+.slides .slide:before {
+    content:'';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    opacity: .75;
+}
+
+.slide-contents {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+}
+
+.slide-contents h2 {
+    color: #fff;
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 90px;
+    letter-spacing: -4px;
+    white-space: nowrap;
+    border: 1px solid red;
+    padding: 59px;
+}
+
+.slide-contents a {
+    display:block;
+    width: 24px;
+    height: 11px;
+    background: url(../img/scroll_arrow_w.png) no-repeat;
+	overflow:hidden;
+	Font-size:1px;
+	line-height:0;
+	text-indent:-9999px;
+    position: absolute;
+    bottom: -214px;
+    left: 50%;
+    animation: btnAni 1s ease-in infinite;
+}
+
+main {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+main > h2 {
+    margin-top: 180px;
+    font-family: 'Noto Sans KR';
+    font-size: 50px;
+}
+
+.card {
+    margin-top: 87px;
+}
+
+
+.card .card-cont {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+}
+
+.card .card-cont li {
+    display: inline-block;
+    border: 1px solid #959595;
+    width: 302px;
+    height: 502px;
+    background: url(../img/silluet.png) no-repeat;
+    box-sizing: border-box;
+    transition: top .4s ease-in-out;
+}
+
+.card .card-cont li:hover {
+    position: relative;
+    top: -501px;
+}
+
+.card-bg {
+    padding: 0 30px;
+    height: 100%;
+    position: relative;
+}
+
+.card-bg h2,
+.hidden-card h2 {
+    font-size: 40px;
+    font-family: 'Noto Sans KR';
+    letter-spacing: -1px;
+    position: absolute;
+    top: 32px;
+}
+
+.card-bg span,
+.hidden-card span {
+    color: #959595;
+    font-family: 'Noto Sans KR';
+    position: absolute;
+    top: 88px;
+    font-size: 15px;
+}
+
+.card-bg .top-box {
+    position: absolute;
+    bottom: 27px;
+    width: 73px;
+    height: 31px;
+    background-color: #ffc500;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-bg > a {
+    position: absolute;
+    overflow:hidden;
+	Font-size:1px;
+	line-height:0;
+	text-indent:-9999px;
+    width: 21px;
+    height: 21px;
+    background: url(../img/arrow-open.png) no-repeat center/cover;
+    left: 244px;
+    top: 38px;
+}
+
+.card-bg .top-box a,
+.hidden-card .top-box a {
+    color: #000;
+    font-family: 'Noto Sans KR';
+}
+
+.hidden-card .top-box {
+    position: absolute;
+    width: 73px;
+    height: 31px;
+    background-color: #ffc500;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 22px;
+    left: 22px;
+}
+
+.hidden-card h2 {
+    position: absolute;
+    top: 83px;
+}
+
+.hidden-card span {
+    position: absolute;
+    top: 139px;
+}
+
+.hidden-card {
+    position: relative;
+    border: 1px solid gray;
+    height: 100%;
+    padding: 0 30px;
+}
+
+.hidden-card > a {
+    overflow:hidden;
+	Font-size:1px;
+	line-height:0;
+	text-indent:-9999px;
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    right: 30px;
+    top: 38px;
+    background: url(../img/close.png) no-repeat center/cover;
+}
+
+@keyframes btnAni {
+    from {
+        bottom: -214px;
+        opacity: 0;
+    }
+    to {
+        bottom: -240px;
+        opacity: 1;
+    }
+}
+

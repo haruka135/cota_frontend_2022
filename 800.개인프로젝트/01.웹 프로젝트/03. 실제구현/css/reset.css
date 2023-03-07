@@ -43,3 +43,7 @@ button {
     overflow:visible; 
     cursor:pointer;
 }
+
+img {
+    vertical-align: top;
+}

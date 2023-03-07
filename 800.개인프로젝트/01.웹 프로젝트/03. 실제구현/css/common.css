@@ -2,14 +2,15 @@
 
 @import url('reset.css');
 
-/*  body * {
+ /* body * {
     outline: 1px dashed red;
-}
- */
+} */
+
 header.main-header {
     margin: 0 auto;
     width: 100%;
     position: absolute;
+    z-index: 1;
 }
 .gnb {
     height: 105px;
@@ -211,78 +212,5 @@ div.on {
 
 
 
-.slides {
-    position: relative;
-}
 
-.slides .slide {
-    background: url(../img/slide_01.png) no-repeat center/cover;
-    width: 100%;
-    height: 910px;
-    z-index: -1;
-    position: relative;
-}
-
-.slide-contents {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-
-.slide-contents h2 {
-    color: #fff;
-    text-align: center;
-    font-family: 'Poppins';
-    font-size: 90px;
-    letter-spacing: -4px;
-    white-space: nowrap;
-    margin-bottom: 40px;
-}
-
-.slide-contents p {
-    color: #fff;
-    text-align: center;
-    line-height: 1.3;
-    font-size: 19px;
-    font-family: 'Noto Sans KR';
-    margin-bottom: 50px;
-}
-.view-wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 23px;
-}
-
-.slide-contents .view-more {
-    text-align: center;
-    width: 210px;
-    height: 40px;
-    border: 1px solid #fff;
-    line-height: 42px;
-    border-radius: 30px;
-}
-
-
-.slide-contents .view-more a {
-    color: #fff;
-    display: block;
-    width: 212px;
-    height: 42px;
-    cursor: pointer;
-}
-
-.icons {
-    background: url(../img/arrow-down.png) no-repeat;
-    width: 38px;
-    height: 37px;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.icons a {
-    display: block;
-    text-indent: -9999em;
-}
 
