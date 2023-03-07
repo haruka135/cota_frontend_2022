@@ -18,6 +18,8 @@ window.addEventListener("DOMContentLoaded",() => {
 
     let prot = 0;
 
+    console.log(button);
+
     function highSlide(sseq) {
 
         if(prot) return;
@@ -26,9 +28,9 @@ window.addEventListener("DOMContentLoaded",() => {
             prot = 0;
         },400)
 
-        let commonlist = slide.querySelectorAll("li");
+        let commonlist = sslide.querySelectorAll("li");
 
-        if(seq) {
+        if(sseq) {
             sslide.style.top = "-100%";
             sslide.style.transition = "top .4s ease-in-out";
 
@@ -53,10 +55,10 @@ window.addEventListener("DOMContentLoaded",() => {
        let commonseq = commonlist[sseq].getAttribute("data-seq");
 
        for(let x of sbullet) {
-        x.classList.remove("active");
+        x.classList.remove(".active");
        }
 
-       sbullet[sseq].classList.add("active");
+       sbullet[sseq].classList.add(".active");
 
 
     }
@@ -77,13 +79,7 @@ window.addEventListener("DOMContentLoaded",() => {
         searchover();
     }
 
-    button.forEach((ele,idx) => {
-        ele.onclick = () => {
-            highSlide(idx);
-        };
-    });
-
-
+   
     const color = {"color1":"red","color2":"navy","color3":"sky","color4":"green"};
     const colorspan = document.querySelectorAll(".color span");
 
@@ -91,6 +87,14 @@ window.addEventListener("DOMContentLoaded",() => {
         console.log(color[x]);
     }
 
-    
+     button.forEach((ele,idx) => {
+        ele.onclick = () => {
+            event.preventDefault();
+            console.log("11111");
+            highSlide(idx);
+        };
+    });
+
+
 
 });

@@ -40,6 +40,7 @@ window.addEventListener("DOMContentLoaded",() => {
 
         sbtn.forEach((ele,idx) => {
             ele.onclick = () => {
+                event.preventDefault();
                 Slider(idx);
             };
         });

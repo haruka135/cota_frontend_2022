@@ -1,8 +1,8 @@
 window.addEventListener("DOMContentLoaded",()=> {
 
-    const galist = document.querySelectorAll(".gal-slide>li");
+    const glist = document.querySelectorAll(".gal-slide>li");
 
-    galist.forEach((ele,idx) => {
+    glist.forEach((ele,idx) => {
         ele.setAttribute("data-seq",idx);
     });
     
@@ -43,19 +43,16 @@ window.addEventListener("DOMContentLoaded",()=> {
 
         let gseq = glist[seq].getAttribute("data-seq");
 
-        for (let x of bullet) {
-            x.classList.remove("on");
-        }
-
+        for (let x of bullet) x.classList.remove("on");
+       
         bullet[gseq].classList.add("on");
-
-
-
 
     };
    
      btn.forEach((ele,idx) => {
                ele.onclick = () => {
+                event.preventDefault();
+                console.log("test");
                    galslide(idx);
                }
            });
