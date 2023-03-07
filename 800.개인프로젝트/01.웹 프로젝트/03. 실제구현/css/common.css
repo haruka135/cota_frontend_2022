@@ -64,7 +64,7 @@ header.main-header {
     z-index: 1;
 }
 
-.menu > li:nth-child(2):hover .smenu {
+.menu > li:nth-child(2):hover .smenu{
     display: block;
     position: absolute;
     z-index: 1;
@@ -76,7 +76,7 @@ header.main-header {
     z-index: 1;
 }
 
-.menu > li:first-child:hover .smenu > ul {
+.menu > li:first-child:hover .smenu > ul{
     display: flex;
 }
 
@@ -92,7 +92,7 @@ header.main-header {
     display: flex;
 }
 
-.menu .smenu > ul li {
+.menu .smenu li {
     padding: 41px 50px;
 }
 
@@ -132,6 +132,10 @@ header.main-header {
     height: 95px;
 }
 
+.gnb .menu li.sm:hover::before {
+    height: 200px;
+    border: 1px solid red;
+}
 
 
 .menu > li > a {
