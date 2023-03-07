@@ -83,12 +83,17 @@ main > h2 {
 .card .card-cont {
     position: relative;
     overflow: hidden;
-    display: grid;
+    display: flex;
+    gap: 28px;
 }
 
-.card .card-cont li {
-    display: inline-block;
-    border: 1px solid #959595;
+.card .card-cont > li:hover {
+    position: relative;
+    top: -502px;
+}
+
+.card .card-cont > li {
+    display: block;
     width: 302px;
     height: 502px;
     background: url(../img/silluet.png) no-repeat;
@@ -96,15 +101,13 @@ main > h2 {
     transition: top .4s ease-in-out;
 }
 
-.card .card-cont li:hover {
-    position: relative;
-    top: -501px;
-}
 
 .card-bg {
     padding: 0 30px;
     height: 100%;
     position: relative;
+    border: 1px solid #959595;
+    box-sizing: border-box;
 }
 
 .card-bg h2,
@@ -181,9 +184,10 @@ main > h2 {
 
 .hidden-card {
     position: relative;
-    border: 1px solid gray;
+    border: 1px solid #959595;
     height: 100%;
     padding: 0 30px;
+    box-sizing: border-box;
 }
 
 .hidden-card > a {

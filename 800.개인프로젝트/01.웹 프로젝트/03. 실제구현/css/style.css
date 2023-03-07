@@ -495,7 +495,7 @@ body {
     margin: 0 auto;
 }
 
-.conbox .conslide li.conslide1 {
+.conbox .conslide .conslide1 div {
     margin-left: 82px;
     position: absolute;
     left: 0;
@@ -503,19 +503,19 @@ body {
 
 }
 
-.conbox .conslide li.conslide2 {
+.conbox .conslide .conslide2 div {
     position: absolute;
     right: 0;
     bottom: 0;
 }
 
 
-.conbox .conslide li span {
+.conbox .conslide div span {
     display: none;
     transition: all .4s ease-in-out;
 }
 
-.conbox .conslide li:hover span {
+.conbox .conslide > div:hover span {
     position: absolute;
     top: 17px;
     left: 27px;
@@ -528,7 +528,7 @@ body {
     -webkit-line-clamp: 1;
 }
 
-.conbox .conslide li:hover::before {
+.conbox .conslide > div:hover > div::before {
     content:'';
     background-color: black;
     position: absolute;
@@ -541,7 +541,7 @@ body {
     
 }
 
-.conbox .conslide li.conslide2 img {
+.conbox .conslide .conslide2 img {
     display: block;
     width: 462px;
     height: 250px;
