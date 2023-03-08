@@ -474,7 +474,6 @@ body {
 .news-header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 116px;
 }
 
 .media-header .view-wrapper,
@@ -489,9 +488,12 @@ body {
     position: relative;
 }
 
+.slider-con {
+    display: flex;
+}
 
 .news-con .newcon li span {
-    font-size: 43px;
+    font-size: 40px;
     font-family: 'Noto Sans KR';
     color: #fff;
 }
@@ -500,8 +502,9 @@ body {
     padding-bottom: 337px;
 }
 
+
 .news-con .newcon li p {
-    font-size: 35px;
+    font-size: 30px;
     font-family: 'Noto Sans KR';
     color: #3b3b3b;
     font-weight: bold;
