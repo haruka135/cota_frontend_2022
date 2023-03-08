@@ -190,17 +190,6 @@ header.main-header {
     opacity: .4;
 }
 
-.hidden-all {
-    position: fixed;
-    display: none;
-    width: 100%;
-    height: 100%;
-    top:0;
-    left:0;
-    background: rgba(0,0,0,.5);
-    z-index: 5;
-}
-
 div.on {
     display: block;
 }
@@ -219,7 +208,147 @@ div.on {
 
 }
 
+.footer-main {
+    width: 1700px;
+    margin: 0 auto;
+    position: relative;
+}
 
+.big-logo .logobig img {
+    display: block;
+    width: auto;
+    height: 277px;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-main .address-contact {
+    position: absolute;
+    top: 0;
+    left: 470px;
+}
+
+.footer-menu .ftmenu {
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+    grid-template-columns: 1fr 1fr;
+    row-gap: 27px;
+    column-gap: 56px;
+}
+
+.footer-menu .ftmenu li a {
+    color: #fff;
+    font-family: 'Noto Sans KR';
+    font-weight: bold;
+}
+
+.address {
+    margin-bottom: 20px;
+}
+
+.address h2, .contact h2 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: normal;
+    margin-bottom: 7px;
+}
+
+.address address {
+    font-style: normal;
+    color: #fff;
+    font-size: 13px;
+    font-family: 'Noto Sans KR';
+}
+
+.address address:nth-of-type(1) {
+    padding-bottom: 8px;
+}
+
+.contact span {
+    color: #fff;
+    font-size: 13px;
+    font-family: 'Noto Sans KR';
+}
+
+.contact {
+    margin-bottom: 75px;
+}
+
+.link .sns-link {
+    display: flex;
+    gap: 17px;
+}
+
+.link .sns-link li a {
+    display:block;
+	Font-size:1px;
+	line-height:0;
+	text-indent:-9999px;
+}
+
+.link .sns-link li {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #ffc600;
+    justify-content: center;
+    align-items: center;
+}
+
+.link .sns-link li a.yt {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../img/youtube_mo.png) no-repeat center/cover;
+}
+
+.link .sns-link li a.fb {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../img/facebook_mo.png) no-repeat center/cover;
+}
+
+.link .sns-link li a.tw {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../img/twitter_mo.png) no-repeat center/cover;
+}
+
+.link .sns-link li a.th {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../img/twitch_mo.png) no-repeat center/cover;
+}
+
+.link .sns-link li a.in {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../img/insta_mo.png) no-repeat center/cover;
+}
+
+.link .sns-link li a.ti {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../img/tictok_mo.png) no-repeat center/cover;
+}
+
+.copyright {
+    margin-top: 40px;
+}
+
+.copyright span {
+    color: #fff;
+
+}
 
 
 

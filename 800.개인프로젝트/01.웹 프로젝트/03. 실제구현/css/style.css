@@ -481,93 +481,54 @@ body {
     margin-top: 18px;
 }
 
-.news-con .newcon li span {
-    font-size: 40px;
-    font-family: 'Noto Sans KR';
-    color: #fff;
-}
-
-.news-con {
-    padding-bottom: 337px;
-}
-
-.media-con {
-    padding-bottom: 319px;
-}
-
-.media-wrapper {
+.media-parent {
+    border: 1px solid red;
+    width: 100%;
     position: relative;
 }
 
-.slider-con {
+.media-parent .media-wrapper {
+    border: 1px solid blue;
+}
+
+.media-parent .media-wrapper .media-slide1 {
     display: flex;
-    height: 471px;
+    width: 100%;
+    height: 100%;
 }
 
-.slider-con li {
+.media-parent .media-wrapper .media-slide1 li {
     flex-basis: 100%;
-    flex-shrink: 0;
 }
 
-.slider-con li:nth-child(2n-1) {
-    left: 0;
-    bottom: 0;
-    position: absolute;
-}
-
-.slider-con li:nth-child(2n) {
-    right: 0;
-    bottom: 0;
-    position: absolute;
-}
-
-.slider-con li:nth-child(2n-1) div {
-    width: 836px;
-    height: 471px;
-    position: relative;
-}
-
-.slider-con li:nth-child(2n) div {
-    width: 464px;
-    height: 254px;
-    position: relative;
-}
-
-.slider-con li div img {
+.media-parent .media-wrapper .media-slide1 li div img {
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
 
-.slider-con li:hover div:before {
-    content:'';
-    background-color: #000;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    opacity: 0.5;
-
-}
-
-.slider-con li:hover div span {
-    position: absolute;
-    left: 23px;
-    top: 19px;
-    display: block;
-    color: #fff;
-    font-family: 'Noto Sans KR';
-    font-size: 20px;
-}
-
-.slider-con li div span {
+.media-parent .media-wrapper .media-slide1 li div span {
     display: none;
 }
 
 
-.news-con .newcon li p {
+.news-con {
+    padding-bottom: 337px;
+}
+
+.news-con .newcon {
+    display: flex;
+    flex-direction: column;
+}
+
+.news-con .newcon li span {
     font-size: 30px;
+    font-family: 'Noto Sans KR';
+    color: #fff;
+}
+
+.news-con .newcon li p {
+    font-size: 20px;
     font-family: 'Noto Sans KR';
     color: #3b3b3b;
     font-weight: bold;
@@ -581,144 +542,3 @@ body {
     margin-bottom: 128px;
 }
 
-.footer-main {
-    width: 1700px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.big-logo .logobig img {
-    display: block;
-    width: auto;
-    height: 277px;
-}
-
-.footer-wrapper {
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer-main .address-contact {
-    position: absolute;
-    top: 0;
-    left: 470px;
-}
-
-.footer-menu .ftmenu {
-    display: grid;
-    grid-template-rows: repeat(4,1fr);
-    grid-template-columns: 1fr 1fr;
-    row-gap: 27px;
-    column-gap: 56px;
-}
-
-.footer-menu .ftmenu li a {
-    color: #fff;
-    font-family: 'Noto Sans KR';
-    font-weight: bold;
-}
-
-.address {
-    margin-bottom: 20px;
-}
-
-.address h2, .contact h2 {
-    color: #fff;
-    font-size: 15px;
-    font-weight: normal;
-    margin-bottom: 7px;
-}
-
-.address address {
-    font-style: normal;
-    color: #fff;
-    font-size: 13px;
-    font-family: 'Noto Sans KR';
-}
-
-.address address:nth-of-type(1) {
-    padding-bottom: 8px;
-}
-
-.contact span {
-    color: #fff;
-    font-size: 13px;
-    font-family: 'Noto Sans KR';
-}
-
-.contact {
-    margin-bottom: 75px;
-}
-
-.link .sns-link {
-    display: flex;
-    gap: 17px;
-}
-
-.link .sns-link li a {
-    display:block;
-	Font-size:1px;
-	line-height:0;
-	text-indent:-9999px;
-}
-
-.link .sns-link li {
-    display: flex;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background-color: #ffc600;
-    justify-content: center;
-    align-items: center;
-}
-
-.link .sns-link li a.yt {
-    display: block;
-    width: 40px;
-    height: 40px;
-    background: url(../img/youtube_mo.png) no-repeat center/cover;
-}
-
-.link .sns-link li a.fb {
-    display: block;
-    width: 40px;
-    height: 40px;
-    background: url(../img/facebook_mo.png) no-repeat center/cover;
-}
-
-.link .sns-link li a.tw {
-    display: block;
-    width: 40px;
-    height: 40px;
-    background: url(../img/twitter_mo.png) no-repeat center/cover;
-}
-
-.link .sns-link li a.th {
-    display: block;
-    width: 40px;
-    height: 40px;
-    background: url(../img/twitch_mo.png) no-repeat center/cover;
-}
-
-.link .sns-link li a.in {
-    display: block;
-    width: 40px;
-    height: 40px;
-    background: url(../img/insta_mo.png) no-repeat center/cover;
-}
-
-.link .sns-link li a.ti {
-    display: block;
-    width: 40px;
-    height: 40px;
-    background: url(../img/tictok_mo.png) no-repeat center/cover;
-}
-
-.copyright {
-    margin-top: 40px;
-}
-
-.copyright span {
-    color: #fff;
-
-}
