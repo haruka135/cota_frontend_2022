@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+.scroll::-webkit-scrollbar {
+    display: none;
+  }
+
 body {
     overflow-x: hidden;
 }
