@@ -58,6 +58,55 @@ body {
     border: 1px solid #fff;
     line-height: 42px;
     border-radius: 30px;
+    transition: .4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-slides .view-more:hover::after {
+    content: '';
+    border: none;
+    display: block;
+    background-color: #fdc800;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    animation: overflow .5s ease-out;
+}
+
+.media .view-more:hover::after,
+.news .view-more:hover::after {
+    content: '';
+    border: none;
+    display: block;
+    background-color: #fdc800;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    animation: overflow .5s ease-out;
+}
+
+@keyframes overflow {
+    from {
+        top: 100%;
+    }
+    to {
+        top: 0;
+    }
+    
+}
+
+.main-slides .view-more:hover a {
+    color: #000;
 }
 
 
@@ -67,6 +116,7 @@ body {
     width: 212px;
     height: 42px;
     cursor: pointer;
+    transition: all .4s ease-in-out;
 }
 
 .icons {
@@ -92,6 +142,10 @@ body {
 .shopping,
 .media {
     padding-top: 284px;
+}
+
+.media {
+    padding-bottom: 193px;
 }
 
 .media, .news, #footer {
@@ -482,35 +536,151 @@ body {
 }
 
 .media-parent {
-    border: 1px solid red;
-    width: 100%;
     position: relative;
+    height: 400px;
+}
+.media-parent .media-wrapper1 {
+    width: 600px;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
 }
 
-.media-parent .media-wrapper {
-    border: 1px solid blue;
+.media-parent .media-wrapper2 {
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    right: 82px;
+    overflow: hidden;
 }
 
-.media-parent .media-wrapper .media-slide1 {
+.media-parent .media-wrapper1 .media-slide1 {
     display: flex;
     width: 100%;
     height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.media-parent .media-wrapper2 .media-slide2 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 .media-parent .media-wrapper .media-slide1 li {
     flex-basis: 100%;
 }
 
-.media-parent .media-wrapper .media-slide1 li div img {
+.media-parent .media-wrapper1 .media-slide1 li div {
+    width: 600px;
+    height: 300px;
+    position: relative;
+}
+
+.media-parent .media-wrapper2 .media-slide2 li div {
+    width: 400px;
+    height: 200px;
+    position: relative;
+}
+
+.media-parent .media-wrapper1 .media-slide1 li div img {
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
 
-.media-parent .media-wrapper .media-slide1 li div span {
+.media-parent .media-wrapper2 .media-slide2 li div img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+.media-parent .media-wrapper li div span {
     display: none;
 }
 
+.media-parent .media-wrapper1 .media-slide1 li:hover div::after {
+    content:'';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    opacity: .4;
+}
+
+
+.media-parent .media-wrapper2 .media-slide2 li:hover div::after {
+    content:'';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    opacity: .4;
+}
+
+.media-parent .media-wrapper1 .media-slide1 li:hover div span {
+    position: absolute;
+    display: block;
+    z-index: 1;
+    top: 15px;
+    left: 25px;
+    color: #fff;
+    font-family: 'Noto Sans KR';
+    font-size: 20px;
+}
+
+.media-parent .media-wrapper2 .media-slide2 li:hover div span {
+    position: absolute;
+    display: block;
+    z-index: 1;
+    top: 15px;
+    left: 25px;
+    color: #fff;
+    font-family: 'Noto Sans KR';
+    font-size: 20px;
+}
+
+
+.media-lbtn {
+    position: absolute;
+    top: 112px;
+    right: 344px;
+    width: 21px;
+    height: 21px;
+    background: url(../img/new_arrow_left.png) no-repeat;
+    display:block;
+	overflow:hidden;
+	Font-size:1px;
+	line-height:0;
+	text-indent:-9999px;
+}
+
+.media-rbtn {
+    position: absolute;
+    top: 112px;
+    right: 251px;
+    width: 21px;
+    height: 21px;
+    background: url(../img/new_arrow_right.png) no-repeat;
+    display:block;
+	overflow:hidden;
+	Font-size:1px;
+	line-height:0;
+	text-indent:-9999px;
+}
 
 .news-con {
     padding-bottom: 337px;
