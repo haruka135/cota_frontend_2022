@@ -74,7 +74,61 @@ function slideFn(obj,idx) { // obj - 슬라이드부모요소 , idx - 슬라이�
 
 ////// loadFn함수 //////////////////
 function loadFn() {
+
+        const ham = document.querySelector(".ham a");
+        const hmenu = document.querySelector(".hiddenmenu");
+
+        ham.onclick = () => {
+            hmenu.style.right = "0";
+            hmenu.style.transition = "right .4s ease-in-out";
+        };
+
+        ham.onmouseover = () => {
+            hmenu.style.right = "-100%";
+            hmenu.style.transition = "right .4s ease-in-out";
+        }
+
+        const robtn = document.querySelectorAll(".robtn");
+        const roslide = document.querySelectorAll(".roasterlist");
+
+        let rolist = document.querySelectorAll(".roasterlist li");
+        console.log(rolist);
+
+        rolist.forEach((ele,idx) => {
+            ele.setAttribute("roaster-data",idx);
+        });
+
+        const roasterSlide = (seq) => {
+            let prelist = document.querySelectorAll(".roasterlist li");
     
+            if(seq) {
+                roslide.style.left= "-100%";
+                roslide.style.transition = "left .4s ease-in-out";
+    
+                setTimeout(()=>{
+                    roslide.appendChild(prelist[0]);
+                    roslide.style.left = "0";
+                    roslide.style.transition = "none";
+                },400);
+            } else {
+                roslide.insertBefore(prelist[prelist.length - 1],prelist[0]);
+                roslide.style.left = "-100%";
+                roslide.style.transition = "none";
+    
+                setTimeout(()=>{
+                    roslide.style.left = "0";
+                    roslide.style.transition = "left .4s ease-in-out";
+                },0);
+            }
+        };
+
+        robtn.forEach((ele,idx)=>{
+            ele.onclick = ()=>{
+                event.preventDefault();
+                console.log("버튼 눌렀어")
+                roasterSlide(idx);
+            };
+        });
     
         const bbtn = document.querySelectorAll(".bbtn");
         const bslide = document.querySelector(".business-slide");

@@ -24,49 +24,73 @@ body{
 
 .cont .banner .img-banner .sl1 {
   display: block;
-  height: 500px;
-  background: url(../img/particle_banner.png) no-repeat; 
-  background-size: cover;
-
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #000;
+  overflow: hidden;
 }
 
-.cont .banner .img-banner > li {
-  display: flex !important;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.cont .banner .img-banner .sl1 .slimg img:first-child {
+    width: 1249px;
+    height: 486px;
+    position: absolute;
+    left: 396px;
+    top: 517px;
+}
+
+.cont .banner .img-banner .sl1 .slimg img:last-child {
+  width: auto;
+  height: 900px;
+  position: absolute;
+  top: -2px;
+  left: 614px;
+}
+
+.cont .banner .img-banner .sl1 .text span:nth-of-type(1) {
+  position: absolute;
+  left: 346px;
+  top: 272px;
   color: #fff;
-  font-family: "Raleway",sans-serif;
-  gap: 20px;
-
+  font-family: 'Noto Serif JP';
+  font-weight: 900;
+  font-size: 85px;
+  z-index: 2;
 }
 
-
-.cont .banner .img-banner > li div:first-child {
-  font-size: 40px;
-  font-weight: 800;
-}
-
-.cont .banner .img-banner > li div:last-child a {
-  font-size: 20px;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.cont .banner .img-banner > li div:last-child a {
-  display: inline-block;
-  background-color: #fff;
-  color: #131313;
-  padding: 20px;
-  border-radius: 5px;
-  margin-right: 38px;
-  transition: all .5s ease-in-out;
-}
-
-.cont .banner .img-banner > li div:last-child a:hover {
-  background-color: transparent;
-  border: 2px solid #fff;
+.cont .banner .img-banner .sl1 .text span:nth-of-type(2) {
+  position: absolute;
+  top: 312px;
+  right: 181px;
   color: #fff;
+  font-family: 'Noto Serif JP';
+  font-weight: 900;
+  font-size: 85px;
+}
+
+.cont .banner .img-banner .sl1 .text p {
+  color: rgba(255,255,255,.4);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  bottom: 173px;
+  font-family: 'Rubik';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.cont .banner .img-banner .sl1 .particle span {
+  width: block;
+  width: 436px;
+  height: 436px;
+  background: linear-gradient(to right,#84592C 100%,#1E0A01 32%);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: blur(110px);
 }
 
 .saturn-info {
@@ -140,17 +164,20 @@ body{
 .sub {
   margin-top: 54px;
   margin-bottom: 54px;
+  display: flex;
 }
 
 .sub > #snb {
   width: 210px;
-  float: left;
+  height: 100vh;
   padding-left: 39px;
 }
 
 .sub > #contents {
-  float: left;
-  width: 991px;
+  width: calc(100% - 210px);
+  display: flex;
+  flex-direction: column;
+  padding-left: 300px;
 }
 
 .sub #snb a {
@@ -162,7 +189,8 @@ body{
 
 .history h2,
 .gal h2,
-.explorers h2 {
+.explorers h2,
+.news h2 {
   font-size: 40px;
   font-family: Metropolis;
   font-weight: bold;
@@ -209,16 +237,19 @@ body{
 }
 
 .gal {
-  padding-top: 86px;
+  margin-top: 86px;
+  position: relative;
+  height: 69.8vh;
 }
 
 .slide-wrap {
   position: relative;
-  margin-top: 40px;
-  margin-left: 80px;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
   box-sizing: border-box;
   width: 671px;
-  height: 503px;
+  height: 594px;
   overflow: hidden;
 }
 
@@ -234,13 +265,37 @@ body{
 .slide-wrap .gal-slide li {
   flex-shrink: 0;
   flex-basis: 100%;
+  position: relative;
 }
 
 .slide-wrap .gal-slide li img {
   object-fit: cover;
   width: 100%;
+  height: 88%;
+}
+
+.slide-wrap .fig {
+  position: absolute;
+  font-family: 'Metropolis';
+  color: #858585;
+  bottom:20px;
+  left: 0;
+  text-align: center;
+  display: flex;
+  width: 100%;
   height: 100%;
 }
+
+.slide-wrap .fig li {
+  flex-shrink: 0;
+  flex-basis: 100%;
+}
+
+.slide-wrap .fig li figcaption{
+ position: absolute;
+ bottom: 0;
+}
+
 
 .btn {
   display: block;
@@ -264,10 +319,10 @@ body{
 }
 
 .bullet {
-  margin-left: 80px;
   width: 671px;
   text-align: center;
-  margin-top: 31px;
+  position: absolute;
+  bottom: 53px;
 }
 
 .bullet > li {
@@ -297,6 +352,12 @@ body{
   line-height: 1.5;
 }
 
-.explorers {
-  padding-top: 80px;
+.explorers,
+.news {
+  margin-top: 85px;
+}
+
+.explorers .ex-info {
+  width: 100vw;
+  margin: 0 auto;
 }

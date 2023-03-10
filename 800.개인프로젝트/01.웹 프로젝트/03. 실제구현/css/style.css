@@ -14,7 +14,7 @@ body {
 .slides .slide {
     background: url(../img/slide_01.png) no-repeat center/cover;
     width: 100%;
-    height: 910px;
+    height: 100vh;
     position: relative;
 }
 
@@ -216,9 +216,20 @@ body {
 .divide-wrapper .divide li {
     flex-basis: 100%;
     flex: 1;
-    background: url(../img/team_01.jpg) no-repeat center/cover;
     position: relative;
     transition: all .4s ease-in-out;
+}
+
+.divide-wrapper .divide li:first-child {
+    background: url(../img/team_01.jpg) no-repeat center/cover;
+}
+
+.divide-wrapper .divide li:nth-child(2) {
+    background: url(../img/team_02.jpg) no-repeat center/cover;
+}
+
+.divide-wrapper .divide li:nth-child(3) {
+    background: url(../img/team_03.jpg) no-repeat center/cover;
 }
 
 .divide-wrapper .divide li:hover {
@@ -242,7 +253,7 @@ body {
     opacity: 0;
 }
 
-.divide-wrapper .divide li a {
+.divide-wrapper .divide li a.first {
     position: absolute;
     color: #fff;
     left: 50%;
@@ -253,6 +264,20 @@ body {
     font-weight: bold;
     letter-spacing: -6px;
 }
+
+.divide-wrapper .divide li a.second  {
+    position: absolute;
+    color: #fff;
+    left: 50%;
+    top: 58%;
+    transform: translate(-50%,-50%);
+    font-size: 25px;
+    font-family: 'Pretendard-Regular';
+    font-weight: lighter;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
 
 .esports-btn {
     position: absolute;
@@ -537,11 +562,11 @@ body {
 
 .media-parent {
     position: relative;
-    height: 400px;
+    height: 473px;
 }
 .media-parent .media-wrapper1 {
-    width: 600px;
-    height: 300px;
+    width: 837px;
+    height: 472px;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -549,11 +574,11 @@ body {
 }
 
 .media-parent .media-wrapper2 {
-    width: 400px;
-    height: 200px;
+    width: 464px;
+    height: 252px;
     position: absolute;
     bottom: 0;
-    right: 82px;
+    right: 35px;
     overflow: hidden;
 }
 
@@ -580,14 +605,14 @@ body {
 }
 
 .media-parent .media-wrapper1 .media-slide1 li div {
-    width: 600px;
-    height: 300px;
+    width: 837px;
+    height: 472px;
     position: relative;
 }
 
 .media-parent .media-wrapper2 .media-slide2 li div {
-    width: 400px;
-    height: 200px;
+    width: 464px;
+    height: 252px;
     position: relative;
 }
 
@@ -656,8 +681,8 @@ body {
 
 .media-lbtn {
     position: absolute;
-    top: 112px;
-    right: 344px;
+    top: 115px;
+    right: 322px;
     width: 21px;
     height: 21px;
     background: url(../img/new_arrow_left.png) no-repeat;
@@ -670,7 +695,7 @@ body {
 
 .media-rbtn {
     position: absolute;
-    top: 112px;
+    top: 115px;
     right: 251px;
     width: 21px;
     height: 21px;
@@ -697,19 +722,33 @@ body {
     transition: all .5s;
 }
 
+.news-con .news-grid li div:nth-child(2) {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    opacity: .5;
+    z-index: 1;
+}
+
+
 .news-con .news-grid li:first-child {
     display: block;
-    width: 956px;
-    height: 372px;
+    width: 51%;
+    height: 40vh;
     top: 0;
     left: 0;
-    background: url(../img/news_01.jpg) no-repeat center/cover;
+    background: url(../img/news_01.jpg) no-repeat top/cover;
 }
 
 .news-con .news-grid li:nth-child(2) {
     display: block;
-    width: 960px;
-    height: 605px;
+    width: 49%;
+    height: 65vh;
     top: 0;
     right: 0;
     background: url(../img/news_02.jpg) no-repeat center/cover;
@@ -717,8 +756,8 @@ body {
 
 .news-con .news-grid li:nth-child(3) {
     display: block;
-    width: 956px;
-    height: 536px;
+    width: 51%;
+    height: 60vh;
     bottom: 0;
     left: 0;
     background: url(../img/news_03.jpg) no-repeat center/cover;
@@ -727,11 +766,18 @@ body {
 
 .news-con .news-grid li:last-child {
     display: block;
-    width: 960px;
-    height: 303px;
+    width: 49%;
+    height: 35vh;
     bottom: 0;
     right: 0;
     background: url(../img/news_04.jpg) no-repeat center/cover;
+}
+
+.news-con .news-grid li .open span {
+    z-index: 3;
+    font-family: 'Pretendard-Regular';
+    font-size: 16px;
+    white-space: nowrap;
 }
 
 .news-con .news-grid li:first-child .open span {
@@ -746,7 +792,6 @@ body {
     color: #fff;
     left: 32px;
     bottom: 32px;
-    transform: rotate(90deg);
 }
 
 .news-con .news-grid li:nth-child(3) .open span {
@@ -754,7 +799,8 @@ body {
     color: #fff;
     right: 32px;
     top: 32px;
-    transform: rotate(90deg);
+    transform-origin:right center;
+    transform: rotate(-90deg);
 }
 
 .news-con .news-grid li:last-child .open span {
@@ -776,12 +822,14 @@ body {
     left: 0;
     right: 0;
     z-index: 1;
+    animation: opacity .8s ease-out;
 }
 
 .news-con .news-grid li:hover .closed {
     display: block;
     position: absolute;
     z-index: 2;
+    width: 100%;
 }
 
 
@@ -791,14 +839,57 @@ body {
 }
 
 .news-con .news-grid li:hover .closed h3 {
-    font-family: 'Noto Sans KR';
+    font-family: 'Pretendard-Regular';
     font-size: 24px;
-    font-weight: bold;
     position: absolute;
-    left: 339px;
-    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 15vh;
+    animation: h2 .8s ease-in;
+}
+
+.news-con .news-grid li:hover .closed p {
+    white-space: normal;
+    text-align: center;
+    padding: 0 10vw;
+    font-family: 'Pretendard-Regular';
+    font-weight: lighter;
+    position: absolute;
+    top: 23vh;
+    animation: p .8s ease-in;
 }
 
 .closed {
     display: none;
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes h2 {
+    from {
+        opacity: 0;
+        top: 10vh;
+    }
+    to {
+        opacity: 1;
+        top: 15vh;
+    }
+}
+
+@keyframes p {
+    from {
+        opacity: 0;
+        top: 17vh;
+    }
+    to {
+        opacity: 1;
+        top: 23vh;
+    }
 }

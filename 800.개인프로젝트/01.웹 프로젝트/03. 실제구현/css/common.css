@@ -2,6 +2,15 @@
 
 @import url('reset.css');
 
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700;800&display=swap');
+
 /* body * {
     outline: 1px dashed red;
 } */
@@ -10,7 +19,7 @@ header.main-header {
     margin: 0 auto;
     width: 100%;
     position: absolute;
-    z-index: 1;
+    z-index: 3;
 }
 .gnb {
     height: 105px;
@@ -45,10 +54,34 @@ header.main-header {
     height: 100%;
 }
 
+.left-menu .menu > li > a {
+    position: relative;
+}
+
 .left-menu .menu a {
     color: #fff;
     font-family:'Noto Sans KR';
 }
+
+.left-menu .menu > li > a:hover {
+    background: linear-gradient(to right,red 20%,blue 60%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.left-menu .menu > li > a:hover::after {
+    content: '';
+    display: block;
+    width: 88px;
+    height: 4px;
+    background-color: #84afff;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .menu-wrapper {
     margin-left: 120px;
 }
@@ -67,6 +100,7 @@ header.main-header {
     height: 98px;
     background-color: #fff;
     display: none;
+    z-index: -1;
 }
 
 .menu > li:first-child:hover .smenu {
@@ -206,6 +240,32 @@ div.on {
     height: 4px;
     background-color: #fff;
 
+}
+
+.hiddenmenu {
+    width: 105px;
+    height: 100vh;
+    background-color: black;
+    opacity: .8;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: -2;
+}
+
+.hiddenmenu .snsmenu {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hiddenmenu .snsmenu li a {
+    font-size: 25px;
+    color: #fff;
 }
 
 .footer-main {
