@@ -16,6 +16,12 @@ body {
     width: 100%;
     height: 100vh;
     position: relative;
+    transition: all 3s ease-in-out;
+    overflow: hidden;
+}
+
+.slides .slide:hover {
+    transform: scale(1.1);
 }
 
 .slide-contents {

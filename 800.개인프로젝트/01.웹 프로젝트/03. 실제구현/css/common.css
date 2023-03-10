@@ -64,10 +64,7 @@ header.main-header {
 }
 
 .left-menu .menu > li > a:hover {
-    background: linear-gradient(to right,red 20%,blue 60%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
+    color: orange !important;
 }
 
 .left-menu .menu > li > a:hover::after {
@@ -75,9 +72,9 @@ header.main-header {
     display: block;
     width: 88px;
     height: 4px;
-    background-color: #84afff;
+    background-color: orange;
     position: absolute;
-    bottom: 25px;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
 }
