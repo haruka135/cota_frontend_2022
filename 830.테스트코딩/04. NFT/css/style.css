@@ -1,0 +1,43 @@
+@import url('reset.css');
+
+body {
+    background-color: black;
+}
+
+/* body * {
+    border: 1px dashed red;
+} */
+
+header {
+    padding: 30px 37px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+}
+
+.menu-wrapper .menu {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    gap: 16px;
+}
+
+.menu-wrapper .menu li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.menu-wrapper .menu li a {
+    height: 100%;
+    line-height: 90px;
+    font-size: 18px;
+    color: #fff;
+}

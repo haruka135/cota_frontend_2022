@@ -1,6 +1,8 @@
 
 window.addEventListener("DOMContentLoaded",() => {
 
+        
+
         // 슬라이드 번호
         let slidenum = 0;
 
@@ -37,11 +39,9 @@ window.addEventListener("DOMContentLoaded",() => {
         // 3. 대상에 이벤트 설정하기
 
         sbtn.forEach((ele,idx) => {
-
             ele.onclick = () => {
+                event.preventDefault();
                 Slider(idx);
             };
-
         });
-
 });

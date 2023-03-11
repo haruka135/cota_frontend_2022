@@ -13,8 +13,9 @@
         <!-- 외부 미디어쿼리 CSS 불러오기 -->
         <link rel="stylesheet" href="../css/mainmedia.css" />
         <!-- 외부JS삽입 -->
-        <script src="../js/main.js"></script>
+        <script src="../js/galslide.js"></script>
         <script src="../js/slide.js"></script>
+        <script src="../js/main.js"></script>
     </head>
     <body>
         <!-- 1. 상단영역 -->
@@ -52,9 +53,27 @@
         <!-- 2. 비주얼 영역 -->
         <div id="cont">
             <main class="cont">
-                <ul class="img">
-                    <li class="img-slide1"><img src="../img/bg01.jpg" alt="배너테스트" /></li>
-                </ul>
+                <section class="banner">
+                    <ul class="img-banner">
+                        <li class="sl1">
+                            <div class="slimg">
+                                <img src="../img/bg_earth.png" alt="지구">
+                                <img src="../img/bg_phone.png" alt="핸드폰">
+                            </div>
+                            <div class="text">
+                                <span>SATURN</span>
+                                <span>INFORMATION</span>
+                                <p>
+                                    Seeing Saturn assets inversetment Platform, you can create, trade, min and invest<br>
+                                    seamlessly in Non-Fungible Tokens
+                                </p>
+                            </div>
+                            <div class="particle">
+                                <span></span>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
                 <section class="saturn-info-more">
                     <div class="saturn-info">
                         <span>Saturn</span>
@@ -95,5 +114,128 @@
                 </section>
             </main>
         </div>
+
+         <!-- 3. 하단영역 -->
+    <div id="info">
+        <footer class="info ibx">
+            <!-- 3-1. More Destinations -->
+            <div class="more">
+                <h3>More Destinations</h3>
+                
+                <div class="mbx">
+                    <ul id="mslide">
+                        <li>
+                            <a href="#">
+                                <img src="../img/jupiter_new.png" alt="Jupiter">
+                                <span>Jupiter</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../img/earth.png" alt="Earth">
+                                <span>Earth</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../img/mercury_new.png" alt="Mercury">
+                                <span>Mercury</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../img/mars.png" alt="Mars">
+                                <span>Mars</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../img/venus_jg.png" alt="Venus">
+                                <span>Venus</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../img/saturn.png" alt="Saturn">
+                                <span>Saturn</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../img/uranus.png" alt="Uranus">
+                                <span>Uranus</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../img/neptune.png" alt="Neptune">
+                                <span>Neptune</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../img/earth_moon.png" alt="Earth's Moon">
+                                <span>Earth's Moon</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!--이동버튼-->
+                <div href="#" class="mbtn mb1">
+                    <img src="../img/arrow_left_slim.png" alt="왼쪽이동버튼">
+                </div>
+                <div href="#" class="mbtn mb2">
+                    <img src="../img/arrow_right_slim.png" alt="오른쪽이동버튼">
+                </div>
+
+            </div>
+
+            <!-- 3-2. SNS -->
+            <div class="sns">
+                <h3>Stay Connected</h3>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="ir">트위터 바로가기</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="ir">페이스북 바로가기</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="ir">인스타그램 바로가기</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 3-3. 하단링크 -->
+            <div class="blink">
+                <ul>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">BIBLIOGRAPHY</a></li>
+                    <li><a href="#">FEEDBACK</a></li>
+                    <li><a href="#">PRIVACY</a></li>
+                    <li><a href="#">IMAGE USE</a></li>
+                    <li><a href="#">NASA SCIENCE MISSION DIRECTORATE</a></li>
+                    <li><a href="#">NASA PORTAL</a></li>
+                    <li><a href="#">SITEMAP</a></li>
+                </ul>
+            </div>
+
+            <!-- 3-4. 회사정보 -->
+            <div class="addr">
+                <address>
+                    This site is maintained by the Planetary Science Communications team at <br>
+                    <strong>NASA’s Jet Propulsion Laboratory</strong> for <a href="#">NASA’s Science Mission Directorate.</a>
+                </address>
+            </div>
+
+        </footer>
+    </div>
     </body>
 </html>
