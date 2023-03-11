@@ -111,7 +111,7 @@ body {
     
 }
 
-.main-slides .view-more:hover a {
+.view-more a:hover {
     color: #000;
 }
 
@@ -125,17 +125,66 @@ body {
     transition: all .4s ease-in-out;
 }
 
+.media .view-more a,
+.news .view-more a {
+    position: absolute;
+    z-index: 2;
+    color: #fff;
+}
+
 .icons {
-    background: url(../img/arrow-down.png) no-repeat;
-    width: 38px;
-    height: 37px;
+    
     display: inline-block;
-    vertical-align: middle;
+    width: 38px;
+    height: 38px;
+    background-color:#fdc800;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    position: relative;
+    overflow: hidden;
 }
 
 .icons a {
     display: block;
     text-indent: -9999em;
+    background: url(../img/arrow-down.png) no-repeat center;
+    width: 38px;
+    height: 37px; 
+}
+
+.icons a:hover {
+    animation: button2 .5s ease-in-out;
+}
+
+.icons a:hover::before {
+    content:'';
+    display: block;
+    background: url(../img/arrow-down.png) no-repeat center;
+    width: 38px;
+    height: 37px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: button1 .5s ease-in-out;
+
+}
+
+@keyframes button1 {
+    from {
+        left: -35px;
+    }
+    to {
+        left: 0px;
+    }
+}
+
+@keyframes button2 {
+    from {
+        background-position-x: center;
+    }
+    to {
+        background-position-x: 48px;
+    }
 }
 
 .main {
