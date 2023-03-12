@@ -368,6 +368,36 @@ function loadFn(){
     */
 
     /************************************************************* 
+                    함수기능 : 메뉴 클릭시 하단 메뉴 나타나기 
+    *************************************************************/
+
+        // 1. 메뉴 a 요소 수집
+        const menu = document.querySelector(".hidden-ul li a:nth-of-type(1)");
+
+        // 2. 숨겨진 메뉴 나타나기
+        const hmenu = document.querySelector(".hidden-smenu");
+
+        const closing = document.querySelector(".close");
+
+        // 3. 함수 
+        const hidden = () => {
+            hmenu.style.display = "block";
+            menu.style.display = "none";
+            closing.style.display = "block";
+        };
+
+        const closer = () => {
+            hmenu.style.display = "none";
+            menu.style.display = "block";
+        };
+
+        // 4. 클릭 이벤트
+        menu.onclick = () => {
+            event.preventDefault();
+            hidden();
+        };
+
+    /************************************************************* 
                     함수기능 : 인포메이션 배열넣기
     *************************************************************/
     // 0. 배열
