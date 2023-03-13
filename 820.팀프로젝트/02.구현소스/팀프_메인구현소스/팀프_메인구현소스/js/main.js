@@ -389,12 +389,17 @@ function loadFn(){
         const closer = () => {
             hmenu.style.display = "none";
             menu.style.display = "block";
+            closing.style.display = "none";
         };
 
         // 4. 클릭 이벤트
         menu.onclick = () => {
             event.preventDefault();
             hidden();
+        };
+        closing.onclick = () => {
+            event.preventDefault();
+            closer();
         };
 
     /************************************************************* 
@@ -420,8 +425,95 @@ function loadFn(){
         for(let x of pa) {
             console.log(x);
             p.innerHTML += `${x}<br>`;
-        }   
-        p.style.whiteSpace = 'nowrap';       
+        }      
+
+        
+    /************************************************************* 
+                    함수기능 : explorer 슬라이드 함수
+    *************************************************************/
+
+    // 1. 대상 선정 ///////////////////////////////////////////
+    // 1-1. 이벤트 대상: .ebtn
+    const ebtn = document.querySelectorAll(".ebtn");
+
+    // 1-2. 변경 대상: .explorer-slide
+    const eslide = document.querySelector(".explorer-slide");
+
+    // 1-3. 슬라이드 li list 
+    let elist = document.querySelectorAll(".explorer-slide li");
+
+    // 초기화 1 - 순번 붙이기 //////////////// 
+
+    elist.forEach((ele,idx) => {
+        ele.setAttribute("ex-seq",idx);
+    });
+
+    // 초기화 2 - 맨 뒤 요소 맨 앞으로 이동 2번 하기 //////////////
+    // 맨 뒤 맨 앞 이동 함수만들기
+
+    const echgseq = () => {
+        // 현재 슬라이드 li 새로 읽기(2번 반복시 li의 순서가 달라지기 때문)
+        elist = document.querySelectorAll(".explorer-slide > li");
+
+        // 맨뒤 맨앞 이동하기 -> 변경대상: .explorer-slide -> eslide 변수
+        eslide.insertBefore(elist[elist.length-1],elist[0]);
+    };
+
+    // 2번 맨뒤 맨앞이동 함수 호출하기
+    for(let i=0;i<2;i++) echgseq();
+
+    // 광클 금지 변수
+    let eprot = 0;
+
+    // 2. 슬라이드 변경 함수 만들기 
+
+    const exSlide = () => {
+
+        // 광클 금지 설정하기
+        if(eprot) return;
+        eprot = 1; // 잠금!
+        setTimeout(()=>{
+            prot = 0; // 해제!
+        },400);
+
+        // 0. 현재의 슬라이드 li 수집하기
+        let commonli = eslide.querySelectorAll("li");
+
+        // 1. 방향에 따른 분기
+        // 1-1. 오른쪽 버튼 클릭 시
+
+        if(seq) {
+            // 1. 슬라이드 이동전 먼저 잘라낸다
+
+            // 1-1. 바깥에 나가있는 첫번째 슬라이드 li를 잘라서 맨 뒤로 보낸다.
+            eslide.appendChild(commonli[0]);
+            eslide.style.left = "-110%";
+            eslide.style.transition = "none";
+
+            // 1-2. 오른쪽 버튼 클릭 시 다음 슬라이드가 나타나도록 슬라이드 박스의 left 값을 -220%로 변경시킨다.
+            setTimeout(() => {
+                eslide.style.left = "-220%";
+                eslide.style.transition = "left .4s ease-in-out";
+            },0); 
+        } else {
+            eslide.insertBefore(commonli[commonli.length - 1],commonli[0]);
+            eslide.style.left = "-330%";
+            eslide.style.transition = "none";
+
+            setTimeout(()=> {
+                eslide.style.left = "-220%";
+                eslide.style.transition = "left .4s ease-in-out";
+            },0);
+        }
+
+        // 2. 이동버튼대상에 이벤트 설정하기
+        ebtn.forEach((ele,idx) => {
+            ele.onclick = () => {
+                event.preventDefault();
+                exSlide();
+            };
+        });
+    };
 
 
     
