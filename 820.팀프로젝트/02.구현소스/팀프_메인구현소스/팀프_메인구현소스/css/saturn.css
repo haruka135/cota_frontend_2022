@@ -247,11 +247,10 @@ body{
 }
 
 .con .right-menu {
-  width: 83vw;
+  width: 93vw;
 }
 
 .con .right-menu > section {
-  margin-left: 63px;
   margin-bottom: 80px;
 }
 
@@ -495,7 +494,7 @@ body{
 
 .explorer {
   position: relative;
-  width: 100%;
+  width: 90%;
   height: 100vh;
   overflow: hidden;
 }
@@ -508,7 +507,7 @@ body{
 
 .explorer .explorer-wrapper .explorer-slide {
   display: flex;
-  gap: 50px;
+  gap: 30px;
   position: absolute;
   top: 0;
   left: -36%;
