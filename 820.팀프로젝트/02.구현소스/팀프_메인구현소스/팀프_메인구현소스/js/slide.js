@@ -165,21 +165,21 @@ window.addEventListener("DOMContentLoaded",() => {
 
             // 1-1. 바깥에 나가있는 첫번째 슬라이드 li를 잘라서 맨 뒤로 보낸다.
             eslide.appendChild(commonli[0]);
-            eslide.style.left = "-122%";
+            eslide.style.left = "-125%";
             eslide.style.transition = "none";
 
             // 1-2. 오른쪽 버튼 클릭 시 다음 슬라이드가 나타나도록 슬라이드 박스의 left 값을 -220%로 변경시킨다.
             setTimeout(() => {
-                eslide.style.left = "-243%";
+                eslide.style.left = "-250%";
                 eslide.style.transition = "left .4s ease-in-out";
             },1); 
         } else {
             eslide.insertBefore(commonli[commonli.length - 1],commonli[0]);
-            eslide.style.left = "-364%";
+            eslide.style.left = "-375%";
             eslide.style.transition = "none";
 
             setTimeout(()=> {
-                eslide.style.left = "-243%";
+                eslide.style.left = "-250%";
                 eslide.style.transition = "left .4s ease-in-out";
             },0);
         }

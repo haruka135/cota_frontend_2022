@@ -409,6 +409,7 @@
 
     .cont .con .explorer {
         width: 100%;
+        height: auto;
     }
 
     .cont .con .explorer h2 {
