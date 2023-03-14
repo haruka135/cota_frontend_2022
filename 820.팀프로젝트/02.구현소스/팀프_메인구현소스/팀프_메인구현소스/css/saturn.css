@@ -240,17 +240,22 @@ body{
   position: relative;
 }
 
+.con .left-menu .hidden-ul a {
+  font-family:'Metropolis';
+  font-size: 17px;
+}
+
 .cont .con .left-menu ul li a {
   transition: all .5s;
 }
 
-.cont .con .left-menu ul li a:hover {
+.cont .con .left-menu ul:first-childå li a:hover {
   margin-bottom: 12px;
   color: #10305c;
   font-weight: bold;
 }
 
-.cont .con .left-menu ul li a:hover::after {
+.cont .con .left-menu ul:first-child li a:hover::after {
   content:'';
   display: block;
   width: 70px;

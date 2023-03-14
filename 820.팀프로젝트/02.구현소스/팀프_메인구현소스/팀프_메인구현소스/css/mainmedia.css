@@ -482,11 +482,12 @@
     }
 
     .cont .con .explorer .explorer-wrapper .explorer-slide li:hover .explorer-info span:last-child {
-        font-size: 25px;
+        font-size: 20px;
         writing-mode: vertical-lr;
         letter-spacing: 0px;
         color: #fff;
         text-shadow: 0 0 5px #000;
+        text-transform: uppercase;
         margin-left: 10px;
     }
 
