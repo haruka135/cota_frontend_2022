@@ -62,13 +62,28 @@
     .info .sns{
     padding: 0 0 10vh;
     }
-
-    /* 비주얼 영역 */
-	.text span:nth-of-type(1) {
-		font-size: 9px;
+	
+	/* IN DEPTH */
+	
+	.cont .con .center-menu .depth .depth-inner .grid-all .grid-list li {
+		width: 25%;
 	}
 	
+	.cont .con .center-menu .depth .depth-inner .grid-all .grid-list li:nth-child(2n) {
+		border-right: none;
+	}
 	
+	.cont .con .center-menu .depth .depth-inner .grid-all .grid-list li:nth-child(3) {
+		border-right: 1px solid #B0CADD;
+	}
+	
+	.cont .con .center-menu .depth .depth-inner .grid-all .grid-list li:nth-child(9) {
+		border: none;	
+	}
+
+	.cont .con .center-menu .depth .depth-inner .grid-all .grid-list li:nth-child(3) .grid-wrapper .circle {
+		margin-top: 40px;	
+	}
         
 }
 /* 1400px 사이즈 이하 미디어쿼리 끝 */
@@ -158,7 +173,21 @@
     .info .blink ul {
         padding: 0 5vw;
     }
+	
+	/* MISSIONS */
 
+    .cont .con .exploration .ex-inner .ex-con ul li > div div:last-child h2 {
+        font-size: 1.65rem;
+    }
+
+    .cont .con .exploration .ex-inner .ex-con ul li > div div:last-child span {
+        font-size: 1.15rem;
+    }
+
+    .cont .con .exploration .ex-inner .ex-con ul li > div div:last-child p {
+        font-size: 1.4rem;
+    }
+	
 }
 /* 1100px 사이즈 이하 미디어쿼리 끝 */
 
@@ -384,6 +413,82 @@
         padding-left: 38px;
     }
 
+    /* IN DEPTH */
+
+    .cont .con .center-menu .depth .depth-inner {
+        padding: 0;
+    }
+
+    .cont .con .center-menu .depth .depth-inner .grid-all .grid-list {
+        width: auto;
+        padding: 0 20px;
+    }
+
+    .cont .con .center-menu .depth .depth-inner .grid-all .grid-list li:nth-child(n) {
+        width: 80%;
+        border: none;
+        border-bottom: 1px solid #b0cadd;
+    }
+
+    .cont .con .center-menu .depth .depth-inner .grid-all .grid-list li {
+        padding-top: 30px;
+    }
+
+    .cont .con .center-menu .depth .depth-inner .grid-all .grid-list li .grid-wrapper a {
+        display: none;
+    }
+
+    /* EXPLORATION */
+    .cont .con .center-menu .exploration .ex-inner {
+        padding: 0;
+    }
+
+    .cont .con .center-menu .exploration .ex-inner > h2 {
+        padding-left: 10px;
+    }
+
+    .cont .con .center-menu .exploration .ex-inner .menu-div {
+        padding-left: 10px;
+    }
+
+    .cont .con .center-menu .exploration .ex-inner .menu-div a {
+        font-size: 1.9rem;
+        font-weight: bold;
+    }
+
+    .cont .con .center-menu .exploration .ex-inner .ex-con ul li {
+        margin: 0 20px;
+    }
+
+    .cont .con .center-menu .exploration .ex-inner .ex-con ul li > div {
+        flex-direction: row-reverse;
+    }
+
+    .cont .con .center-menu .exploration .ex-inner .ex-con ul li img {
+        width: 148px;
+        height: 111px;
+    }
+
+    /* GALLERIES */
+    .cont .con .center-menu .galleries .gal-inner {
+        padding: 0;
+    }
+
+    .cont .con .center-menu .galleries .gal-inner h2 {
+        padding-left: 10px;
+    }
+
+    .cont .con .center-menu .galleries .gal-inner .gal-theme {
+        padding-left: 10px;
+    }
+
+    .cont .con .center-menu .galleries .gal-inner .gal-theme a {
+        font-size: 1.9rem;
+    }
+
+    .cont .con .center-menu .galleries .gal-inner .gal-list {
+        justify-content: center;
+    }
    
 }
 /* 600px 사이즈 이하 미디어쿼리 끝 */
