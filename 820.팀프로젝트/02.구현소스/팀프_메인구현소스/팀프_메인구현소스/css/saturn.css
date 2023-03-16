@@ -473,7 +473,7 @@ body{
 }
 
 .cont .con .center-menu .exploration .ex-inner {
-  padding: 0 25%;
+  padding: 0 18%;
   margin-top: 35px;
 }
 
@@ -557,7 +557,7 @@ body{
 .cont .con .center-menu .exploration .ex-inner .ex-con ul li .img-box {
   max-width: 284px;
   max-height: 211px;
-  aspect-ratio: 2.5 / 1;
+  aspect-ratio: 1.5 / 1;
 }
 
 .cont .con .center-menu .exploration .ex-inner .ex-con ul li .img-box img {
