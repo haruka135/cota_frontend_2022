@@ -353,7 +353,7 @@ body{
 .cont .con .center-menu .depth {
   width: 100%;
   height: 100%;
-  background-color: #d1dde6;
+  background-color: #fcf6ef;
 }
 
 .cont .con .center-menu .depth .depth-inner {
@@ -383,14 +383,32 @@ body{
 .cont .con .center-menu .depth .depth-inner .grid-all .grid-list li {
   padding: 0 45px;
   padding-bottom: 40px;
+<<<<<<< HEAD
   border-right: 1px solid #b0cadd;
   border-bottom: 1px solid #b0cadd;
+=======
+  border-right: 1px solid #f9e7d5;
+  border-bottom: 1px solid #f9e7d5;
+>>>>>>> 76eba9e051e9a3ac5ed6a8882b7079bd451295b1
   width: 20%;
 }
 
 .cont .con .center-menu .depth .depth-inner .grid-all .grid-list li:nth-child(3n) {
   border: none;
+<<<<<<< HEAD
   border-bottom: 1px solid #b0cadd;
+=======
+  border-bottom: 1px solid #f9e7d5;
+}
+
+.cont .con .center-menu .depth .depth-inner .grid-all .grid-list li:nth-child(7),
+.cont .con .center-menu .depth .depth-inner .grid-all .grid-list li:nth-child(8),
+.cont .con .center-menu .depth .depth-inner .grid-all .grid-list li:nth-child(9)
+ {
+  border: none;
+  border-right: 1px solid #f9e7d5;
+  border-left: 1px solid #f9e7d5;
+>>>>>>> 76eba9e051e9a3ac5ed6a8882b7079bd451295b1
 }
 
 
@@ -402,7 +420,7 @@ body{
 }
 
 .cont .con .center-menu .depth .depth-inner .grid-all .grid-list li .grid-wrapper .circle {
-  background-color: #b0cadd;
+  background-color:#f9e7d5;
   width: 61px;
   height: 61px;
   border-radius: 50%;
@@ -428,9 +446,14 @@ body{
 
 .cont .con .center-menu .depth .depth-inner .grid-all .grid-list li .grid-wrapper > span {
   text-align: center;
+<<<<<<< HEAD
   font-size: 2.5rem;
+=======
+  font-size: 2.1rem;
+>>>>>>> 76eba9e051e9a3ac5ed6a8882b7079bd451295b1
   font-weight: bold;
   margin-bottom: 28px;
+  white-space: nowrap;
 }
 
 .cont .con .center-menu .depth .depth-inner .grid-all .grid-list li .grid-wrapper p {
@@ -447,7 +470,11 @@ body{
 }
 
 .cont .con .center-menu .depth .depth-inner .grid-all .grid-list li:nth-child(4) {
+<<<<<<< HEAD
 	background: url(../img/depth_01.jpg) no-repeat center/cover;
+=======
+	background: url(../img/depth_01.png) no-repeat center/cover;
+>>>>>>> 76eba9e051e9a3ac5ed6a8882b7079bd451295b1
 }
 
 .cont .con .center-menu .depth .depth-inner .grid-all .grid-list li:nth-child(4) p {
@@ -458,12 +485,18 @@ body{
 	font-style: italic;
 	line-height: 1.5;
 	font-weight: bold;
+<<<<<<< HEAD
 }
 
 .cont .con .center-menu .depth .depth-inner .grid-all .grid-list li:nth-child(4) span {
 	color: #63B3EB;
 	font-size: 1.5rem;
   text-align: center;
+=======
+  white-space: nowrap;
+  text-align: center;
+
+>>>>>>> 76eba9e051e9a3ac5ed6a8882b7079bd451295b1
 }
 
 /* MISSIONS */
@@ -473,7 +506,11 @@ body{
 }
 
 .cont .con .center-menu .exploration .ex-inner {
+<<<<<<< HEAD
   padding: 0 25%;
+=======
+  padding: 0 18%;
+>>>>>>> 76eba9e051e9a3ac5ed6a8882b7079bd451295b1
   margin-top: 35px;
 }
 
@@ -557,7 +594,11 @@ body{
 .cont .con .center-menu .exploration .ex-inner .ex-con ul li .img-box {
   max-width: 284px;
   max-height: 211px;
+<<<<<<< HEAD
   aspect-ratio: 2.5 / 1;
+=======
+  aspect-ratio: 1.5 / 1;
+>>>>>>> 76eba9e051e9a3ac5ed6a8882b7079bd451295b1
 }
 
 .cont .con .center-menu .exploration .ex-inner .ex-con ul li .img-box img {
