@@ -155,7 +155,7 @@ function loadFn() {
     abtn.forEach((ele, idx) => {
         ele.onclick = () => {
             // 1. 인터발지우기함수 호출!
-            clearAuto();
+            /* clearAuto(); */
             // 2. 슬라이드 함수 호출!
             goSlide(idx);
         }; ///// click함수 //////
@@ -195,7 +195,7 @@ function loadFn() {
    } ////////////// autoSlide함수 //////////
 
    // 자동넘김 최초호출!
-   autoSlide();
+   /* autoSlide(); */
 
    /************************************ 
         함수명: clearAuto
@@ -218,6 +218,91 @@ function loadFn() {
    } ///////// clearAuto 함수 /////////////
    
 
+   /************************************************ 
+    [ 블릿크기 이동 구현하기 ]
+
+    1. 오른쪽 이동 시 : 현재 블릿보다 오른쪽 클릭시
+       1) 기본형: 오른쪽 버튼 클릭 구현
+       2) 유형: 먼저 이동 후 맨 앞 요소 맨 뒤로 이동
+       3) 원리: 차잇수만큼 %이동 후 for문으로 잘라내기
+
+    2. 왼쪽 이동 시: 현재 블릿보다 왼쪽 클릭 시
+       1) 기본형: 왼쪽 버튼 클릭 구현
+       2) 유형: 먼저 맨뒤요소 맨앞으로 이동후 들어오기
+       3) 원리: 차이수만큼 앞에 for문으로 쌓은 후 이동함
+
+    3. 방향구분의 기준: 클릭된 블릿순번 - 현재 블릿 순번
+       1) 양수면 오른쪽 이동
+       2) 음수면 왼쪽 이동
+   ************************************************/
+
+   // 대상: .indic li -> indic 변수에 할당
+   // 이벤트 : click 이벤트
+   // 순번 변수 - 블릿순번 블릿li클릭함수에서 공유
+   let iseq = 0;
+
+   indic.forEach((ele,idx) => { // ele - 요소자신, idx - 순번
+        // 클릭이벤트 설정하기
+        ele.onclick = () => {
+            // 1. 클릭된 순번
+            let cseq = idx;
+            console.log("클릭된 순번: ",cseq);
+            console.log("현재 순번: ",iseq);
+            console.log("순번 차: ",diff);
+
+            // 2. 현재 순번 - iseq
+
+            // 방향별 슬라이드 이동하기
+
+            if(diff > 0) {
+                //  console.log("오른!");
+            // (1) 오른쪽 버튼 클릭시 다음 슬라이드가
+            //     나타나도록 슬라이드 박스의 left값을
+            //     -100%로 변경시킨다.
+            slide.style.left = "-100%";
+            slide.style.transition = "left .4s ease-in-out";
+
+            // (2) 슬라이드 이동후!!! (0.4초후)
+            setTimeout(() => {
+                // for문으로 자를 수(순수값)만큼 순서대로 처리
+                // 계산되는 차이수
+                let temp = pure;
+                for(let i = 0 ; i < pure ; i++) {
+                    // temp 1씩 감소하기
+                    temp--;
+
+                    // (2-1) 바깥에 나가있는 첫번째 슬라이드
+                    //       li를 잘라서 맨뒤로 보낸다!
+                    // 슬라이드 li가 잘라내면 매번 변경되므로
+                    // 새로 읽어서 맨뒤로 이동한다.
+                    slide.appendChild(slide.querySelectorAll("li")[0]);
+                    // (2-2) 동시에 left값을 0으로 변경한다!
+                    slide.style.left = "0";
+                    // (2-3) 트랜지션 없애기!
+                    slide.style.transition = "none";
+                }
+
+            }, 400); //// 타임아웃 //////
+            } ///////////////// 양수면 오른쪽
+            else if (diff < 0) {}  ///////// 음수면 왼쪽
+            else { return; } /////////// 0이면 return
+
+            // 3. 순번차 - 클릭된 순번 - 현재 순번
+            // 현재 블릿 초기화
+            let diff = cseq - iseq;
+            // 순수값 차이 -> 절대값: Math.abs()
+            let pure = Math.abs(diff);
+
+            // 4. 클릭된 순번으로 현재 순번 변경
+            iseq = cseq;
+
+            // 5. 클릭된 블릿에 on 넣기
+            indic.forEach(ele=>ele.classList.remove("on"));
+
+            // 6. 넣기
+            indic[iseq].classList.add("on");
+        };
+   });
 
 
 
