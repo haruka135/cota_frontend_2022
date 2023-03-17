@@ -383,13 +383,21 @@ body{
 .cont .con .center-menu .depth .depth-inner .grid-all .grid-list li {
   padding: 0 45px;
   padding-bottom: 40px;
+<<<<<<< HEAD
+  border-right: 1px solid #b0cadd;
+  border-bottom: 1px solid #b0cadd;
+=======
   border-right: 1px solid #f9e7d5;
   border-bottom: 1px solid #f9e7d5;
+>>>>>>> 76eba9e051e9a3ac5ed6a8882b7079bd451295b1
   width: 20%;
 }
 
 .cont .con .center-menu .depth .depth-inner .grid-all .grid-list li:nth-child(3n) {
   border: none;
+<<<<<<< HEAD
+  border-bottom: 1px solid #b0cadd;
+=======
   border-bottom: 1px solid #f9e7d5;
 }
 
@@ -400,6 +408,7 @@ body{
   border: none;
   border-right: 1px solid #f9e7d5;
   border-left: 1px solid #f9e7d5;
+>>>>>>> 76eba9e051e9a3ac5ed6a8882b7079bd451295b1
 }
 
 .cont .con .center-menu .depth .depth-inner .grid-all .grid-list li:nth-child(7) {
@@ -450,7 +459,11 @@ body{
 
 .cont .con .center-menu .depth .depth-inner .grid-all .grid-list li .grid-wrapper > span {
   text-align: center;
+<<<<<<< HEAD
+  font-size: 2.5rem;
+=======
   font-size: 2.1rem;
+>>>>>>> 76eba9e051e9a3ac5ed6a8882b7079bd451295b1
   font-weight: bold;
   margin-bottom: 28px;
   white-space: nowrap;
@@ -470,7 +483,11 @@ body{
 }
 
 .cont .con .center-menu .depth .depth-inner .grid-all .grid-list li:nth-child(4) {
+<<<<<<< HEAD
+	background: url(../img/depth_01.jpg) no-repeat center/cover;
+=======
 	background: url(../img/depth_01.png) no-repeat center/cover;
+<<<<<<< HEAD
   position: relative;
 }
 
@@ -479,6 +496,9 @@ body{
   bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
+=======
+>>>>>>> 76eba9e051e9a3ac5ed6a8882b7079bd451295b1
+>>>>>>> eab6bd7da6b312fb7e309944e3123b79bc644214
 }
 
 .cont .con .center-menu .depth .depth-inner .grid-all .grid-list li:nth-child(4) p {
@@ -487,9 +507,18 @@ body{
 	font-size: 1.5rem;
 	line-height: 1.5;
 	font-weight: bold;
+<<<<<<< HEAD
+}
+
+.cont .con .center-menu .depth .depth-inner .grid-all .grid-list li:nth-child(4) span {
+	color: #63B3EB;
+	font-size: 1.5rem;
+  text-align: center;
+=======
   white-space: nowrap;
   text-align: center;
 
+>>>>>>> 76eba9e051e9a3ac5ed6a8882b7079bd451295b1
 }
 
 /* MISSIONS */
@@ -499,7 +528,15 @@ body{
 }
 
 .cont .con .center-menu .exploration .ex-inner {
+<<<<<<< HEAD
   padding: 0 5%;
+=======
+<<<<<<< HEAD
+  padding: 0 25%;
+=======
+  padding: 0 18%;
+>>>>>>> 76eba9e051e9a3ac5ed6a8882b7079bd451295b1
+>>>>>>> eab6bd7da6b312fb7e309944e3123b79bc644214
   margin-top: 35px;
 }
 
@@ -583,7 +620,15 @@ body{
 .cont .con .center-menu .exploration .ex-inner .ex-con ul li .img-box {
   max-width: 284px;
   max-height: 211px;
+<<<<<<< HEAD
   aspect-ratio: 1 / 0.3;
+=======
+<<<<<<< HEAD
+  aspect-ratio: 2.5 / 1;
+=======
+  aspect-ratio: 1.5 / 1;
+>>>>>>> 76eba9e051e9a3ac5ed6a8882b7079bd451295b1
+>>>>>>> eab6bd7da6b312fb7e309944e3123b79bc644214
 }
 
 .cont .con .center-menu .exploration .ex-inner .ex-con ul li .img-box img {
