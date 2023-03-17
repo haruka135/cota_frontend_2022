@@ -1,0 +1,62 @@
+@charset "utf-8";
+@import url("default.css");
+
+body * {
+    outline: 1px dashed red;
+}
+
+header .header-inner {
+    max-width: 50%;
+    height: 78px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .header-inner .left-header {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+header .header-inner .left-header .logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header .header-inner .left-header .logo a {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+header .header-inner .left-header .head-menu {
+    display: flex;
+    align-items: center;
+}
+
+header .header-inner .left-header .head-menu li a {
+    display: block;
+    padding: 30px 20px;
+    text-decoration: none;
+    color: #000;
+}
+
+header .header-inner .left-header .head-menu li a:hover {
+    color: #4078c0;
+}
+
+header .header-inner .right-header {
+    display: flex;
+}
+
+header .header-inner .right-header .ex-menu {
+    display: flex;
+    align-items: center;
+}
+
+header .header-inner .right-header .ex-menu li a {
+    padding: 0 20px;
+}

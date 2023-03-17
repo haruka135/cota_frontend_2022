@@ -62,29 +62,35 @@
     .info .sns{
     padding: 0 0 10vh;
     }
-	
-	/* IN DEPTH */
+
+    /* IN DEPTH */
 	
 	.cont .con .center-menu .depth .depth-inner .grid-all .grid-list li {
-		width: 25%;
-	}
-	
-	.cont .con .center-menu .depth .depth-inner .grid-all .grid-list li:nth-child(2n) {
-		border-right: none;
-	}
-	
-	.cont .con .center-menu .depth .depth-inner .grid-all .grid-list li:nth-child(3) {
-		border-right: 1px solid #B0CADD;
-	}
-	
-	.cont .con .center-menu .depth .depth-inner .grid-all .grid-list li:nth-child(9) {
-		border: none;	
-	}
+        width: 33.33333%;
+    }
 
-	.cont .con .center-menu .depth .depth-inner .grid-all .grid-list li:nth-child(3) .grid-wrapper .circle {
-		margin-top: 40px;	
-	}
-        
+    .cont .con .center-menu .depth .depth-inner .grid-all .grid-list li:nth-child(3) {
+        margin-top: 40px;
+    }
+
+    .cont .con .center-menu .depth .depth-inner .grid-all .grid-list li:nth-child(2) {
+        border-right: none;
+    }
+
+    .cont .con .center-menu .depth .depth-inner .grid-all .grid-list li:nth-child(7) {
+        border-bottom: 1px solid #f9e7d5;
+    }
+
+    .cont .con .center-menu .depth .depth-inner .grid-all .grid-list li:nth-child(8) {
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid #f9e7d5;
+    }
+
+    .cont .con .center-menu .depth .depth-inner .grid-all .grid-list li:nth-child(9) {
+        border-left: 1px solid #f9e7d5;
+        border-right: 1px solid #f9e7d5;
+    }
 }
 /* 1400px 사이즈 이하 미디어쿼리 끝 */
 
@@ -173,7 +179,7 @@
     .info .blink ul {
         padding: 0 5vw;
     }
-	
+
 	/* MISSIONS */
 
     .cont .con .exploration .ex-inner .ex-con ul li > div div:last-child h2 {
@@ -255,7 +261,7 @@
 	}
 	
 	.cont .saturn-info-more .saturn-info .buttons {
-		width: 50%;
+		width: 60%;
 	}
 	
 	.cont .con {
@@ -427,11 +433,12 @@
     .cont .con .center-menu .depth .depth-inner .grid-all .grid-list li:nth-child(n) {
         width: 80%;
         border: none;
-        border-bottom: 1px solid #b0cadd;
+        border-bottom: 1px solid #f9e7d5;
     }
 
     .cont .con .center-menu .depth .depth-inner .grid-all .grid-list li {
         padding-top: 30px;
+        height: 334px;
     }
 
     .cont .con .center-menu .depth .depth-inner .grid-all .grid-list li .grid-wrapper a {
@@ -486,8 +493,9 @@
         font-size: 1.9rem;
     }
 
-    .cont .con .center-menu .galleries .gal-inner .gal-list {
-        justify-content: center;
+    .cont .con .center-menu .galleries .gal-inner .gal-wrapper {
+        width: 95%;
+        margin: 0 auto;
     }
    
 }

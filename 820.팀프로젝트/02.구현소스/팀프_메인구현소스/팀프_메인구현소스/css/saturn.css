@@ -357,7 +357,7 @@ body{
 }
 
 .cont .con .center-menu .depth .depth-inner {
-  padding: 0 18%;
+  padding: 0 5%;
 }
 
 .cont .con .center-menu .depth .depth-inner h2 {
@@ -400,6 +400,19 @@ body{
   border: none;
   border-right: 1px solid #f9e7d5;
   border-left: 1px solid #f9e7d5;
+}
+
+.cont .con .center-menu .depth .depth-inner .grid-all .grid-list li:nth-child(7) {
+  border-left: none;
+}
+
+.cont .con .center-menu .depth .depth-inner .grid-all .grid-list li:nth-child(8) {
+  border-left: none;
+}
+
+.cont .con .center-menu .depth .depth-inner .grid-all .grid-list li:nth-child(9) {
+  border-left: none;
+  border-right: none;
 }
 
 
@@ -458,14 +471,20 @@ body{
 
 .cont .con .center-menu .depth .depth-inner .grid-all .grid-list li:nth-child(4) {
 	background: url(../img/depth_01.png) no-repeat center/cover;
+  position: relative;
+}
+
+.cont .con .center-menu .depth .depth-inner .grid-all .grid-list li:nth-child(4) .grid-wrapper-other {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .cont .con .center-menu .depth .depth-inner .grid-all .grid-list li:nth-child(4) p {
 	color: #fff;
-	padding-top: 30px;
 	font-family: 'Metropolis';
-	font-size: 1.8rem;
-	font-style: italic;
+	font-size: 1.5rem;
 	line-height: 1.5;
 	font-weight: bold;
   white-space: nowrap;
@@ -480,7 +499,7 @@ body{
 }
 
 .cont .con .center-menu .exploration .ex-inner {
-  padding: 0 18%;
+  padding: 0 5%;
   margin-top: 35px;
 }
 
@@ -564,7 +583,7 @@ body{
 .cont .con .center-menu .exploration .ex-inner .ex-con ul li .img-box {
   max-width: 284px;
   max-height: 211px;
-  aspect-ratio: 1.5 / 1;
+  aspect-ratio: 1 / 0.3;
 }
 
 .cont .con .center-menu .exploration .ex-inner .ex-con ul li .img-box img {
@@ -606,7 +625,7 @@ body{
 }
 
 .cont .con .center-menu .galleries .gal-inner {
-  padding: 0 18%;
+  padding: 0 5%;
 }
 
 .cont .con .center-menu .galleries .gal-inner h2 {
@@ -648,6 +667,7 @@ body{
   gap: 10px;
   flex-wrap: wrap;
   margin-bottom: 50px;
+  width: 75%;
 }
 
 .cont .con .center-menu .galleries .gal-inner .gal-list li {
