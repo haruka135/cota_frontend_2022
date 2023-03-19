@@ -180,5 +180,18 @@ function loadFn() {
             };
         });
 
+        const acco = document.querySelectorAll('.roaster-list li');
+        const hidbtn = document.querySelectorAll(".list-con a");
+
+        for(let i=0;i<hidbtn.length;i++) {
+            hidbtn[i].addEventListener('click',function(){
+                event.preventDefault();
+                for(let j=0;j<acco.length;j++) {
+                    acco[j].classList.remove("active");
+                }
+                this.classList.add('active');
+            });
+        }
+      
 } ////////// loadFn함수 ////////////////
 
