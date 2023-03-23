@@ -3,100 +3,122 @@
 @import url('reset.css');
 
 body {
-    font-family: 'Noto Sans KR';
-    font-size: 14px;
+    background-color: #000;
+    font-size: 16px;
+    font-family: 'Pretendard';
 }
 
-header .top-header {
+.main-header {
     width: 100%;
-    background-color: #fff;
-    border-bottom: 1px solid #dddddd;
+    background-color: transparent;
+    border-bottom: 4px solid rgb(255, 255, 255,.5);
+    position: absolute;
+    top: 0;
+    z-index: 3;
 }
 
-header .top-header .top-inner {
-    padding: 0 21px;
+.main-header .header-inner {
+    padding: 0 60px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header .top-header .top-inner .logo a {
+.main-header .header-inner .logo {
+    width: 127px;
+    height: 100%;
+}
+
+.main-header .header-inner .logo a {
     display: block;
-    width: 255px;
-    height: 34px;
-    padding: 5px 0;
-}
-
-header .top-header .top-inner .logo a img {
-    object-fit: cover;
     width: 100%;
     height: 100%;
+    padding: 25px 0;
 }
 
-header .top-header .top-inner .top-menu {
+.main-header .header-inner .logo a img {
+    width: 127px;
+    height: 50px;
+}
+
+.main-header .header-inner .center-menu {
+    height: 100px;
+}
+
+.main-header .header-inner .center-menu .menu-list {
     display: flex;
-}
-
-header .top-header .top-inner .top-menu li::after {
-    content: '';
-    display: inline-block;
-    width: 1px;
-    height: 12px;
-    background-color: #dddddd;
-}
-
-header .top-header .top-inner .top-menu li:last-child::after {
-    display: none;
-}
-
-header .top-header .top-inner .top-menu li a {
-    padding: 10px;
-    color: #767676;
-    font-weight: 400;
-}
-
-header .btm-header {
-    width: 100%;
-    height: 86px;
-}
-
-header .btm-header .header-inner {
     height: 100%;
-    padding: 0 586px;
-    margin: 0 auto;
-}
-
-header .btm-header .header-inner .center-menu {
-    height: 100%;
-    display: flex;
-    justify-content: center;
     align-items: center;
 }
 
-header .btm-header .header-inner .center-menu li a {
-    padding: 20px;
-    font-size: 18px;
-    color: #3f3f3f;
-}
-
-header .menu-header {
-    position: relative;
-    top:0;
-}
-
-header .slider-header {
-    width: 100%;
-    height: 920px;
-}
-
-header .slider-header .slider-move {
-    width: 100%;
+.main-header .header-inner .center-menu .menu-list li {
     height: 100%;
 }
 
-header .slider-header .slider-move li {
-    background: url(../img/Slide-image-01.png) no-repeat center/cover;
-    width: 100%;
-    height: 100%;
+.main-header .header-inner .center-menu .menu-list li a {
+    padding: 39px 60px;
+    color: #fff;
+    font-size: 1.12rem;
+    letter-spacing: -6%;
+    font-weight: bold;
+    line-height: 100px;
+}
+
+.main-header .header-inner .center-menu .menu-list li .hidden-ul {
+    background-color: #000;
+    opacity: .5;
+    position: absolute;
+    z-index: 1;
+}
+
+.main-header .header-inner .right-menu {
+    display: flex;
+    gap: 84.5px;
+    align-items: center;
+}
+
+.main-header .header-inner .right-menu .lang {
+    display: flex;
+    align-items: center;
+}
+
+.main-header .header-inner .right-menu .lang a {
+    color: #fff;
+    font-size: 1.12rem;
+    font-weight: bold;
+    padding: 19px;
+}
+
+.main-header .header-inner .right-menu .lang span {
+    display: block;
+    width: 1px;
+    height: 11.5px;
+    background-color: #fff;
+    opacity: .5;
+}
+
+.main-header .header-inner .right-menu .lang a:nth-of-type(2) {
+    opacity: .5;
+}
+
+.main-header .header-inner .right-menu .ham {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main-header .header-inner .right-menu .ham span:nth-child(1),
+.main-header .header-inner .right-menu .ham span:nth-child(3) {
+    display: block;
+    width: 29px;
+    height: 2px;
+    background-color: #fff;
+}
+
+.main-header .header-inner .right-menu .ham span:nth-child(2) {
+    display: block;
+    width: 19px;
+    height: 2px;
+    background-color: #fff;
 }

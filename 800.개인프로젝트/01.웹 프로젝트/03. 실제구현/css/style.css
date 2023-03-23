@@ -3,3 +3,89 @@
 @import url('reset.css');
 @import url('common.css');
 
+.mainpage .visual {
+    width: 100%;
+    height: 970px;
+}
+
+.mainpage .visual .visual-list {
+    width: 100%;
+    height: 100%;
+}
+
+.mainpage .visual .visual-list li {
+    width: 100%;
+    height: 100%;
+    background: url(../img/main_ban_01.jpg) no-repeat center/cover;
+    position: relative;
+}
+
+.mainpage .visual .visual-list li .visual-contents {
+    position: absolute;
+    top: 468px;
+    left: 250px;
+}
+
+.mainpage .visual .visual-list li .visual-contents > span {
+    display: block;
+}
+
+.mainpage .visual .visual-list li .visual-contents > span:nth-of-type(1) {
+    color: #fff;
+    font-size: 3.125rem;
+    letter-spacing: -3%;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.mainpage .visual .visual-list li .visual-contents > span:nth-of-type(2) {
+    background: linear-gradient(90.06deg, #007FBF 8.53%, #009580 63.22%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+    font-size: 3.43rem;
+    letter-spacing: -2%;
+    margin-bottom: 56px;
+}
+
+.mainpage .visual .visual-list li .visual-contents .bullet {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.mainpage .visual .visual-list li .visual-contents .bullet > span {
+    color: #fff;
+}
+
+.mainpage .visual .visual-list li .visual-contents .bullet .bar.on {
+    position: relative;
+}
+
+.mainpage .visual .visual-list li .visual-contents .bullet .bar.on span.bar-back {
+    display: block;
+    width: 79px;
+    height: 4px;
+    background-color: #fff;
+    opacity: .7;
+}
+
+.mainpage .visual .visual-list li .visual-contents .bullet .bar.on span.progressive {
+    display: block;
+    width: 79px;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    animation: progressive 3s ease-in-out;
+}
+
+@keyframes progressive {
+    from {
+        width: 0px;
+    }
+    to {
+        width: 79px;
+    }
+}
+
