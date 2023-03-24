@@ -11,7 +11,7 @@ body {
 .main-header {
     width: 100%;
     background-color: transparent;
-    border-bottom: 4px solid rgb(255, 255, 255,.5);
+    border-bottom: 1px solid rgb(255, 255, 255,.5);
     position: absolute;
     top: 0;
     z-index: 3;
@@ -23,6 +23,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .main-header .header-inner .logo {
@@ -44,6 +45,9 @@ body {
 
 .main-header .header-inner .center-menu {
     height: 100px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .main-header .header-inner .center-menu .menu-list {
@@ -52,11 +56,12 @@ body {
     align-items: center;
 }
 
-.main-header .header-inner .center-menu .menu-list li {
+.main-header .header-inner .center-menu .menu-list > li {
     height: 100%;
+    position: relative;
 }
 
-.main-header .header-inner .center-menu .menu-list li a {
+.main-header .header-inner .center-menu .menu-list > li > a {
     padding: 39px 60px;
     color: #fff;
     font-size: 1.12rem;
@@ -65,17 +70,58 @@ body {
     line-height: 100px;
 }
 
-.main-header .header-inner .center-menu .menu-list li .hidden-ul {
-    background-color: #000;
-    opacity: .5;
-    position: absolute;
-    z-index: 1;
+.main-header .header-inner .center-menu .menu-list .sub-menu {
+    display: none;
 }
+
+.main-header .header-inner .center-menu .menu-list > li:hover .sub-menu {
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 0;
+}
+
+.main-header .header-inner .center-menu .menu-list > li:hover::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background:rgb(0,0,0,.5);
+}
+
+.main-header .header-inner .center-menu .menu-list > li .sub-menu::after {
+    content: '';
+    position: absolute;
+    z-index: -4;
+    top: 1px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background:rgb(0,0,0,.5);
+}
+
+.main-header .header-inner .center-menu .menu-list .sub-menu li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 1.12rem;
+    padding: 20px 10px;
+}
+
 
 .main-header .header-inner .right-menu {
     display: flex;
     gap: 84.5px;
     align-items: center;
+    position: absolute;
+    right: 60px;
 }
 
 .main-header .header-inner .right-menu .lang {
@@ -102,7 +148,8 @@ body {
     opacity: .5;
 }
 
-.main-header .header-inner .right-menu .ham {
+
+.main-header .header-inner .right-menu .ham a {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -122,3 +169,4 @@ body {
     height: 2px;
     background-color: #fff;
 }
+

@@ -3,6 +3,77 @@
 @import url('reset.css');
 @import url('common.css');
 
+.mainpage .hidden-menu {
+    display: none;
+}
+
+.mainpage .hidden-menu.on {
+    width: 100%;
+    height: 970px;
+    position: fixed;
+    display: block;
+    z-index: 99;
+}
+
+.mainpage .hidden-menu.on::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(0,0,0,.8);
+    z-index: 3;
+}
+
+.mainpage .hidden-menu.on .hidden-inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 4;
+    top: 105px;
+}
+
+.mainpage .hidden-menu.on .hidden-inner > ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.mainpage .hidden-menu.on .hidden-inner > ul > li > a {
+    color: #fff;
+    display: inline-block;
+    width: 260px;
+    height: 44px;
+    text-align: left;
+    font-size: 1.25rem;
+    border-bottom: 2px solid rgb(255,255,255,.8);
+}
+
+.mainpage .hidden-menu.on .hidden-inner > ul > li > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+    padding-top: 30px;
+}
+
+.mainpage .hidden-menu.on .hidden-inner > ul > li > ul > li > a {
+    color: #ddd;
+    font-size: 1.12rem;
+}
+
+.mainpage .hidden-menu.on .hidden-inner > ul > li > ul > li > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding-top: 18px;
+}
+
+.mainpage .hidden-menu.on .hidden-inner > ul > li > ul > li > ul li a {
+    color: rgb(255,255,255,.5);
+    font-size: 1rem;
+}
+
 .mainpage .visual {
     width: 100%;
     height: 970px;
@@ -55,7 +126,7 @@
     align-items: center;
 }
 
-.mainpage .visual .visual-list li .visual-contents .bullet > span {
+.mainpage .visual .visual-list li .visual-contents .bullet .bar > span {
     color: #fff;
 }
 
@@ -63,21 +134,34 @@
     position: relative;
 }
 
-.mainpage .visual .visual-list li .visual-contents .bullet .bar.on span.bar-back {
-    display: block;
-    width: 79px;
+.mainpage .visual .visual-list li .visual-contents .bullet .bar .barbx {
+    position: relative;
+    display: inline-block;
+    width: 20px;
     height: 4px;
+    vertical-align: 4px;
+    transition: .7s;
+}
+.mainpage .visual .visual-list li .visual-contents .bullet .bar.on .barbx {
+    width: 79px;
+}
+.mainpage .visual .visual-list li .visual-contents .bullet .bar.on .barbx span.bar-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background-color: #fff;
     opacity: .7;
+
 }
 
-.mainpage .visual .visual-list li .visual-contents .bullet .bar.on span.progressive {
+.mainpage .visual .visual-list li .visual-contents .bullet .bar.on .barbx  span.progressive {
     display: block;
-    width: 79px;
+    width: 0;
     height: 4px;
     background-color: #fff;
     position: absolute;
-    animation: progressive 3s ease-in-out;
+    z-index: 1;
+    animation: progressive 3s ease-in-out forwards;
 }
 
 @keyframes progressive {
@@ -89,3 +173,123 @@
     }
 }
 
+.mainpage .business {
+    width: 100%;
+    height: 1281px;
+    background: url(../img/bg_main_business.jpg) no-repeat center/cover;
+}
+
+
+.mainpage .business .business-inner {
+    padding: 0 295px;
+    margin: 0 auto;
+}
+
+
+.mainpage .business .business-inner > h2 {
+    padding-top: 196px;
+    font-size: 4.375rem;
+    font-weight: 800;
+    letter-spacing: -7%;
+    color: #fff;
+}
+
+.mainpage .business .business-inner > h2 span {
+    font-weight: 100;
+}
+
+.mainpage .business .business-inner > h3 {
+    padding-top: 51px;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.15rem;
+    background: linear-gradient(90deg, #007BBB 1%, #00A256 8%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.mainpage .business .business-inner > p {
+    padding-top: 19px;
+    font-size: 2rem;
+    color: #fff;
+    letter-spacing: -0.07rem;
+}
+
+.mainpage .business .business-inner > p span {
+    font-weight: 800;
+}
+
+.mainpage .business .business-inner .business-con {
+    margin-top: 57px;
+}
+
+.mainpage .business .business-inner .business-con .business-list {
+    display: flex;
+    gap: 21px;
+}
+
+.mainpage .business .business-inner .business-con .business-list li {
+    flex: 1;
+}
+
+.mainpage .business .business-inner .business-con .business-list li:first-child .con .img {
+    width: 265px;
+    height: 429px;
+    background: url(../img/main_business_img1.jpg) no-repeat center/cover;
+    margin-bottom: 26px;
+}
+
+.mainpage .business .business-inner .business-con .business-list li:nth-child(2) .con .img {
+    width: 265px;
+    height: 429px;
+    background: url(../img/main_business_img2.jpg) no-repeat center/cover;
+    margin-bottom: 26px;
+}
+
+.mainpage .business .business-inner .business-con .business-list li:nth-child(3) .con .img {
+    width: 265px;
+    height: 429px;
+    background: url(../img/main_business_img3.jpg) no-repeat center/cover;
+    margin-bottom: 26px;
+}
+
+.mainpage .business .business-inner .business-con .business-list li:nth-child(4) .con .img {
+    width: 265px;
+    height: 429px;
+    background: url(../img/main_business_img4.jpg) no-repeat center/cover;
+    margin-bottom: 26px;
+}
+
+.mainpage .business .business-inner .business-con .business-list li:nth-child(5) .con .img {
+    width: 265px;
+    height: 429px;
+    background: url(../img/main_business_img5.jpg) no-repeat center/cover;
+    margin-bottom: 26px;
+}
+
+
+
+
+.mainpage .business .business-inner .business-con .business-list li .con > h3 {
+    font-size: 1rem;
+    letter-spacing: -7%;
+    color: rgb(255,255,255,.3);
+    font-weight: normal;
+    margin-bottom: 16px;
+}
+
+.mainpage .business .business-inner .business-con .business-list li .con > h2 {
+    font-size: 2rem;
+    color: #fff;
+    letter-spacing: -7%;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.mainpage .business .business-inner .business-con .business-list li .con p {
+    width: 265px;
+    font-size: 1rem;
+    letter-spacing: -7%;
+    color: rgb(255,255,255,.8);
+}
