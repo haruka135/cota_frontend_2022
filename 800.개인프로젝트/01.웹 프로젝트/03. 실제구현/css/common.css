@@ -18,7 +18,7 @@ body {
 }
 
 .main-header .header-inner {
-    max-width: 1800px;
+    width: 92%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -62,7 +62,7 @@ body {
 }
 
 .main-header .header-inner .center-menu .menu-list > li > a {
-    padding: 39px 60px;
+    padding: 39px 40px;
     color: #fff;
     font-size: 1.12rem;
     letter-spacing: -6%;
