@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded",function() {
 
-    const ham = document.querySelector(".ham a");
-    const hamspan = document.querySelectorAll(".ham a span");
+    const ham = document.querySelector(".ham");
+    const hamspan = document.querySelectorAll(".ham span");
     const hmenu = document.querySelector(".hidden-menu");
 
-    ham.onclick = () => {
+    ham.onclick = () => {        
         hmenu.classList.toggle("on");
     }
 
