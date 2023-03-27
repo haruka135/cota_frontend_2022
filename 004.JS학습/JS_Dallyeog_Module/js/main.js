@@ -14,4 +14,20 @@ let calbx = new MakeDallyeok(".calbx");
 // 초기화함수를 호출함
 calbx.initDallyeok();
 // 다음달 달력호출
-calbx.
+calbx.nextCal();
+
+// 다른 요소에 달력 추가 생성하기
+let calbx2 = new MakeDallyeok(".calbx2");
+// 초기화 함수 호출
+calbx2.initDallyeok();
+
+
+//// 제이쿼리 라이브러리를 html페이지 상단에 호출후 사용
+$(".myipt").click(function(){
+    console.log(this);
+    $(this).next().find(".calender").show();
+});
+
+$(".calender").click(function() {
+    $(this).hide();
+});

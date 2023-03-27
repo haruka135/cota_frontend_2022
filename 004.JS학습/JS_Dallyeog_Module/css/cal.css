@@ -30,14 +30,15 @@
 /* 캘린더 전체박스 */
 .calender{
     position: absolute;
-    top: 50%;
+/*     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%); */
     padding-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: var(--bg-color);
     font-family: var(--font);
+    display: none; /* 처음에 숨김 */
 }
 
 
