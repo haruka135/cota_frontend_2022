@@ -121,8 +121,9 @@ body {
     display: flex;
     gap: 84.5px;
     align-items: center;
-    position: absolute;
-    right: 0;
+    position: fixed;
+    right: 60px;
+    z-index: 99;
 }
 
 .main-header .header-inner .right-menu .lang {
