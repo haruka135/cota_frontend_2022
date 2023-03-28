@@ -325,3 +325,365 @@
     line-height: 19px;
     letter-spacing: -7%;
 }
+
+.mainpage .management {
+    width: 100%;
+    height: 1006px;
+    background: url(../img/bg_main_esg.jpg) no-repeat center/cover;
+}
+
+.mainpage .management > h2 {
+    text-align: center;
+    padding-top: 215px;
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    letter-spacing: 0.15rem;
+    font-weight: 800;
+    background-image: linear-gradient(90deg,#007bbb 40%,#00a256 60%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.mainpage .management > p {
+    padding-top: 19px;
+    padding-bottom: 52px;
+    text-align: center;
+    font-size: 2.1875rem;
+    color: #fff;
+    letter-spacing: -0.02rem;
+    line-height: 2.625rem;
+}
+
+.mainpage .management > p span {
+    font-weight: 800;
+}
+
+.mainpage .management .box-inner {
+    padding: 0 15.625rem;
+    margin: 0 auto;
+}
+
+.mainpage .management .box-inner  .real-box {
+    background-color: rgba(0,0,0,.2);
+}
+
+.mainpage .management .box-inner .real-box .real-box-inner {
+    padding: 3.75rem 1.825rem;
+}
+
+.mainpage .management .box-inner .real-box .real-box-inner .real-box-list {
+    display: flex;
+}
+
+.mainpage .management .box-inner .real-box .real-box-inner .real-box-list li {
+    flex: 1;
+    position: relative;
+}
+
+.mainpage .management .box-inner .real-box .real-box-inner .real-box-list li .con-wrapper {
+    text-align: center;
+    height: 100%;
+}
+
+.mainpage .management .box-inner .real-box .real-box-inner .real-box-list li .con-wrapper img {
+    margin-bottom: 27px;
+}
+
+.mainpage .management .box-inner .real-box .real-box-inner .real-box-list li .con-wrapper h2 {
+    font-size: 1.375rem;
+    color: #fff;
+    line-height: 1.625rem;
+    letter-spacing: -0.07rem;
+    padding-bottom: 0.5625rem;
+}
+
+.mainpage .management .box-inner .real-box .real-box-inner .real-box-list li .con-wrapper > span {
+    display: block;
+    font-size: 1rem;
+    color: rgba(255,255,255,.5);
+    letter-spacing: 0.03rem;
+    padding-bottom: 1.1rem;
+}
+
+.mainpage .management .box-inner .real-box .real-box-inner .real-box-list li .con-wrapper .detail-wrap {
+    border: 1px solid #888d8d;
+    display: inline-block;
+    padding: 11px 43px;
+    transition: all .4s;
+}
+
+.mainpage .management .box-inner .real-box .real-box-inner .real-box-list li .con-wrapper .detail-wrap span {
+    color: rgba(255,255,255,.5);
+    font-size: 0.75rem;
+    line-height: 1.2rem;
+    letter-spacing: -0.01rem;
+    transition: all .4s;
+}
+
+.mainpage .management .box-inner .real-box .real-box-inner .real-box-list li .con-wrapper .detail-wrap a {
+    display: inline-block;
+    text-indent: -9999em;
+    width: 7px;
+    height: 11px;
+    background: url(../img/btn_right.png) no-repeat;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+
+.mainpage .management .box-inner .real-box .real-box-inner .real-box-list li .con-wrapper .detail-wrap:hover {
+    background-color: #fff;
+}
+
+.mainpage .management .box-inner .real-box .real-box-inner .real-box-list li .con-wrapper .detail-wrap:hover span {
+    color: #000;
+}
+
+.mainpage .management .box-inner .real-box .real-box-inner .real-box-list li .right-bar {
+    width: 2px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: transparent;
+    
+}   
+
+.mainpage .management .box-inner .real-box .real-box-inner .real-box-list li .right-bar .first-bar {
+    position: absolute;
+    background-color: transparent;
+    right: 0;
+    left: 0;
+    height: 48%
+}
+
+.mainpage .management .box-inner .real-box .real-box-inner .real-box-list li .right-bar .first-bar-back {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255,255,255,.25);
+}
+
+.mainpage .management .box-inner .real-box .real-box-inner .real-box-list li .right-bar .bar-blue {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 2px;
+    background-color: #0470ad;
+}
+
+.mainpage .management .box-inner .real-box .real-box-inner .real-box-list li .right-bar .second-bar {
+    position: absolute;
+    height: 48%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: transparent;
+}
+
+.mainpage .management .box-inner .real-box .real-box-inner .real-box-list li .right-bar .second-bar .second-bar-back {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255,255,255,.25);
+
+}
+
+.mainpage .management .box-inner .real-box .real-box-inner .real-box-list li .right-bar .second-bar .bar-green {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #068d47;
+}
+
+.mainpage .ir-information {
+    width: 100%;
+    height: 988px;
+    background: url(../img/bg_main_ir.jpg) no-repeat center/cover;
+}
+
+.mainpage .ir-information .ir-inner {
+    padding: 0 240px;
+    padding-top: 168px;
+}
+
+.mainpage .ir-information .ir-inner .all-contents-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.mainpage .ir-information .ir-inner .all-contents-wrapper .first-flex .flex {
+    display: flex;
+}
+
+.mainpage .ir-information .ir-inner .all-contents-wrapper .first-flex .flex > li:first-child {
+    padding-right: 148px;
+}
+
+.mainpage .ir-information .ir-inner .all-contents-wrapper .first-flex .flex > li:first-child > h2 {
+    padding-top: 142px;
+    font-size: 1rem;
+    background-image: linear-gradient(90.04deg, #007BBB 4%, #00A256 10%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 0.15rem;
+    line-height: 19px;
+    font-weight: 800;
+    padding-bottom: 14px;
+}
+
+.mainpage .ir-information .ir-inner .all-contents-wrapper .first-flex .flex > li:first-child p {
+    color: #fff;
+    font-size: 2.1875rem;
+    line-height: 2.6875rem;
+    padding-bottom: 121px;
+    white-space: nowrap;
+}
+
+.mainpage .ir-information .ir-inner .all-contents-wrapper .first-flex .flex > li:first-child p span {
+    font-weight: 800;
+}
+
+.mainpage .ir-information .ir-inner .all-contents-wrapper .first-flex .flex li .flex-menu {
+    display: flex;
+}
+
+.mainpage .ir-information .ir-inner .all-contents-wrapper .first-flex .flex li li:nth-child(1) {
+    background: url(../img/bg_main_ir_banner1.jpg) no-repeat center/cover;
+    width: 361px;
+    height: 439px;
+}
+
+.mainpage .ir-information .ir-inner .all-contents-wrapper .first-flex .flex li li:nth-child(2) {
+    background: url(../img/bg_main_ir_banner2.jpg) no-repeat center/cover;
+    width: 361px;
+    height: 439px;
+    margin-left: 25px;
+}
+
+.mainpage .ir-information .ir-inner .all-contents-wrapper .first-flex .flex li li:nth-child(n+1) {
+    position: relative;
+}
+
+.mainpage .ir-information .ir-inner .all-contents-wrapper .first-flex .flex li li:nth-child(n+1) h2 {
+    position: absolute;
+    left: 12.47%;
+    top: 12.93%;
+    color: #fff;
+}
+
+.mainpage .ir-information .ir-inner .all-contents-wrapper .first-flex .flex li li:nth-child(n+1) p {
+    position: absolute;
+    left: 12.74%;
+    top: 23.58%;
+    color: rgba(255,255,255,.4);
+    font-weight: 400;
+}
+
+.mainpage .ir-information .ir-inner .all-contents-wrapper .first-flex .flex li li:nth-child(n+1) .add-search-icons {
+    position: absolute;
+    right: 31px;
+    bottom: 31px;
+    width: 50px;
+    height: 50px;
+    background-color: #007dc6;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainpage .ir-information .ir-inner .all-contents-wrapper .first-flex .flex li li:nth-child(n+1) .add-search-icons .search-link {
+    display: block;
+    text-indent: -9999em;
+    width: 23px;
+    height: 23px;
+    background: url(../img/search.png) no-repeat;
+    position: absolute;
+    padding: 14px;
+}
+    
+.mainpage .ir-information .ir-inner .all-contents-wrapper .second-slider {
+    padding-top: 20px;
+}
+
+.mainpage .ir-information .ir-inner .all-contents-wrapper .second-slider > h2 {
+    font-weight: 700;
+    font-size: 1.5625rem;
+    color: #fff;
+    letter-spacing: -0.02rem;
+    line-height: 2.6875rem;
+}
+
+.mainpage .ir-information .ir-inner .all-contents-wrapper .second-slider > span {
+    line-height: 2.6875rem;
+    font-size: 1.125rem;
+    color: rgba(255,255,255,.5);
+    letter-spacing: 0.02rem;
+    padding-bottom: 35px;
+}
+
+.mainpage .ir-information .ir-inner .all-contents-wrapper .second-slider .slider-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.mainpage .ir-information .ir-inner .all-contents-wrapper .second-slider .slider-wrapper .news-slider {
+    display: flex;
+    gap: 45px;
+}
+
+.mainpage .ir-information .ir-inner .all-contents-wrapper .second-slider .slider-wrapper .news-slider li {
+    flex: 1;
+    border: 1px solid rgba(255,255,255,.5);
+}
+
+.mainpage .ir-information .ir-inner .all-contents-wrapper .second-slider .slider-wrapper .news-slider li .news-inner {
+    padding-left: 26px;
+    padding-top: 30px;
+    padding-bottom: 23px;
+}
+
+.mainpage .ir-information .ir-inner .all-contents-wrapper .second-slider .slider-wrapper .news-slider li .news-inner .elipse-wrapper1 h2 {
+    color: #fff;
+    font-size: 1.126rem;
+    width: 259px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.mainpage .ir-information .ir-inner .all-contents-wrapper .second-slider .slider-wrapper .news-slider li .news-inner .elipse-wrapper2 span {
+    display: block;
+    line-height: 2.6875rem;
+    font-size: 0.875rem;
+    color: rgba(255,255,255,.5);
+    width: 271px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-bottom: 68px;
+}
+
+.mainpage .ir-information .ir-inner .all-contents-wrapper .second-slider .slider-wrapper .news-slider li .news-inner .timer-wrap {
+    display: flex;
+    gap: 7px;
+}
+
+.mainpage .ir-information .ir-inner .all-contents-wrapper .second-slider .slider-wrapper .news-slider li .news-inner .timer-wrap .timer-img {
+    width: 14px;
+    height: 15px;
+    background: url(../img/timer.png) no-repeat;
+}
+
+.mainpage .ir-information .ir-inner .all-contents-wrapper .second-slider .slider-wrapper .news-slider li .news-inner .timer-wrap span {
+    color: rgba(255,255,255,.5);
+}
