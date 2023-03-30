@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded",function() {
 
     ham.onclick = () => {        
         hmenu.classList.toggle("on");
+        ham.classList.toggle("on");
     }
 
     let bar_seq = 0;

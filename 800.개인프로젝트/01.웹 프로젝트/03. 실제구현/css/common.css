@@ -16,9 +16,9 @@ body {
     width: 100%;
     background-color: transparent;
     border-bottom: 1px solid rgb(255, 255, 255,.5);
-    position: fixed;
+    position: absolute;
     top: 0;
-    z-index: 99999;
+    z-index: 4;
 }
 
 .main-header .header-inner {
@@ -125,6 +125,9 @@ body {
     display: flex;
     gap: 85px;
     align-items: center;
+    position: absolute;
+    right: 0;
+    z-index: 5;
 }
 
 .main-header .header-inner .right-menu .lang {
@@ -155,3 +158,39 @@ body {
     opacity: 1;
 }
 
+.main-header .header-inner .right-menu .ham {
+    width: 30px;
+    height: 21px;
+    position: relative;
+}
+
+.main-header .header-inner .right-menu .ham span {
+    display: inline-block;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+}
+
+.main-header .header-inner .right-menu .ham span:nth-child(2) {
+    top: 10px;
+}
+
+.main-header .header-inner .right-menu .ham span:nth-child(3) {
+    top: 20px;
+}
+
+.main-header .header-inner .right-menu .ham.on span:first-child {
+    transform: rotate(45deg);
+    top: 10px;
+}
+
+.main-header .header-inner .right-menu .ham.on span:nth-child(2) {
+    left: 50%;
+    width: 0;
+}
+
+.main-header .header-inner .right-menu .ham.on span:last-child {
+    transform: rotate(-45deg);
+    top: 10px;
+}

@@ -77,11 +77,16 @@
 .mainpage .visual {
     width: 100%;
     height: 970px;
+    position: relative;
+    overflow: hidden;
 }
 
 .mainpage .visual .visual-list {
     width: 100%;
     height: 100%;
+    position: absolute;
+    left: 0;
+    display: flex;
 }
 
 .mainpage .visual .visual-list li {
@@ -89,6 +94,8 @@
     height: 100%;
     background: url(../img/main_ban_01.jpg) no-repeat center/cover;
     position: relative;
+    flex-basis: 100%;
+    flex-shrink: 0;
 }
 
 .mainpage .visual .visual-list li .visual-contents {
@@ -137,10 +144,11 @@
 .mainpage .visual .visual-list li .visual-contents .bullet .bar .barbx {
     position: relative;
     display: inline-block;
-    width: 20px;
-    height: 4px;
-    vertical-align: 4px;
+    width: 0;
+    height: 2px;
+    vertical-align: 5px;
     transition: .7s;
+    margin-left: 5px;
 }
 .mainpage .visual .visual-list li .visual-contents .bullet .bar.on .barbx {
     width: 79px;
@@ -157,7 +165,7 @@
 .mainpage .visual .visual-list li .visual-contents .bullet .bar.on .barbx  span.progressive {
     display: block;
     width: 0;
-    height: 4px;
+    height: 2px;
     background-color: #fff;
     position: absolute;
     z-index: 1;
@@ -171,6 +179,19 @@
     to {
         width: 79px;
     }
+}
+
+.mainpage .visual .visual-list li .visual-contents .bullet .stop {
+    width: 9px;
+    height: 12px;
+    display: flex;
+    gap: 5px;
+}
+
+.mainpage .visual .visual-list li .visual-contents .bullet .stop .stop-bar {
+    width:4px;
+    height: 100%;
+    background-color: #fff;
 }
 
 .mainpage .business {
@@ -379,6 +400,7 @@
 .mainpage .management .box-inner .real-box .real-box-inner .real-box-list li {
     flex: 1;
     position: relative;
+    padding: 27px 0;
 }
 
 .mainpage .management .box-inner .real-box .real-box-inner .real-box-list li .con-wrapper {
@@ -686,4 +708,92 @@
 
 .mainpage .ir-information .ir-inner .all-contents-wrapper .second-slider .slider-wrapper .news-slider li .news-inner .timer-wrap span {
     color: rgba(255,255,255,.5);
+}
+
+.mainpage .pr-center {
+    width: 100%;
+    height: 1092px;
+    background: url(../img/bg_main_pr.jpg) no-repeat center/cover;
+}
+
+.mainpage .pr-center > h2 {
+    padding-top: 145px;
+    padding-bottom: 19px;
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+    line-height: 1.1875rem;
+    background: linear-gradient(90deg, #007BBB 45%, #00A256 52%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.mainpage .pr-center > p {
+    text-align: center;
+    font-size: 1.875rem;
+    line-height: 2.6875rem;
+    letter-spacing: -0.02rem;
+    font-weight: 500;
+    color: #fff;
+    padding-bottom: 62px;
+}
+
+.mainpage .pr-center > p span {
+    font-weight: 800;
+}
+
+.mainpage .pr-center .pr-flex-inner {
+    padding: 0 265px;
+    margin: 0 auto;
+}
+
+.mainpage .pr-center .pr-flex-inner .pr-flex {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 60px;
+}
+
+.mainpage .pr-center .pr-flex-inner .pr-flex > div {
+    flex: 1;
+}
+
+.mainpage .pr-center .pr-flex-inner .pr-flex .pr-flex-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.mainpage .pr-center .pr-flex-inner .pr-flex .pr-flex-left .pr-flex-left-menu {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 26px;
+    border-bottom: 1px solid #fff;
+}
+
+.mainpage .pr-center .pr-flex-inner .pr-flex .pr-flex-left .pr-flex-left-menu .pr-flex-left-menu-all {
+    display: flex;
+    gap: 24px;
+}
+
+.mainpage .pr-center .pr-flex-inner .pr-flex .pr-flex-left .pr-flex-left-menu .pr-flex-left-menu-all li a {
+    padding: 11px 0;
+    color: #fff;
+    font-size: 1.375rem;
+    line-height: 2.6875rem;
+    letter-spacing: 0.02rem;
+}
+
+.mainpage .pr-center .pr-flex-inner .pr-flex .pr-flex-left .pr-flex-left-menu .plus-box {
+    display: inline-block;
+    border: 1px solid #fff;
+}
+
+.mainpage .pr-center .pr-flex-inner .pr-flex .pr-flex-left .pr-flex-left-menu .plus-box a {
+    display: inline-block;
+    text-indent: -9999em;
+    width: 15px;
+    height: 15px;
+    background: url(../img/plus.png) no-repeat;
+    padding: 16px;
 }
