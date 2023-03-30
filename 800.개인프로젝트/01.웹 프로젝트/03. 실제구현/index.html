@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>한솔로지스틱스</title>
         <link rel="stylesheet" href="css/style.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
         <script src="./js/main.js"></script>
     </head>
     <body>
@@ -16,6 +18,106 @@
                             <img src="./img/logo.svg" alt="logo-svg" />
                         </a>
                     </h1>
+
+                    <!-- 전체메뉴 -->
+                    <section class="hidden-menu">
+                        <div class="hidden-inner">
+                            <ul>
+                                <li>
+                                    <a href="#">회사소개</a>
+                                    <ul>
+                                        <li><a href="#">개요</a></li>
+                                        <li><a href="#">CEO 인사말</a></li>
+                                        <li><a href="#">CI</a></li>
+                                        <li><a href="#">연혁</a></li>
+                                        <li><a href="#">인증</a></li>
+                                        <li>
+                                            <a href="#">네트워크</a>
+                                            <ul>
+                                                <li><a href="#">국내</a></li>
+                                                <li><a href="#">글로벌</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">사업영역</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">글로벌물류</a>
+                                            <ul>
+                                                <li><a href="#">해상/항공운송</a></li>
+                                                <li><a href="#">철도운송</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">디지털트럭운송</a></li>
+                                        <li><a href="#">컨테이너운송</a></li>
+                                        <li><a href="#">W&D</a></li>
+                                        <li><a href="#">물류컨설팅</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">지속가능영역</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">환경경영</a>
+                                            <ul>
+                                                <li><a href="#">환경방침 및 목표</a></li>
+                                                <li><a href="#">환경경영체계 및 추진조직</a></li>
+                                                <li><a href="#">친환경 활동</a></li>
+                                                <li><a href="#">환경인증현황</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#">사회책임경영</a>
+                                            <ul>
+                                                <li><a href="#">품질경영</a></li>
+                                                <li><a href="#">안전경영</a></li>
+                                                <li><a href="#">윤리경영</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#">기업지배구조</a>
+                                            <ul>
+                                                <li><a href="#">이사회</a></li>
+                                                <li><a href="#">감사위원회</a></li>
+                                                <li><a href="#">주주총회</a></li>
+                                                <li><a href="#">관련규정</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#">ESG성과</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">투자정보</a>
+                                    <ul>
+                                        <li><a href="#">재무정보</a></li>
+                                        <li><a href="#">배당현황</a></li>
+                                        <li><a href="#">공시정보</a></li>
+                                        <li><a href="#">IR News</a></li>
+                                        <li><a href="#">Contact IR</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">홍보센터</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">물류상담서비스</a>
+                                            <ul>
+                                                <li><a href="#">물류문의</a></li>
+                                                <li><a href="#">파트너사문의</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">언론보도</a></li>
+                                        <li><a href="#">브로슈어</a></li>
+                                        <li><a href="#">소셜미디어</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
                     <div class="center-menu">
                         <ul class="menu-list">
                             <li>
@@ -86,107 +188,14 @@
         </div>
         <div id="main">
             <main class="mainpage">
-                <section class="hidden-menu">
-                    <div class="hidden-inner">
-                        <ul>
-                            <li>
-                                <a href="#">회사소개</a>
-                                <ul>
-                                    <li><a href="#">개요</a></li>
-                                    <li><a href="#">CEO 인사말</a></li>
-                                    <li><a href="#">CI</a></li>
-                                    <li><a href="#">연혁</a></li>
-                                    <li><a href="#">인증</a></li>
-                                    <li>
-                                        <a href="#">네트워크</a>
-                                        <ul>
-                                            <li><a href="#">국내</a></li>
-                                            <li><a href="#">글로벌</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">사업영역</a>
-                                <ul>
-                                    <li>
-                                        <a href="#">글로벌물류</a>
-                                        <ul>
-                                            <li><a href="#">해상/항공운송</a></li>
-                                            <li><a href="#">철도운송</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">디지털트럭운송</a></li>
-                                    <li><a href="#">컨테이너운송</a></li>
-                                    <li><a href="#">W&D</a></li>
-                                    <li><a href="#">물류컨설팅</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">지속가능영역</a>
-                                <ul>
-                                    <li>
-                                        <a href="#">환경경영</a>
-                                        <ul>
-                                            <li><a href="#">환경방침 및 목표</a></li>
-                                            <li><a href="#">환경경영체계 및 추진조직</a></li>
-                                            <li><a href="#">친환경 활동</a></li>
-                                            <li><a href="#">환경인증현황</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#">사회책임경영</a>
-                                        <ul>
-                                            <li><a href="#">품질경영</a></li>
-                                            <li><a href="#">안전경영</a></li>
-                                            <li><a href="#">윤리경영</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#">기업지배구조</a>
-                                        <ul>
-                                            <li><a href="#">이사회</a></li>
-                                            <li><a href="#">감사위원회</a></li>
-                                            <li><a href="#">주주총회</a></li>
-                                            <li><a href="#">관련규정</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#">ESG성과</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">투자정보</a>
-                                <ul>
-                                    <li><a href="#">재무정보</a></li>
-                                    <li><a href="#">배당현황</a></li>
-                                    <li><a href="#">공시정보</a></li>
-                                    <li><a href="#">IR News</a></li>
-                                    <li><a href="#">Contact IR</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">홍보센터</a>
-                                <ul>
-                                    <li>
-                                        <a href="#">물류상담서비스</a>
-                                        <ul>
-                                            <li><a href="#">물류문의</a></li>
-                                            <li><a href="#">파트너사문의</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">언론보도</a></li>
-                                    <li><a href="#">브로슈어</a></li>
-                                    <li><a href="#">소셜미디어</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
                 <section class="visual">
                     <ul class="visual-list">
                         <li>
+                            <div class="vidbx">
+                                <video src="./img/vid1.mp4" autoplay loop muted></video>
+                                <video src="./img/vid2.mp4" autoplay loop muted></video>
+                                <video src="./img/vid3.mp4" autoplay loop muted></video>
+                            </div>
                             <div class="visual-contents">
                                 <span>고객이 만족하는 최고의</span>
                                 <span>SCM Solution Provider</span>
@@ -298,80 +307,65 @@
                                     <div class="con">
                                         <div class="img">
                                             <div class="click-search">
-                                                <img src="./img/icons.png" alt="">
+                                                <img src="./img/icons.png" alt="" />
                                                 <span>MORE DETAILS</span>
                                             </div>
                                         </div>
                                         <h3>Global Logistics</h3>
                                         <h2>글로벌물류</h2>
-                                        <p>
-                                            글로벌 네트워크 및 대규모 취급물량을 기반으로 산업 국가별물류 전문가가
-                                            현지에 특화된 3PL 솔루션을 제공합니다
-                                        </p>
+                                        <p>글로벌 네트워크 및 대규모 취급물량을 기반으로 산업 국가별물류 전문가가 현지에 특화된 3PL 솔루션을 제공합니다</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="con">
                                         <div class="img">
                                             <div class="click-search">
-                                                <img src="./img/icons.png" alt="">
+                                                <img src="./img/icons.png" alt="" />
                                                 <span>MORE DETAILS</span>
                                             </div>
                                         </div>
                                         <h3>Global Logistics</h3>
                                         <h2>글로벌물류</h2>
-                                        <p>
-                                            글로벌 네트워크 및 대규모 취급물량을 기반으로 산업 국가별물류 전문가가
-                                            현지에 특화된 3PL 솔루션을 제공합니다
-                                        </p>
+                                        <p>글로벌 네트워크 및 대규모 취급물량을 기반으로 산업 국가별물류 전문가가 현지에 특화된 3PL 솔루션을 제공합니다</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="con">
                                         <div class="img">
                                             <div class="click-search">
-                                                <img src="./img/icons.png" alt="">
+                                                <img src="./img/icons.png" alt="" />
                                                 <span>MORE DETAILS</span>
                                             </div>
                                         </div>
                                         <h3>Global Logistics</h3>
                                         <h2>글로벌물류</h2>
-                                        <p>
-                                            글로벌 네트워크 및 대규모 취급물량을 기반으로 산업 국가별물류 전문가가
-                                            현지에 특화된 3PL 솔루션을 제공합니다
-                                        </p>
+                                        <p>글로벌 네트워크 및 대규모 취급물량을 기반으로 산업 국가별물류 전문가가 현지에 특화된 3PL 솔루션을 제공합니다</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="con">
                                         <div class="img">
                                             <div class="click-search">
-                                                <img src="./img/icons.png" alt="">
+                                                <img src="./img/icons.png" alt="" />
                                                 <span>MORE DETAILS</span>
                                             </div>
                                         </div>
                                         <h3>Global Logistics</h3>
                                         <h2>글로벌물류</h2>
-                                        <p>
-                                            글로벌 네트워크 및 대규모 취급물량을 기반으로 산업 국가별물류 전문가가
-                                            현지에 특화된 3PL 솔루션을 제공합니다
-                                        </p>
+                                        <p>글로벌 네트워크 및 대규모 취급물량을 기반으로 산업 국가별물류 전문가가 현지에 특화된 3PL 솔루션을 제공합니다</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="con">
                                         <div class="img">
                                             <div class="click-search">
-                                                <img src="./img/icons.png" alt="">
+                                                <img src="./img/icons.png" alt="" />
                                                 <span>MORE DETAILS</span>
                                             </div>
                                         </div>
                                         <h3>Global Logistics</h3>
                                         <h2>글로벌물류</h2>
-                                        <p>
-                                            글로벌 네트워크 및 대규모 취급물량을 기반으로 산업 국가별물류 전문가가
-                                            현지에 특화된 3PL 솔루션을 제공합니다
-                                        </p>
+                                        <p>글로벌 네트워크 및 대규모 취급물량을 기반으로 산업 국가별물류 전문가가 현지에 특화된 3PL 솔루션을 제공합니다</p>
                                     </div>
                                 </li>
                             </ul>
@@ -379,18 +373,18 @@
                     </div>
                 </section>
                 <section class="management">
-                     <h2>ESG MANAGEMENT</h2>
-                     <p>
-                        전사차원의 체계적인 ESG활동을 통해<br>
+                    <h2>ESG MANAGEMENT</h2>
+                    <p>
+                        전사차원의 체계적인 ESG활동을 통해<br />
                         <span>환경적,사회적,경제적 책임을 다하는</span> 한솔 로지스틱스
-                     </p>
-                     <div class="box-inner">
+                    </p>
+                    <div class="box-inner">
                         <div class="real-box">
                             <div class="real-box-inner">
                                 <ul class="real-box-list">
                                     <li>
                                         <div class="con-wrapper">
-                                            <img src="./img/icon1.png" alt="아이콘1">
+                                            <img src="./img/icon1.png" alt="아이콘1" />
                                             <h2>기업지배구조</h2>
                                             <span>Coperate Governance</span>
                                             <div class="detail-wrap">
@@ -411,7 +405,7 @@
                                     </li>
                                     <li>
                                         <div class="con-wrapper">
-                                            <img src="./img/icon1.png" alt="아이콘1">
+                                            <img src="./img/icon1.png" alt="아이콘1" />
                                             <h2>사회책임경영</h2>
                                             <span>Coperate Governance</span>
                                             <div class="detail-wrap">
@@ -432,7 +426,7 @@
                                     </li>
                                     <li>
                                         <div class="con-wrapper">
-                                            <img src="./img/icon1.png" alt="아이콘1">
+                                            <img src="./img/icon1.png" alt="아이콘1" />
                                             <h2>사회책임경영</h2>
                                             <span>Coperate Governance</span>
                                             <div class="detail-wrap">
@@ -444,7 +438,7 @@
                                 </ul>
                             </div>
                         </div>
-                     </div>
+                    </div>
                 </section>
                 <section class="ir-information">
                     <div class="ir-inner">
@@ -452,12 +446,10 @@
                             <div class="first-flex">
                                 <ul class="flex">
                                     <li>
-                                        <h2>
-                                            IR INFORMATION
-                                        </h2>
+                                        <h2>IR INFORMATION</h2>
                                         <p>
-                                            투명한 투명정보 공개를 바탕으로 <br>
-                                            <span>정도경영 실무를 꿈꾸는</span> 한솔 로지스틱스 
+                                            투명한 투명정보 공개를 바탕으로 <br />
+                                            <span>정도경영 실무를 꿈꾸는</span> 한솔 로지스틱스
                                         </p>
                                     </li>
                                     <li>
@@ -465,8 +457,8 @@
                                             <li>
                                                 <h2>재무정보</h2>
                                                 <p>
-                                                    한솔 로지스틱스의 고객중심 비전 <br>
-                                                    “고객이 만족하는 최고의 SCM Provider” <br>
+                                                    한솔 로지스틱스의 고객중심 비전 <br />
+                                                    “고객이 만족하는 최고의 SCM Provider” <br />
                                                     실현과 함께 주주가치를 극대화 하겠습니다.
                                                 </p>
                                                 <div class="add-search-icons">
@@ -476,8 +468,8 @@
                                             <li>
                                                 <h2>재무정보</h2>
                                                 <p>
-                                                    한솔 로지스틱스의 고객중심 비전 <br>
-                                                    “고객이 만족하는 최고의 SCM Provider” <br>
+                                                    한솔 로지스틱스의 고객중심 비전 <br />
+                                                    “고객이 만족하는 최고의 SCM Provider” <br />
                                                     실현과 함께 주주가치를 극대화 하겠습니다.
                                                 </p>
                                                 <div class="add-search-icons">
@@ -558,7 +550,7 @@
                 <section class="pr-center">
                     <h2>PR CENTER</h2>
                     <p>
-                        고객이 만족하는 최고의 <br>
+                        고객이 만족하는 최고의 <br />
                         <span>SCM Solution Provider</span> 한솔 로지스틱스
                     </p>
                     <div class="pr-flex-inner">
@@ -578,7 +570,7 @@
                                         <div class="newspaper-con">
                                             <span>두번째 기사</span>
                                             <div class="news-timer">
-                                                <img src="./img/timer.png" alt="타이머">
+                                                <img src="./img/timer.png" alt="타이머" />
                                                 <span>2023-03-12</span>
                                             </div>
                                         </div>
@@ -587,7 +579,7 @@
                                         <div class="newspaper-con">
                                             <span>두번째 기사</span>
                                             <div class="news-timer">
-                                                <img src="./img/timer.png" alt="타이머">
+                                                <img src="./img/timer.png" alt="타이머" />
                                                 <span>2023-03-12</span>
                                             </div>
                                         </div>
@@ -596,7 +588,7 @@
                                         <div class="newspaper-con">
                                             <span>두번째 기사</span>
                                             <div class="news-timer">
-                                                <img src="./img/timer.png" alt="타이머">
+                                                <img src="./img/timer.png" alt="타이머" />
                                                 <span>2023-03-12</span>
                                             </div>
                                         </div>
@@ -605,7 +597,7 @@
                                         <div class="newspaper-con">
                                             <span>두번째 기사</span>
                                             <div class="news-timer">
-                                                <img src="./img/timer.png" alt="타이머">
+                                                <img src="./img/timer.png" alt="타이머" />
                                                 <span>2023-03-12</span>
                                             </div>
                                         </div>
@@ -621,10 +613,10 @@
                                 </div>
                                 <div class="pr-flex-right-download">
                                     <div class="download-inner">
-                                        <img src="./img/brosher.png" alt="브로슈어">
+                                        <img src="./img/brosher.png" alt="브로슈어" />
                                         <div class="txt-all">
                                             <p>
-                                                <span>한솔로지스틱스</span><br>
+                                                <span>한솔로지스틱스</span><br />
                                                 브로슈어 다운로드
                                             </p>
                                             <ul class="download-link">
