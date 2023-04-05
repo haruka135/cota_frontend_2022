@@ -1,11 +1,7 @@
 @charset "utf-8";
 
-html{
-    /* 부드러운 스크롤 적용(스크롤 애니메이션)
-    -> 스크롤 이동시간, 이징 가속도는 조절 x
-       제이쿼리에서 조절할 예정 */
-    scroll-behavior: smooth;
-}
+/* 제이쿼리 스크롤 이동 애니메이션 시 
+   scroll-behavior: smooth; 를 적용하지 않는다. */
 
 html,
 body{
