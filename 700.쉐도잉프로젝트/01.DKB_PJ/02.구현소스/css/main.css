@@ -9,10 +9,10 @@
 @import url(common.css);
 
 /* 공사중 표시 */
-body * {
+/* body * {
     outline: 1px dotted red;
 }
-
+ */
 /* 컨텐츠 파트 최상위 부모 */
 body {
     /* 한번에 배경 주기 + 여러개 주기 */
@@ -52,8 +52,18 @@ body {
 /* 캐릭터 각 박스 공통 */
 .cont .cbx .cat {
     /* 4등분할 가로크기 -> 25% */
-    width: 25%;
+    width: 24%;
     float: left;
+    margin: 0 0.5%; /* 마진: 위아래 0, 양쪽 0.5% */
+}
+
+/* 캐릭터 이미지 박스 */
+.cont .cbx .cat .ci {
+    transition: margin-top .4s;
+}
+/* .cat에 오버시 .ci 박스 마진탑 변경하기 */
+.cont .cbx .cat:hover .ci {
+    margin-top: -55%
 }
 
 /* 캐릭터 이미지 (.ci 직계 img) */
@@ -89,4 +99,67 @@ body {
 /* .cat 박스에 마우스 오버시 흐린 이미지 숨기기 */
 .cont .cbx .cat:hover .ci figcaption img:last-child {
     display: none;
+}
+
+
+/* 캐릭터 설명 박스 */
+.cont .cbx .cat .cd {
+    /* 배경 넣기 */
+    background: url(../images/eachBG.jpg) no-repeat bottom/cover;
+    /* 전체 높이 설정 */
+    height: 0;
+    /* 둥근 모서리 : 왼쪽 위 부터 시계 방향 */
+    border-radius: 20px 5px 5px 20px;
+    /* 위아래 약간 떨어뜨리기 */
+    margin-top: 20px;
+    /* 넘치는 요소 숨기기 */
+    overflow: auto;
+    /* 트랜지션 - 두가지 변화 상태를 애니메이션 해주는 속성 
+       속시이지*/
+    transition: height .4s ease;
+}
+
+/* .cat에 마우스 오버시 .cd 높이값 늘리기 */
+.cont .cbx .cat:hover .cd {
+    height: 250px;
+}
+
+/* 캐릭터 설명 타이틀 */
+.cont .cbx .cat .cd h3 {
+    font-family: 'Gugi', cursive;
+    font-size: 24px;
+    font-weight: normal;
+    padding: 15px 10px 5px;
+    letter-spacing: -1px;
+}
+
+/* 캐릭터 타이틀 앞 아이콘 가상요소로 넣기 */
+.cont .cbx .cat .cd h3::before {
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 35px;
+    background: url(../images/bg_logo_a_01.png) no-repeat -144px -185px;
+    vertical-align: -11px;
+    margin-right: 5px;
+}
+
+/* 캐릭터 설명 문단 */
+.cont .cbx .cat .cd div p {
+    font-family: 'ZCOOL KuaiLe', cursive;
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 10px;
+    text-align: justify; /* 양쪽 정렬 */
+}
+
+/* 캐릭터 첫번째 문단 첫글자 가상요소로 디자인 변경하기 */
+.cont .cbx .cat .cd div p:first-child::first-letter {
+    color: orange;
+    font-size: 40px;
+    text-shadow: 0 -1px #000,
+                 0 1px #000,
+                 -1px 0 #000,
+                 1px 0 #000;
+    line-height: 0.9; /* 글자 크기로 인해 줄 간격 조정 */
 }
