@@ -237,10 +237,31 @@ $(() => {
                 .delay(500)
                 .fadeIn(200,()=>{
                     // 7번방 좀비가 올라와서 달려든다
-                    
+                    bd.eq(7)
+                    .find(".mz")
+                    .animate({
+                        // 윗층으로 올라온다
+                        bottom: bd.eq(7).height() + "px"
+                        // li 높이만큼 bottom을 올려준다
+                    },500,"easeOutElastic")
+                    .delay(500)
+                    .animate({
+                        // 달려들기
+                        right: bd.eq(7).width()*1.2 + "px"
+                    },1000,"easeOutBounce", () => {
+                        // 물린 후 대사
+                        msg.html("아악! 물렸다 <br> 어서 치료 주사 방으로");
+                        
+                        // 미니언즈 좀비 이미지 변경(1초후)
+                        setTimeout(()=>{
+                            mi.find("img")
+                            .attr("src","images/mz1.png")
+                            .css({filter:"grayscale(100%)"})
+                            // 다음버튼 보이기
+                            $(this).next().delay(500).slideDown(300);
+                        },1000)
+                    });
                 });
-                // 다음버튼 보이기
-                $(this).next().delay(500).slideDown(300);
             }; ///////////// fn함수 /////////
 
             // 공통함수 호출! : 4번방으로!
