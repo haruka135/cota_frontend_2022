@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-/* 보그 PJ 서브페이지 CSS - temp.css */
+/* 보그 PJ 카테고리 페이지 CSS - category.css */
 
 /* 외부CSS파일 합치기 */
 @import url(./reset.css);
@@ -8,10 +8,8 @@
 @import url(./common.css);
 
 /* 2-1. 카테고리 페이지 상단영역 */
-
-/* 2-1-1. 서브 타이틀 */
-
-.stit {
+/* 2-1-1.서브타이틀 */
+.stit{
     font-family: pist;
     font-weight: normal;
     font-size: 50px;
@@ -19,200 +17,189 @@
     padding: 40px 0 20px;
 }
 
-/* 2-2-2. 서브 메뉴(LNB : Local Navigation Bar) */
-
-.lnb {
+/* 2-1-2.서브메뉴(LNB:Local Navigation Bar) */
+.lnb{
     padding: 5px 0 50px;
 }
-
-.lnb ul {
-    /* flexbox */
+.lnb ul{
+    /* 플렉스박스 */
     display: flex;
-    /* flex 중앙정렬 */
+    /* 플렉스중앙정렬 */
     justify-content: center;
-    /* 사이 간격 */
+    /* 사이간격 */
     gap: 0 20px;
 }
-
-.lnb a {
+.lnb a{
     font-family: nbg;
     font-size: 18px;
     color: #333;
     /* 트랜지션 */
     transition: color .5s;
 }
-
-/* 첫번째 메뉴 빨간색 + 빨간색 */
-
+/* 첫번째메뉴 + 오버시 빨간색 글자 */
 .lnb li:first-child a,
-.lnb a:hover {
+.lnb a:hover{
     color: red;
 }
 
+/* 2-2. 카테고리 페이지 컨텐츠영역 */
 
-/* 2-2. 카테고리 페이지 컨텐츠 영역 */
-
-/********************* fashion *********************/
-
-.fashion .bg1-1 {
+/************************ fashion ************************/
+.fashion .bg1-1{
     background-image: url(../images/fashion/cont1-1a.jpg);
 }
-.fashion .bg1-2 {
+.fashion .bg1-2{
     background-image: url(../images/fashion/cont1-2a.jpg);
 }
-.fashion .bg1-3 {
+.fashion .bg1-3{
     background-image: url(../images/fashion/cont1-3a.jpg);
 }
-.fashion .bg2-1 {
+.fashion .bg2-1{
     background-image: url(../images/fashion/cont2-1a.jpg);
 }
-.fashion .bg2-2 {
+.fashion .bg2-2{
     background-image: url(../images/fashion/cont2-2a.jpg);
 }
-.fashion .bg2-3 {
+.fashion .bg2-3{
     background-image: url(../images/fashion/cont2-3a.jpg);
 }
 
-/********************* beauty *********************/
-
-.beauty .bg1-1 {
+/************************ beauty ************************/
+.beauty .bg1-1{
     background-image: url(../images/beauty/cont1-1a.jpg);
 }
-.beauty .bg1-2 {
+.beauty .bg1-2{
     background-image: url(../images/beauty/cont1-2a.jpg);
 }
-.beauty .bg1-3 {
+.beauty .bg1-3{
     background-image: url(../images/beauty/cont1-3a.jpg);
 }
-.beauty .bg2-1 {
+.beauty .bg2-1{
     background-image: url(../images/beauty/cont2-1a.jpg);
 }
-.beauty .bg2-2 {
+.beauty .bg2-2{
     background-image: url(../images/beauty/cont2-2a.jpg);
 }
-.beauty .bg2-3 {
+.beauty .bg2-3{
     background-image: url(../images/beauty/cont2-3a.jpg);
 }
-/********************* living *********************/
 
-.living .bg1-1 {
+/************************ living ************************/
+.living .bg1-1{
     background-image: url(../images/living/cont1-1a.jpg);
 }
-.living .bg1-2 {
+.living .bg1-2{
     background-image: url(../images/living/cont1-2a.jpg);
 }
-.living .bg1-3 {
+.living .bg1-3{
     background-image: url(../images/living/cont1-3a.jpg);
 }
-.living .bg2-1 {
+.living .bg2-1{
     background-image: url(../images/living/cont2-1a.jpg);
 }
-.living .bg2-2 {
+.living .bg2-2{
     background-image: url(../images/living/cont2-2a.jpg);
 }
-.living .bg2-3 {
+.living .bg2-3{
     background-image: url(../images/living/cont2-3a.jpg);
 }
-/********************* people *********************/
 
-.people .bg1-1 {
+/************************ people ************************/
+.people .bg1-1{
     background-image: url(../images/people/cont1-1a.jpg);
 }
-.people .bg1-2 {
+.people .bg1-2{
     background-image: url(../images/people/cont1-2a.jpg);
 }
-.people .bg1-3 {
+.people .bg1-3{
     background-image: url(../images/people/cont1-3a.jpg);
 }
-.people .bg2-1 {
+.people .bg2-1{
     background-image: url(../images/people/cont2-1a.jpg);
 }
-.people .bg2-2 {
+.people .bg2-2{
     background-image: url(../images/people/cont2-2a.jpg);
 }
-.people .bg2-3 {
+.people .bg2-3{
     background-image: url(../images/people/cont2-3a.jpg);
 }
-/********************* video *********************/
 
-.video .bg1-1 {
+/************************ video ************************/
+.video .bg1-1{
     background-image: url(../images/video/cont1-1a.jpg);
 }
-.video .bg1-2 {
+.video .bg1-2{
     background-image: url(../images/video/cont1-2a.jpg);
 }
-.video .bg1-3 {
+.video .bg1-3{
     background-image: url(../images/video/cont1-3a.jpg);
 }
-.video .bg2-1 {
+.video .bg2-1{
     background-image: url(../images/video/cont2-1a.jpg);
 }
-.video .bg2-2 {
+.video .bg2-2{
     background-image: url(../images/video/cont2-2a.jpg);
 }
-.video .bg2-3 {
+.video .bg2-3{
     background-image: url(../images/video/cont2-3a.jpg);
 }
 
-/********************* runway *********************/
-
-.runway .bg1-1 {
+/************************ runway ************************/
+.runway .bg1-1{
     background-image: url(../images/runway/cont1-1a.jpg);
 }
-.runway .bg1-2 {
+.runway .bg1-2{
     background-image: url(../images/runway/cont1-2a.jpg);
 }
-.runway .bg1-3 {
+.runway .bg1-3{
     background-image: url(../images/runway/cont1-3a.jpg);
 }
-.runway .bg2-1 {
+.runway .bg2-1{
     background-image: url(../images/runway/cont2-1a.jpg);
 }
-.runway .bg2-2 {
+.runway .bg2-2{
     background-image: url(../images/runway/cont2-2a.jpg);
 }
-.runway .bg2-3 {
+.runway .bg2-3{
     background-image: url(../images/runway/cont2-3a.jpg);
 }
 
-/********************* time & gem *********************/
-
-.time-gem .bg1-1 {
+/************************ time & gem ************************/
+.time-gem .bg1-1{
     background-image: url(../images/time-gem/cont1-1a.jpg);
 }
-.time-gem .bg1-2 {
+.time-gem .bg1-2{
     background-image: url(../images/time-gem/cont1-2a.jpg);
 }
-.time-gem .bg1-3 {
+.time-gem .bg1-3{
     background-image: url(../images/time-gem/cont1-3a.jpg);
 }
-.time-gem .bg2-1 {
+.time-gem .bg2-1{
     background-image: url(../images/time-gem/cont2-1a.jpg);
 }
-.time-gem .bg2-2 {
+.time-gem .bg2-2{
     background-image: url(../images/time-gem/cont2-2a.jpg);
 }
-.time-gem .bg2-3 {
+.time-gem .bg2-3{
     background-image: url(../images/time-gem/cont2-3a.jpg);
 }
 
-/********************* shopping *********************/
-
-.shopping .bg1-1 {
+/************************ shopping ************************/
+.shopping .bg1-1{
     background-image: url(../images/shopping/cont1-1a.jpg);
 }
-.shopping .bg1-2 {
+.shopping .bg1-2{
     background-image: url(../images/shopping/cont1-2a.jpg);
 }
-.shopping .bg1-3 {
+.shopping .bg1-3{
     background-image: url(../images/shopping/cont1-3a.jpg);
 }
-.shopping .bg2-1 {
+.shopping .bg2-1{
     background-image: url(../images/shopping/cont2-1a.jpg);
 }
-.shopping .bg2-2 {
+.shopping .bg2-2{
     background-image: url(../images/shopping/cont2-2a.jpg);
 }
-.shopping .bg2-3 {
+.shopping .bg2-3{
     background-image: url(../images/shopping/cont2-3a.jpg);
 }
