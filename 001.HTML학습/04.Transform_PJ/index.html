@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>Document</title>
+        <title>Transform</title>
         <style>
             body {
                 background: url(./images/bg-main.jpg) no-repeat fixed center top/cover;
@@ -10,20 +10,25 @@
 
             /* 타이틀 */
             .tit {
-                /* 박스 셋팅 */
+                /* 박스셋팅 */
                 border-radius: 50px;
-                background-color: rgba(0, 0, 0, 0.301);
+                background-color: rgba(0,0,0,.5);
                 text-align: center;
 
-                /* 글자 셋팅 */
+                /* 글자셋팅 */
                 color: #fff;
                 font-size: 50px;
                 line-height: 100px;
-                text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000;
+                /* 글자 그림자 테두리 */
+                text-shadow: 2px 0 #000,
+                             -2px 0 #000,
+                             0 2px #000,
+                             0 -2px #000;
             }
 
-            /* 전체 부모 박스 */
+            /* 전체부모박스 */
             .cont {
+                /* 박스셋팅 */
                 max-width: 1500px;
                 border: 10px solid lime;
                 border-radius: 20px;
@@ -33,99 +38,32 @@
 
             /* 캐릭터 공통 div */
             .cont > div {
-                /* 옆으로 흐르게 */
-                float: left;
-
-                /* 5등분 가로크기 */
-                width: 20%;
-                text-align: center;
+                float: left;   
+                width: 20%; /* 5등분 가로 크기 */
+                margin-bottom: 50px;
             }
-
-            /* 이미지를 원형으로! */
-
-            .cont > div > img {
-                width: 200px;
-                height: 200px;
-                border-radius: 50%;
-                margin-bottom: 20px;
-                /* 트랜지션 */
-                transition: transform 0.6s;
-            }
-
-            /* 가상요소로 clear 셋팅 */
             .cont::after {
-                content: "";
+                content: '';
                 display: block;
                 clear: both;
             }
 
-            /* 
-                [Transform]
-
-                -> 선택 요소의 크기,회전,이동,기울임 등 변형을 하기 위한 속성
-                -> 2d,3d 지원됨
-
-                1. rotateY(각도deg) - Y축 회전
-                -> deg는 각도의 단위
-
-                2. rotateX(각도deg) - X축 회전
-
-                3. translateX(거리) - X축 이동
-                - 단위: px, % 등
-                - 현재 위치로부터 이동
-                - 기준점: 요소의 왼쪽
-                - % 단위를 쓸 경우 기준은 요소의 width
-                - 이동 방향: +(오른쪽),-(왼쪽)
-
-                5. translate(x축거리,y축거리) - x,y축 이동
-                - 기준: 요소의 윗쪽 왼쪽 선
-
-                6. rotate(각도deg) - 원형회전
-                - 각도의 숫자가 양수이면 시계방향, 음수는 반시계 방향
-
-                7. 회전축 변경하기
-                transform-origin: 가로 세로;
-                - 가로값: left,right,center,px,%
-                - 세로값: top,cetner,bottom,px,%
-                - 기본값: center center
-
-                8. x,y축 기울임 : skew
-                - skewX(각도), skewY(각도)
-                - skew(x축,y축)
-                - 각도가 양수/음수에 따라 기울임 방향이 달라짐
-
-                9. 확대/축소: scale
-                - scale(x축배수,y축배수)
-                - 값을 하나만 쓰면 양방향 같은 값으로 셋팅
-                - 가끔 크기가 정해진 요소를 일정 크기로 축소 확대해서 크기를 맞출 때에 용이함
-
-                10. 복합적용하기
-                transform: 속성1 속성2 속성3...;
-
-                11. 앞뒤로 있는 이미지 뒤집기
-                - 세팅: 한 박스 안에 이미지가 2장 있고 이것을 겹치게 셋팅 -> absolute
-                - 순서는 나중 것이 위에 온다
-                - 적절한 트랜스폼, 트랜지션 이용한다
-            */
-
-            #trans1:hover img {
-                /* 트랜스폼 y축회전 tfry */
-                transform: rotateY(180deg);
-
-                /* css filter  */
-                filter: grayscale(50%);
+            /* 이미지를 원형으로! */
+            .cont> div > img {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                transition: transform .6s, filter .6s;/* 트랜지션: 속시이지 */
             }
 
-            #trans2 img {
-                /* 트랜스폼 x축회전 tfrx */
-                transform: rotateX(180deg);
-                filter: blur(2px);
+            #trans1:hover img {
+                transform: rotateY(180deg);
+                /* 필터 적용: 흑백 */ filter: grayscale(100%);
             }
 
             #trans2:hover img {
-                /* 트랜스폼 x축회전 tfrx */
-                transform: rotateX(0deg);
-                filter: blur(0px);
+                transform: rotateX(180deg);
+                filter: blur(2px);
             }
 
             #trans3:hover img {
@@ -133,95 +71,41 @@
             }
 
             #trans4:hover img {
-                transform: translateY(100%);
+                transform: translateY(200%);
             }
 
             #trans5:hover img {
-                transform: translate(-120px, 100px);
+                transform: translate(100%,200%);
             }
 
             #trans6:hover img {
-                transform: rotate(5478deg);
+                transform: rotate(180deg);
                 transition-duration: 10s;
-                /* 
-                속성: transition-property
-                시간: transtion-duration
-                이징: transtion-timing-function
-                지연시간: transition-delay
-                */
-            }
-
-            #trans6 img {
-                transform-origin: 50px 170px;
+                transition-property: transform;
+                transition-timing-function: ease;
+                transition-delay: none;
+                transform-origin: right bottom;
             }
 
             #trans7:hover img {
-                transform: skew(30deg, 45deg);
-            }
-
-            #trans8 img {
-                transform: scale(0);
+                transform: skewX(-30deg);
             }
 
             #trans8:hover img {
-                transform: scale(1.1);
+                transform: scale(2);
             }
 
             #trans9:hover img {
-                transform: scale(5) translate(-200%, -100%) rotateX(1200deg) skewX(50deg) rotate(5300deg);
-                /* 트랜지션 시간 */
+                transform: scale(5) translate(-200%,-100%) rotateX(1200deg) skewX(50deg) rotate(5300deg);
                 transition-duration: 20s;
             }
-
-            /* 박스의 가로 세로 크기 셋팅 */
-
-            #trans10 {
-                width: 200px;
-                height: 200px;
-                /* outline: 2px dashed lime; */
-                text-align: left; /* 가운데 정렬 풀기 */
-            }
-
-            #trans10 img {
-                position: absolute;
-                /* 젠틀 앱솔루트 */
-                /* 주의: 크기를 %로 주지 말것 -> 부모를 찾기 때문 */
-            }
-
-            #trans10 img:last-child {
-                transform: rotateY(0deg);
-                transition:.4s ease-in-out .4s;
-            }
-
-            #trans10:hover img:last-child {
-                /* 90도 회전하기 */
-                transform: rotateY(90deg);
-                /* 트랜지션 */
-                transition: all ease-in-out .4s;
-            }
-
-            #trans10 img:first-child {
-                /* 90도 회전하기 */
-                transform: rotateY(90deg);
-                transition: ease-in-out .4s;
-            }
-
-            #trans10:hover img:first-child {
-                transform: rotateY(0deg);
-                /* 트랜지션 */
-                transition: all .4s ease-in-out .4s;
-            }
-
-            /* 가속도
-            
-            1. ease-in : 처음엔 천천히 나중에는 등속도
-            2. ease-out : 처음엔 등속도 나중엔 천천히
-            
-            */
         </style>
     </head>
     <body>
+        <!-- 타이틀 -->
         <h1 class="tit">트랜스폼 연습</h1>
+
+        <!-- 내용박스 -->
         <div class="cont">
             <div id="trans1"><img src="images/cast01.jpg" alt="캐릭터" /></div>
             <div id="trans2"><img src="images/cast02.jpg" alt="캐릭터" /></div>

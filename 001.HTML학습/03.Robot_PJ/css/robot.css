@@ -1,0 +1,293 @@
+@charset "utf-8";
+
+/* Robot PJ 메인 CSS - robot.css */
+
+/* 초기화 */
+html,body,h1,h2,p,ol,ul,li {
+    margin: 0;
+    padding: 0;
+}
+
+/******* 공통 클래스 *******/
+
+/* 메탈소재 1 배경 */
+.mt1 {
+    background: url(../images/metal01.jpg) no-repeat center/cover;
+}
+
+/* 메탈소재 2 배경 */
+.mt2 {
+    background: url(../images/metal02.jpg) no-repeat center/cover;
+}
+
+
+body {
+    background: url(../images/bg.jpg) no-repeat fixed top/cover;
+}
+
+/* 공사중 표시 */
+body * {
+    outline: 2px dashed yellow;
+}
+
+/************************ 1. 상단영역  ********************************/
+/************************ 2. 메인영역 ********************************/
+
+/* 2-1. 로봇박스 */
+.robx {
+    /* 패딩 위,아래 */ padding: 200px 0 400px;
+}
+/* 로봇머리 */
+.head {
+    width: 250px;
+    height: 150px;
+    margin: 0 auto;
+    position: relative;
+    /* border-radius: 10px 30px 50% 50%; */
+    z-index: 1; /* .body보다 위! */
+    
+}
+
+.head::after {
+    content: '';
+    position: absolute;
+    bottom: -150px;
+    width: 250px;
+    height: 150px;
+    z-index: -1;
+    clip-path: polygon(0 0,0 50%,33.33% 100%,66.66% 100%,100% 50%,100% 0);
+    background: url(../images/metal01.jpg) no-repeat bottom/100%;
+}
+
+/* 로봇머리 직계 하위는 모두 앱솔루트 */
+.head > div {
+    position: absolute;
+}
+
+/* 로봇 머리에 가상요소로 머리털 박스 만들기 */
+.head::before {
+    content: '';
+    display: block;
+    width: 300px;
+    height: 100px;
+    background: url(../images/hair.png) no-repeat top/80% 100%;
+    transform: scale(1.2,2);
+    position: absolute;
+    z-index: 9999;
+    top: -35px;
+    left: -25px;
+}
+/* 눈 공통 */
+.eye {
+    width: 50px;
+    height: 50px;
+
+    /* 배경 공통 */
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+
+    /* 둥근 모서리 */
+    border-radius: 50%;
+
+    /* 보더 이중선 */
+    border: 4px double #000;
+}
+/* 왼눈 */
+.e1 {
+    background-image: url(../images/e1.jpg);
+    top: 50px;
+    left: 50px;
+}
+/* 오른눈 */
+.e2 {
+    background-image: url(../images/e2.jpg);
+    top: 50px;
+    right: 50px;
+}
+/* 코  */
+.nose {
+    width: 50px;
+    height: 70px;
+    background: url(../images/nose.jpg) no-repeat 0/110% 100%;
+    border-radius: 30%;
+    left: 100px;
+    top: 105px;
+}
+/* 입 */
+.mouth {
+    width: 90px;
+    height: 50px;
+    background: url(../images/mouth.png) no-repeat 0/100% 70%;
+    bottom: -100px;
+    left: 78px;
+}
+
+/* 별모양 점 가상요소로 만들기 */
+.mouth::before,.mouth::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -8px;
+    right: -30px;
+    width: 20px;
+    height: 20px;
+    background-color: #f00;
+    clip-path: polygon(0 0,50% 100%, 100% 0);
+}
+
+.mouth::after {
+    transform: rotate(180deg) translateY(30%);
+}
+
+/* 
+    [CSS 클리핑]
+     clip-path: polygon(x1 y1,x2 y2,x3 y3...);
+     각 좌표쌍은 띄어쓰기로, 각 점은 ,로 구분
+     각 점을 연결하여 도형모양만 출력
+     px은 각 도형 크기 내부의 수치로 쓰고
+     %는 도형을 기준한 위치를 %로 나타낸다.
+*/
+/* 귀 공통 */
+.ear {
+    width: 50px;
+    height: 70px;
+}
+/* 왼귀 */
+.er1 {
+    top: 50px;
+    left: -50px;
+    border-radius: 50% 0 0 50%;
+}
+/* 오른귀 */
+.er2 {
+    top: 50px;
+    right: -50px;
+    border-radius: 0 50% 50% 0;
+}
+
+/* 로봇몸통 */
+.body {
+    position: relative;
+    width: 200px;
+    height: 450px;
+    margin: 0 auto;
+    margin-top: 170px;
+}
+
+.body > div {
+    position: absolute;
+}
+
+/* 몸통 가상요소로 상단 만들기 */
+.body::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -50px;
+    width: 300px;
+    height: 200px;
+    /* 그라데이션 */ background-image: linear-gradient(-25deg,#eeeeee,#838282,#6b6b6b,#eeeeee);
+    /* 몸 깎기 */ clip-path: polygon(0 0,10% 100%,90% 100%,100% 0);
+}
+
+/* 몸통 가상요소로 상단 만들기 */
+.body::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -50px;
+    bottom: 0;
+    width: 300px;
+    height: 150px;
+    /* 그라데이션 */ background-image: linear-gradient(-25deg,#eeeeee,#838282,#6b6b6b,#eeeeee);
+    /* 몸 깍기 */ clip-path: polygon(10% 0,0 20%,0 50%,10% 100%,90% 100%,100% 50%,100% 0);
+}
+
+/* 목 */
+.neck {
+    width: 70px;
+    height: 50px;
+    left: 50%;
+    top: -30px;
+    transform: translateX(-55%);
+    border-radius: 0 0 20px 20px;
+    border-bottom: 20px ridge goldenrod;
+}
+/* 팔공통 */
+.arm {
+    width: 50px;
+    height: 200px;
+    top: 10px;
+    z-index: -1;
+    border-radius: 20px;
+    /* 공통회전축변경: 세로방향 top */ transform-origin: center 15%;
+}
+
+/* 팔공통 가상요소로 연결부분 만들기 */
+.arm::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -25px;
+    left: 1px;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ccc;
+}
+/* 팔 하단 */
+.arm span {
+    position: absolute;
+    top: 100%;
+    left: 5px;
+    display: block;
+    width: 40px;
+    height: 150px;
+    border-radius: 20px;
+    /* 공통회전축변경 : 세로방향 top */ transform-origin: top;
+}
+/* 왼팔 */
+.a1 {
+    left: -100px;
+    transform: rotate(30deg);
+}
+/* 왼팔하단 */
+.a1 span {
+    transform: rotate(30deg);
+}
+/* 오른팔 */
+.a2 {
+    right: -100px;
+}
+/* 오른팔하단 */
+.a2 span {
+    transform: rotate(-30deg);
+}
+/* 왼다리 */
+/* 오른다리 */
+/* 어깨공통 */
+.shd {
+    width: 70px;
+    height: 80px;
+}
+/* 왼어깨 */
+.s1 {
+    top: 8px;
+    left: -113px;
+    border-radius: 50% 0 0 50%;
+    transform: rotate(-9deg);
+}
+/* 오른어깨 */
+.s2 {
+    top: 8px;
+    right: -113px;
+    border-radius: 0 50% 50% 0;
+    transform: rotate(9deg);
+}
+/* TV  */
+/* 유튭 동영상 */
+
+/************************ 3. 하단영역 ********************************/

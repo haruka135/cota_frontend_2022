@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+/* Robot PJ - 애니메이션 CSS */
+
+/* 키프레임 : 애니메이션 장면 연출 */
+
+/* 1. 로봇 등장 키프레임 */
+@keyframes showRobot {
+    from{
+        transform: scale(.1) translate(50%,-50%);
+    }
+    to {
+        transform: scale(1) translate(0,0);
+    }
+}
+
+/* 1-2. 키프레임 호출 설정 - 대상 */
+.robx {
+    animation: showRobot 3s ease-in-out 1s 3; 
+}
