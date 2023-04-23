@@ -2,6 +2,16 @@
 
 /* Robot PJ 메인 CSS - robot.css */
 
+/* 전체 부드러운 스크롤 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 전체 가로 스크롤 방지 */
+html,body {
+    overflow-x: hidden;
+}
+
 /* 초기화 */
 html,body,h1,h2,p,ol,ul,li {
     margin: 0;
@@ -26,16 +36,104 @@ body {
 }
 
 /* 공사중 표시 */
-body * {
+/* body * {
     outline: 2px dashed yellow;
-}
+} */
 
 /************************ 1. 상단영역  ********************************/
+
+/* 1-1. 로고 */
+.logo {
+    /* 포지션 셋팅 */
+    position: fixed;
+    top: calc(50% - 102px);
+    left: calc(50% - 102px);
+    z-index: 1;
+    
+    transform: scale(2);
+
+    /* 박스셋팅 */
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    text-align: center;
+
+    /* 박스 그림자 */
+    box-shadow: inset 0 0 20px 5px #000,
+                0 0 20px 5px aquamarine;
+
+    /* 글자셋팅 */
+    color: aquamarine;
+    /* font: 스두크/줄체 */
+    font: 45px/200px 'Orbitron';
+    text-shadow: 2px 2px 5px #000;
+    
+    background: pink url(../images/robot_03.png) no-repeat center 10px/160px auto;
+}
+
+/* 1-2. 링크타이틀 */
+.link {
+    position: absolute;
+    top: 100px;
+    right: 50px;
+}
+
+.link a {
+    color: lawngreen;
+    text-decoration: none;
+    font: 50px 'Oribitron';
+    text-shadow: 2px 2px 2px #000;
+}
+
+/* 마우스 오버시 */
+.link a:hover {
+    /* 글자색 */ color: orangered;
+    /* 글자데코 */ text-decoration: overline;
+    /* 글자데코스타일 */ text-decoration-style: wavy;
+}
+
+/* 1-3. 탑이동버튼 */
+.btnTop{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    
+    /* 박스셋팅 */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px outset #fff;
+    background-color: #ccc;
+}
+
+.btnTop a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #333;
+    font: 24px/90px 'Oribitron';
+}
+
+/* 버튼 마우스 오버시 */
+.btnTop:hover {
+    background-color: #ff0;
+    border-style: inset;
+}
+
+/* a요소 글자색 */
+.btnTop:hover a {
+    color: red;
+}
+
+
+
 /************************ 2. 메인영역 ********************************/
 
 /* 2-1. 로봇박스 */
 .robx {
-    /* 패딩 위,아래 */ padding: 200px 0 400px;
+    /* 패딩 위,아래 */ padding: 200px 0 50px;
 }
 /* 로봇머리 */
 .head {
@@ -226,7 +324,8 @@ body * {
 }
 
 /* 팔공통 가상요소로 연결부분 만들기 */
-.arm::before {
+.arm::before,
+.arm::after {
     content: '';
     display: block;
     position: absolute;
@@ -236,8 +335,18 @@ body * {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    border: 4px solid #333;
+    box-sizing: border-box; /* 보더,패딩 포함, 크기 유지 */
     background-color: #ccc;
 }
+
+/* 연결부분 내부박스 */
+.arm::after {
+    transform: scale(.8);
+    background-image: linear-gradient(-45deg,#555,#ccc);
+}
+
+
 /* 팔 하단 */
 .arm span {
     position: absolute;
@@ -249,25 +358,131 @@ body * {
     border-radius: 20px;
     /* 공통회전축변경 : 세로방향 top */ transform-origin: top;
 }
+
+/* 팔 하단 가상요소로 손박스 만들기 */
+.arm span::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -120px;
+    left: -15px;
+    width: 80px;
+    height: 120px;
+    outline: 2px dashed lime;
+    transform-origin: top;
+}
+
+/* 왼쪽 손 배경 이미지 */
+.a1 span::after {
+    background: url(../images/hand_left.png) no-repeat bottom/100%;
+    transform: rotate(10deg);
+}
+
+/* 오른쪽 손 배경 이미지 */
+.a2 span::after {
+    left: -25px;
+    background: url(../images/hand_right.png) no-repeat bottom/100%;
+    transform: rotate(-10deg);
+}
 /* 왼팔 */
 .a1 {
     left: -100px;
-    transform: rotate(30deg);
+    transform: rotate(10deg);
 }
 /* 왼팔하단 */
 .a1 span {
-    transform: rotate(30deg);
+    transform: rotate(10deg);
 }
 /* 오른팔 */
 .a2 {
     right: -100px;
+    transform: rotate(-10deg)
 }
 /* 오른팔하단 */
 .a2 span {
-    transform: rotate(-30deg);
+    transform: rotate(-10deg);
 }
+/* 다리공통 */
+.leg {
+    top: 90%;
+    width: 85px;
+    height: 250px;
+    z-index: -1;
+    border-radius: 30px;
+    transform-origin: center 15%;
+}
+/* 다리공통 가상요소로 연결부분 만들기 */
+.leg::before,
+.leg::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -40px;
+    z-index: 1;
+    width: 75px;
+    height: 75px;
+    background-color: #ccc;
+    border: 4px solid #333;
+    box-sizing: border-box;
+    border-radius: 20px;
+    transform: scaleX(.8) rotate(45deg);
+}
+
+/* 다리연결부분 내부박스 */
+.leg::after {
+    transform: scale(.65,.8) rotate(45deg);
+    background-image: linear-gradient(-45deg, #222 10%, #ccc 60%, #eee);
+}
+
+/* 다리하단공통 */
+.leg span {
+    position: absolute;
+    top: 100%;
+    left: 10px;
+    display: block;
+    width: 60px;
+    height: 250px;
+    border-radius: 20px;
+    /* 공통회전축변경 : 세로방향 top */ transform-origin: top;
+}
+
+/* 다리하단 가상요소로 발 만들기 */
+.leg span::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -15px;
+    bottom: -65px;
+    width: 90px;
+    height: 70px;
+    border-radius: 40px 40px 0 0;
+    border: 4px solid #222;
+    border-bottom: 20px solid #222;
+    background-image: linear-gradient(-45deg, #222 10%, #ccc 60%, #eee);
+}
+
+/* 다리하단 가상요소로 부츠 만들기 */
+.leg span::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 80px;
+    left: -5px;
+    width: 60px;
+    height: 150px;
+    border: 4px solid #222;
+    border-top: 20px solid #222;
+    background-image: linear-gradient(-45deg, #222 10%, #ccc 60%, #eee);
+}
+
 /* 왼다리 */
+.l1 {
+    left: -10px;
+}
 /* 오른다리 */
+.l2 {
+    right: -10px;
+}
 /* 어깨공통 */
 .shd {
     width: 70px;
@@ -288,6 +503,116 @@ body * {
     transform: rotate(9deg);
 }
 /* TV  */
+.tv {
+    top: 50px;
+    left: 10px;
+    width: 180px;
+    height: 125px;
+    border-radius: 5px;
+    background: url(../images/tv.jpg) no-repeat center/cover;
+}
+
+/* 스크린 */
+.screen {
+    position: absolute;
+    top: 7px;
+    left: 11px;
+    width: 126px;
+    height: 98px;
+    border-radius: 5px;
+    background-color: #000;
+}
 /* 유튭 동영상 */
+.screen iframe {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 129px;
+    height: 100px;
+    border: none;
+}
+
+/************************ 2-2 로봇 설명 박스 ************************/
+.dcbx {
+    /* 최대가로크기 */ max-width: 800px;
+    /* 마영오! */ margin: 0 auto;
+    /* 하단공간 */ margin-bottom: 200px;
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    padding: 15px 30px;
+    border: 3px solid #fff;
+    border-radius: 20px;
+    box-shadow: inset 0 0 20px blue,
+                inset 0 0 50px 10px cyan;
+}
+
+/* 2-2-1. 제목 */
+.dcbx h2 {
+    position: sticky;
+    top: 10px;
+    text-align: center;
+    font-size: 35px;
+    color: lime;
+    background-color: rgba(255,255,255,.5);
+    border-radius: 20px;
+}
+
+/* 2-2-2. 출처 */
+.dcbx small {
+    font-size: 12px;
+    line-height: 3;
+    color: #ff0;
+    display: block;
+    text-align: center;
+}
+
+.dcbx p {
+    font-size: 15px;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    word-spacing:L 2px;
+    /* 다중열 속성 */
+    column-count: 3;
+    column-rule: 5px dotted lightgreen;
+    column-gap: 55px;
+    /* 양쪽 정렬 */ text-align: justify;
+    /* 단어깨기 */ word-break: break-all;
+    /* 들여쓰기 */ text-indent: 20px;
+}
+
+.dcbx p::first-letter {
+    font-size: 30px;
+    font-weight: bold;
+    color: orange;
+}
+
 
 /************************ 3. 하단영역 ********************************/
+/* 겉박스 */
+#info {
+    /* 글자 셋팅 */
+    color: #fff;
+    font: 30px 'black Ops One';
+    text-shadow: 2px 2px 2px #000;
+    
+    /* 박스 셋팅 */
+    background-color: rgba(0,0,0,.3);
+    text-align: center;
+    padding: 50px;
+}
+
+/* 속박스 가상요소로 아이콘 모양 넣기 */
+.info span::before {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    background: pink url(../images/robot_03.png) no-repeat;
+    background-size: 60px;
+    background-position: -11px -6px;
+    vertical-align: -6px;
+    margin-right: 10px;
+}

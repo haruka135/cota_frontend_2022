@@ -5,16 +5,148 @@
 /* 키프레임 : 애니메이션 장면 연출 */
 
 /* 1. 로봇 등장 키프레임 */
-@keyframes showRobot {
-    from{
-        transform: scale(.1) translate(50%,-50%);
-    }
+@keyframes showRobot { 
     to {
-        transform: scale(1) translate(0,0);
+        transform: translate(0,0) scale(.6);
     }
 }
 
-/* 1-2. 키프레임 호출 설정 - 대상 */
+/* 로봇 몸 키프레임 추가 */
+@keyframes showRobot2 {
+    /* .robx의 내부 div 박스를 회전 -> 중심점 때문에 만들어서 사용 */
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+/* 1-1. 키프레임 호출 설정 - 대상 */
 .robx {
-    animation: showRobot 3s ease-in-out 1s 3; 
+    /* 초기상태 */
+    transform: translate(20%,10%) scale(0);
+    /* 트랜스폼 기준값 */
+    transform-origin: top;
+    animation: showRobot 3s ease-in-out 1s forwards; 
+}
+
+/* 추가 회전 */
+.robx > div {
+    animation: showRobot2 4s ease-in-out 1s forwards;
+}
+
+/* 2. 왼팔 허리에 올리기 키프레임 */
+
+@keyframes leftArm1 {
+    to {
+        transform: rotate(52deg);
+    }
+}
+
+@keyframes leftArm2 {
+    to {
+        transform: rotate(-98deg);
+    }
+}
+
+@keyframes leftArm3 {
+    to {
+        transform:rotate(77deg);
+    }
+}
+
+/* 2-1. 왼팔 애니메이션 호출하기 */
+.a1 {
+    /* 이시이지 반방마 */
+    animation: leftArm1 .5s ease-in-out 5s forwards;  
+}
+
+.a1 span {
+    animation: leftArm2 .5s ease-in-out 5s forwards;
+}
+
+.a1 span::after {
+    animation: leftArm3 .5s ease-in-out 5s forwards;
+}
+
+/* 3. 오른손 키프레임 */
+@keyframes rightArm1 { /* 팔상단 한번 올리기 */
+    to {
+        transform: rotate(-122deg);
+    }
+}
+
+@keyframes rightArm1-2 { /* 팔상단 계속 흔들기 */
+    from {
+        transform: rotate(-122deg)
+    }
+    to {
+        transform: rotate(-132deg);
+    }
+}
+
+@keyframes rightArm2 { /* 팔하단 계속 흔들기 */
+    from {
+        transform: rotate(10deg);
+    }
+    to {
+        transform: rotate(-10deg);
+    }
+}
+
+@keyframes rightArm3 { /* 오른손 계속 흔들기 */
+    from {
+        transform: rotate(10deg);
+    }
+    to {
+        transform: rotate(-10deg);
+    }
+}
+
+/* 3-2. 오른팔 애니 호출 */
+.a2 {
+    animation: rightArm1 .5s ease-out 6s forwards,
+               rightArm1-2 .3s linear 6.5s infinite alternate;
+}
+
+.a2 span {
+    animation: rightArm2 .3s linear 6.5s infinite alternate;
+}
+
+.a2 span::after {
+    animation: rightArm3 .3s linear 6.5s infinite alternate;
+}
+
+/* 4. 로고 키프레임 만들기 */
+@keyframes logo {
+    80% {
+        transform: scale(1);
+        top: 50px;
+        left: 50px;
+    }
+    100% {
+        transform: scale(1) rotate(15deg);
+        top: 50px;
+        left: 50px;
+    }
+}
+
+/* 4-1. 로고 키프레임 호출 */
+.logo {
+    animation: logo 2s ease-in-out 1s forwards,
+               logo2 2s ease-in-out 3s infinite alternate;
+}
+
+/* 5. 오뚜기 회전 */
+@keyframes logo2 {
+    from {
+        transform: rotate(15deg);
+    }
+    to {
+        transform: rotate(-15deg);
+    }
 }
